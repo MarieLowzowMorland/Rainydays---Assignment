@@ -1,9 +1,50 @@
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 60;
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #707070;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  text-decoration: none;
+  padding: 30px;
+}
+
+h2,
+nav a {
+  color: #3a4754;
+  font-size: 30px;
+  font-family: oswald, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.red-h2 {
   color: #ca5c43;
 }
-h2 {
+
+.light-h2 {
+  color: #e9edf2;
+}
+
+#welcome {
+  background-image: url("../images/friendsOnAdventure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 973px;
+  width: 100%;
+}
+
+#welcome h2 {
+  font: normal normal bold Helvetica;
+  color: #ca5c43;
+  text-transform: uppercase;
+}
+
+#bestsellers {
+  background-color: #e9edf2;
+  width: 100%;
+  height: 790px;
 }
 
 .screen-reader-only {
