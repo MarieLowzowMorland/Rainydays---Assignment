@@ -3,3 +3,12 @@ h1 {
   font-size: 60;
   color: #ca5c43;
 }
+h2 {
+}
+
+.screen-reader-only {
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip: rect(0, 0, 1px, 1px);
+}
