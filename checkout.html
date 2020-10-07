@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Have a descripte title and meta for the spesific page -->
+    <title>Rainydays|Home</title>
+    <meta
+      name="description"
+      content="The home page for Rainydays´online shop."
+    />
+    <link href="./Styles/style.css" rel="stylesheet" type="text/CSS" />
+    <link rel="stylesheet" href="https://use.typekit.net/cuv4oew.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="images/logo.png" height="70px" alt="Logo for Rainydays" />
+        </a>
+        <ul>
+          <!-- use <li class="active"> for the active one on this page -->
+          <li><a href="ourJackets.html">Our Jackets</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="ourJackets.html">Sale</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="background">
+      <h1>Checkout</h1>
+
+      <div class="main-contentbox">
+        <section id="shipping-address">
+          <h2>Shipping address</h2>
+          <p>Contry: Norway</p>
+          <form action="shipping-address.php" method="POST">
+            <div>
+              <label for="first-name">First name</label>
+              <input type="text" name="first-name" id="firstName" />
+            </div>
+
+            <div>
+              <label for="sure-name">Surename</label>
+              <input type="text" name="sure-name" id="sureName" />
+            </div>
+
+            <div>
+              <label for="address">Address</label>
+              <input type="text" name="address" id="address" />
+            </div>
+
+            <div>
+              <label for="zip">Zip code</label>
+              <input type="text" name="zip" id="zip" />
+            </div>
+
+            <div>
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" />
+            </div>
+
+            <div>
+              <label for="mail">e-mail</label>
+              <input type="email" name="mail" id="mail" />
+            </div>
+          </form>
+        </section>
+
+        <section id="payment">
+          <h2>Payment</h2>
+          <form action="payment.php" method="POST">
+            <div>
+              <input type="radio" name="paymentType" id="visa" value="visa" />
+              <label for="visa">Visa</label>
+              <input type="radio" name="paymentType" id="vips" value="vips" />
+              <label for="vips">VIPPS</label>
+            </div>
+
+            <div>
+              <label for="card-number">Card number</label>
+              <input type="text" name="card-number" id="cardNumber" />
+            </div>
+
+            <div>
+              <label for="mmyy">mm/yy</label>
+              <input type="text" name="mmyy" id="mmyy" />
+              <label for="cvc">cvc</label>
+              <input type="text" name="cvc" id="cvc" />
+            </div>
+
+            <div>
+              <input type="checkbox" name="accept" id="accept" value="accept" />
+              <label for="accept">
+                I have read & agree to Rainydays Terms and Conditions and accept
+                that the purchase involves a payment responsibility
+              </label>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <h2 class="red-h2">Subscribe to our newsletter</h2>
+      <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
+      <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
+      <h2 class="helvetica-smal-hadding light-h2">Contact:</h2>
+      <p>ranydays@post.com</p>
+      <p>Nicestreet 25 0780 City Norway</p>
+      <p>+47 123 45 566</p>
+      <p>Copyright &copy;</p>
+    </footer>
+  </body>
+</html>

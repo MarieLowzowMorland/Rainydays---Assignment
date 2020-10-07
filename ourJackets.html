@@ -6,23 +6,43 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.png" alt="Logo for Rainydays" />
       <nav>
+        <a href="index.html">
+          <img src="images/logo.png" height="70px" alt="Logo for Rainydays" />
+        </a>
         <ul>
           <li class="active"><a href="ourJackets.html">Our Jackets</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="ourJackets.html"></a>Sale</li>
+          <li><a href="ourJackets.html">Sale</a></li>
         </ul>
       </nav>
     </header>
+
+    <div class="background"></div>
+    <main>
+      <h1 class="screen-reader-only">List of all our Jackets</h1>
+      <section id="filter">
+        <h2>Filter</h2>
+      </section>
+      <section>
+        <img src="images/jacket1.png" alt="image of jacket-name" />
+        <h2>Jacket name</h2>
+        <p>Gore-Tex jacket</p>
+        <p>Color</p>
+        <p>NOK 2000</p>
+      </section>
+    </main>
+
     <footer>
-      <h2>Subscribe to our newsletter</h2>
-      <p>By signing up you agree to Rainydays´ Privacy Policy.</p>
-      <h4>Contact:</h4>
+      <h2 class="red-h2">Subscribe to our newsletter</h2>
+      <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
+      <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
+      <h2 class="helvetica-smal-hadding light-h2">Contact:</h2>
       <p>ranydays@post.com</p>
       <p>Nicestreet 25 0780 City Norway</p>
       <p>+47 123 45 566</p>
+      <p>Copyright &copy;</p>
     </footer>
   </body>
 </html>

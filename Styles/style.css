@@ -1,7 +1,49 @@
-body {
+/* COMMON STYLE */
+html {
+  font-size: 12px;
   font-family: Helvetica, Arial, sans-serif;
   color: #707070;
 }
+
+body {
+  margin: 0px;
+}
+/* 
+ * This class hides the content for human eyes,
+ * but is still readable by screen readers for 
+ * accessebility 
+ */
+.screen-reader-only {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  clip: rect(0, 0, 1px, 1px) !important;
+}
+
+.section-content {
+  padding: 40px;
+}
+
+h1 {
+  color: #ca5c43;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin left: 100px;
+}
+
+a {
+  color: #ca5c43;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #e9edf2;
+}
+
+nav ul,
 nav li {
   display: inline-block;
 }
@@ -13,10 +55,11 @@ nav a {
 h2,
 nav a {
   color: #3a4754;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-family: oswald, sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 .red-h2 {
@@ -27,29 +70,288 @@ nav a {
   color: #e9edf2;
 }
 
+h3 {
+  font-family: oswald, sans-serif;
+  color: #3a4754;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.helvetica-smal-headding {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.background {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: 69%;
+  background-position-x: right;
+  height: 700px;
+  width: 100%;
+}
+.main-contentbox {
+  background-color: #e9edf2;
+  margin: 100px;
+  padding: 75px;
+}
+
+input {
+  font-size: 1.5rem;
+  color: #3a4754;
+  background-color: white;
+  border: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+input:focus, input:hover {
+  border-radius: 0;
+  border-color: #3a4754;
+  border-width: 1px;
+}
+
+label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #a1b2c3;
+}
+
+.logo {
+  max-width: 125px;
+}
+
+.jacket-box {
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+}
+
+.jacket-box img {
+  margin: 0 auto;
+}
+
+.jacket-box p, h3, {
+  margin left: 20px;
+}
+
+#instagram {
+  background-color: #3a4754;
+  width: 100%;
+  height: 465px;
+  background-image: url("../images/instagram.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position-x: right;
+  position: relative;
+}
+
+#instagram h2 {
+  position: relative;
+  float: left;
+  font-size: 3rem;
+  width: 30rem;
+  margin-top: 100px;
+  margin-left: 40px;
+}
+
+#instagram p {
+  color: #e9edf2;
+  position: relative;
+  float: left;
+  width: 30rem;
+  margin-left: 40px;
+}
+
+#magazine {
+  background-color: #a1b2c3;
+  width: 100%;
+  height: 550px;
+}
+
+#magazine div {
+  display: inline-block;
+  margin: 20px;
+}
+
+#magazine img {
+  height: 225px;
+  width: 270px;
+  object-fit: cover;
+}
+
+#magazine h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+#magazine p {
+  font-family: oswald, sans-serif;
+  text-transform: uppercase;
+  color: #3a4754;
+}
+
+#magazine h3 {
+  font-family: oswald, sans-serif;
+  text-transform: uppercase;
+  color: #e9edf2;
+  font-weight: normal;
+  margin: 10px;
+}
+
+#magazine a {
+  float: right;
+
+}
+
+#magazine .article {
+  background-color: #3a4754;
+  width: 270px;
+  height: 355px;
+}
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  padding: 50px 50px 0px 50px;
+  background-color: #3a4754;
+  background-image: url("../images/map.svg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position-x: right;
+  z-index: 1000;
+  position: relative;
+}
+
+footer p {
+  color: #e9edf2;
+}
+
+/* OUR JACKETS*/
+#filter {
+  background-color: #e9edf2;
+}
+/* CONTACT*/
+#contactPage {
+  background-image: url("../images/mapBig.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: 150px;
+  height: 500px;
+  width: 100%;
+}
+/* INDEX STYLE */
 #welcome {
   background-image: url("../images/friendsOnAdventure.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 973px;
+  height: 700px;
   width: 100%;
 }
 
 #welcome h2 {
-  font: normal normal bold Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   color: #ca5c43;
+  text-transform: uppercase;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+#welcome p {
+  font-size: 1.6rem;
+  color: #3a4754;
+  font-family: oswald, sans-serif;
   text-transform: uppercase;
 }
 
 #bestsellers {
   background-color: #e9edf2;
   width: 100%;
-  height: 790px;
+  height: 600px;
 }
 
-.screen-reader-only {
+#bestsellers .jacket-box {
+  background-color: white;
+  display: inline-block;
+  margin: 5px;
+}
+
+#takeALook {
+  background-color: #3a4754;
+  width: 100%;
+  height: 440px;
+}
+
+#takeALook img {
   position: absolute;
-  left: 0;
-  top: 0;
-  clip: rect(0, 0, 1px, 1px);
+  height: 442px;
+  width: auto;
+}
+
+#takeALook h2 {
+  color: #ca5c43;
+  position: relative;
+  float: right;
+  font-size: 3rem;
+  width: 30rem;
+  margin-top: 160px;
+  margin-right: 20px;
+}
+
+/*ABOUT*/
+#whoWeAre a {
+  text-decoration: none;
+}
+
+#whoWeAre ul {
+  list-style-type: none;
+}
+
+#slogan {
+  font-family: oswald, sans-serif;
+  font-size: 1, 4rem;
+  color: #ca5c43;
+  text-transform: uppercase;
+}
+
+#ourHistory {
+  background-color: #3a4754;
+  width: 100%;
+  height: 440px;
+}
+
+#ourHistory p {
+  color: #e9edf2;
+}
+
+#ourValuesAndVision {
+  background-color: #e9edf2;
+  width: 100%;
+  height: 440px;
+}
+button {
+  background-color: #996902;
+}
+
+aside {
+  background-color: blue;
+}
+strong {
+  background-color: chocolate;
+}
+/*CHECKOUT*/
+#shipping-address, #payment {
+ 
+}
+
+
+
 }
