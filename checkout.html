@@ -31,86 +31,134 @@
     <main class="background">
       <h1>Checkout</h1>
 
-      <div class="main-contentbox">
-        <section id="shipping-address">
-          <h2>Shipping address</h2>
-          <p>Contry: Norway</p>
-          <form action="shipping-address.php" method="POST">
-            <div>
-              <label for="first-name">First name</label>
-              <input type="text" name="first-name" id="firstName" />
+      <div class="main-contentbox checkout">
+        <div>
+          <section id="shipping-address">
+            <h2>Shipping address</h2>
+            <p>Contry: Norway</p>
+            <form action="shipping-address.php" method="POST">
+              <div class="input-with-label-wrapper">
+                <label for="firstName">First name</label>
+                <input type="text" name="first-name" id="firstName" />
+              </div>
+
+              <div class="input-with-label-wrapper">
+                <label for="sureName">Surename</label>
+                <input type="text" name="sure-name" id="sureName" />
+              </div>
+
+              <div class="input-with-label-wrapper">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" />
+              </div>
+
+              <div class="input-with-label-wrapper">
+                <label for="zip">Zip code</label>
+                <input type="text" name="zip" id="zip" />
+              </div>
+
+              <div class="input-with-label-wrapper">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" />
+              </div>
+
+              <div class="input-with-label-wrapper">
+                <label for="mail">e-mail</label>
+                <input type="email" name="mail" id="mail" />
+              </div>
+            </form>
+          </section>
+
+          <section id="payment">
+            <h2>Payment</h2>
+            <form action="payment.php" method="POST">
+              <div>
+                <input type="radio" name="paymentType" id="visa" value="visa" />
+                <label for="visa">Visa</label>
+                <input type="radio" name="paymentType" id="vips" value="vips" />
+                <label for="vips">VIPPS</label>
+              </div>
+
+              <div class="input-with-label-wrapper shorter">
+                <label for="cardNumber">Card number</label>
+                <input type="text" name="card-number" id="cardNumber" />
+              </div>
+
+              <div>
+                <label for="mmyy">mm/yy</label>
+                <input type="text" name="mmyy" id="mmyy" />
+                <label for="cvc">cvc</label>
+                <input type="text" name="cvc" id="cvc" />
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="accept"
+                  id="accept"
+                  value="accept"
+                />
+                <label for="accept">
+                  I have read & agree to Rainydays Terms and Conditions and
+                  accept that the purchase involves a payment responsibility
+                </label>
+              </div>
+            </form>
+          </section>
+        </div>
+        <div>
+          <section id="receipt">
+            <h2 class="red-h2">Your cart</h2>
+            <p>Number of items</p>
+            <h3>Jacket name</h3>
+            <p>Gore tex jacket</p>
+
+            <div class="size">
+              <label for="size">Size</label>
+              <select name="size" id="size">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
             </div>
 
-            <div>
-              <label for="sure-name">Surename</label>
-              <input type="text" name="sure-name" id="sureName" />
+            <div class="color">
+              <label for="color">Color</label>
+              <select name="color" id="color">
+                <option value="purple">Pruple</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+                <option value="black">Black</option>
+              </select>
             </div>
 
-            <div>
-              <label for="address">Address</label>
-              <input type="text" name="address" id="address" />
-            </div>
-
-            <div>
-              <label for="zip">Zip code</label>
-              <input type="text" name="zip" id="zip" />
-            </div>
-
-            <div>
-              <label for="city">City</label>
-              <input type="text" name="city" id="city" />
-            </div>
-
-            <div>
-              <label for="mail">e-mail</label>
-              <input type="email" name="mail" id="mail" />
-            </div>
-          </form>
-        </section>
-
-        <section id="payment">
-          <h2>Payment</h2>
-          <form action="payment.php" method="POST">
-            <div>
-              <input type="radio" name="paymentType" id="visa" value="visa" />
-              <label for="visa">Visa</label>
-              <input type="radio" name="paymentType" id="vips" value="vips" />
-              <label for="vips">VIPPS</label>
-            </div>
-
-            <div>
-              <label for="card-number">Card number</label>
-              <input type="text" name="card-number" id="cardNumber" />
-            </div>
-
-            <div>
-              <label for="mmyy">mm/yy</label>
-              <input type="text" name="mmyy" id="mmyy" />
-              <label for="cvc">cvc</label>
-              <input type="text" name="cvc" id="cvc" />
-            </div>
-
-            <div>
-              <input type="checkbox" name="accept" id="accept" value="accept" />
-              <label for="accept">
-                I have read & agree to Rainydays Terms and Conditions and accept
-                that the purchase involves a payment responsibility
-              </label>
-            </div>
-          </form>
-        </section>
+            <h2>Payment overview</h2>
+            <p>Sum products</p>
+            <p>Shipping</p>
+            <aside>Estimated time for shipping is 3-4 days</aside>
+            <p>Total</p>
+            <button>Complete the purchase</button>
+          </section>
+        </div>
       </div>
     </main>
 
     <footer>
-      <h2 class="red-h2">Subscribe to our newsletter</h2>
-      <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
-      <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
-      <h2 class="helvetica-smal-hadding light-h2">Contact:</h2>
-      <p>ranydays@post.com</p>
-      <p>Nicestreet 25 0780 City Norway</p>
-      <p>+47 123 45 566</p>
-      <p>Copyright &copy;</p>
+      <div>
+        <h2 class="red-h2">Subscribe to our newsletter</h2>
+        <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
+        <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
+      </div>
+      <div>
+        <h2 class="helvetica-smal-hadding light-h2">Contact:</h2>
+        <p>ranydays@post.com</p>
+        <p>Nicestreet 25 0780 City Norway</p>
+        <p>+47 123 45 566</p>
+        <p>Copyright &copy;</p>
+      </div>
     </footer>
   </body>
 </html>
