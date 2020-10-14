@@ -29,6 +29,10 @@ body {
   text-align: center;
 }
 
+.right-text {
+  text-align: right;
+}
+
 h1 {
   color: #ca5c43;
   font-family: Helvetica, Arial, sans-serif;
@@ -59,6 +63,22 @@ nav li {
 nav a {
   text-decoration: none;
   padding: 30px;
+}
+
+nav div {
+  display: inline-block;
+}
+
+.nav-icons {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  padding: 10px;
+}
+
+.nav-icons img {
+  height: 1.5rem;
+  padding-left: 10px;
 }
 
 h2,
@@ -108,6 +128,13 @@ h3 {
   padding: 75px;
 }
 
+.story-text {
+  column-count: 2;
+  column-gap: 50px;
+  column-width: 50px;
+  max-width: 500px;
+}
+
 input {
   font-size: 1.5rem;
   color: #3a4754;
@@ -122,7 +149,7 @@ input {
 input:focus,
 input:hover {
   border-radius: 0;
-  border: 1px solid #3a4754;
+  border: 1px solid #ca5c43;
   outline: none;
 }
 
@@ -198,6 +225,7 @@ aside {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 2rem;
 }
 
 #magazine p {
@@ -243,6 +271,9 @@ aside {
   transform: skew(-30deg, 60deg) rotate(90deg);
 }
 
+.point-up {
+}
+
 .same-height {
   display: flex;
   justify-content: space-between;
@@ -278,6 +309,10 @@ footer p {
   color: #e9edf2;
 }
 
+footer > div > div {
+  display: inline-block;
+}
+
 /* OUR JACKETS*/
 #filter {
   background-color: #e9edf2;
@@ -306,6 +341,7 @@ footer p {
   text-transform: uppercase;
   font-size: 2.75rem;
   font-weight: bold;
+  margin: 100px 50px 0 0;
 }
 
 #welcome p {
@@ -313,6 +349,7 @@ footer p {
   color: #3a4754;
   font-family: oswald, sans-serif;
   text-transform: uppercase;
+  margin-right: 50px;
 }
 
 #bestsellers {
@@ -362,13 +399,28 @@ footer p {
 
 #whoWeAre ul {
   list-style-type: none;
+  position: absolute;
+  right: 445px;
+  top: 360px;
+}
+
+#whoWeAre {
+  background-image: url("../images/who-we-are.png");
+  background-repeat: no-repeat;
+  background-size: 34%;
+  background-position-x: right;
+  height: 500px;
+  width: 100%;
 }
 
 #slogan {
   font-family: oswald, sans-serif;
-  font-size: 1, 4rem;
+  font-size: 1.4rem;
   color: #ca5c43;
   text-transform: uppercase;
+  position: absolute;
+  top: 270px;
+  right: 10px;
 }
 
 #ourHistory {
@@ -386,8 +438,30 @@ footer p {
   width: 100%;
   height: 440px;
 }
-button {
-  background-color: #996902;
+.triangle-frame-blue {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.triangle {
+  height: 30rem;
+  width: 30rem;
+  position: relative;
+  top: -31rem;
+  left: -6rem;
+  background-color: #a1b2c3;
+}
+
+.point-down {
+  transform: skew(-30deg, 60deg) rotate(90deg);
+}
+
+.point-up {
 }
 
 /*CHECKOUT*/

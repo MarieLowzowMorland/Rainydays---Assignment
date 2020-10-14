@@ -26,8 +26,15 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="ourJackets.html">Sale</a></li>
         </ul>
-        <img src="images/icons/icon-search.svg" alt="search" />
-        <img src="images/icons/icon-cart.svg" alt="cart" />
+        <div class="nav-icons">
+          <div class="input-with-label-wrapper shorter">
+            <label for="search">Search</label>
+            <input type="text" name="search" id="search" />
+          </div>
+
+          <img src="images/icons/icon-search.svg" alt="search" />
+          <img src="images/icons/icon-cart.svg" alt="cart" />
+        </div>
       </nav>
     </header>
 
@@ -38,8 +45,10 @@
 
       <section id="welcome">
         <div class="section-content">
-          <h2>New collection!</h2>
-          <p>-Get ready for the next season’s adventures</p>
+          <div class="right-text">
+            <h2>New collection!</h2>
+            <p>-Get ready for the next season’s adventures</p>
+          </div>
         </div>
       </section>
 
@@ -172,7 +181,9 @@
       <div class="section-content">
         <div>
           <h2 class="red-h2">Subscribe to our newsletter</h2>
-          <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
+          <a>
+            <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
+          </a>
           <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
         </div>
         <div>
