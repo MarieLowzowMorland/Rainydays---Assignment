@@ -129,10 +129,24 @@ h3 {
 }
 
 .story-text {
+  margin: 0;
   column-count: 2;
   column-gap: 50px;
   column-width: 50px;
   max-width: 500px;
+}
+
+.story-text > p:first-child {
+  margin: 0;
+}
+
+.story-text .links {
+  margin-top: 40px;
+}
+
+.story-text .links a {
+  display: block;
+  margin: 10px 0;
 }
 
 input {
@@ -294,8 +308,7 @@ aside {
 footer {
   box-sizing: border-box;
   width: 100%;
-  height: 300px;
-  padding: 50px 50px 0px 50px;
+  padding: 50px 50px;
   background-color: #3a4754;
   background-image: url("../images/map.svg");
   background-repeat: no-repeat;
@@ -407,7 +420,7 @@ footer > div > div {
 #whoWeAre {
   background-image: url("../images/who-we-are.png");
   background-repeat: no-repeat;
-  background-size: 34%;
+  background-size: contain;
   background-position-x: right;
   height: 500px;
   width: 100%;
@@ -436,32 +449,124 @@ footer > div > div {
 #ourValuesAndVision {
   background-color: #e9edf2;
   width: 100%;
-  height: 440px;
 }
-.triangle-frame-blue {
+
+.split-wrapper {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.split-60 {
+  position: relative;
+  width: 60%;
+}
+
+.split-50 {
+  position: relative;
+  width: 50%;
+}
+
+.split-40 {
+  position: relative;
+  width: 40%;
+}
+
+.triangle-frame-dark {
   position: absolute;
-  right: 0;
-  top: 0;
-  transform: translate(-50%, 0);
-  width: 30rem;
-  height: 30rem;
+  bottom: 0px;
+  right: 11rem;
+  width: 40rem;
+  height: 100%;
   overflow: hidden;
 }
 
-.triangle {
-  height: 30rem;
-  width: 30rem;
-  position: relative;
-  top: -31rem;
-  left: -6rem;
+.triangle-dark {
+  position: absolute;
+  height: 40rem;
+  width: 41rem;
+  top: 35rem;
+  left: 8rem;
+  background-color: #3a4754;
+}
+.triangle-frame-blue {
+  position: absolute;
+  right: 0rem;
+  transform: translate(-50%, 0);
+  width: 20rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.triangle-blue {
+  position: absolute;
+  height: 25rem;
+  width: 25rem;
+  top: -30rem;
+  left: -8rem;
   background-color: #a1b2c3;
 }
 
-.point-down {
-  transform: skew(-30deg, 60deg) rotate(90deg);
+.slogan p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.point-up {
+#sloganMotivate {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 15rem;
+}
+
+#sloganMotivate p {
+  color: #ca5c43;
+}
+
+#sloganMotivate p span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#sloganFreedom {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 11rem;
+}
+
+#sloganFreedom p {
+  color: #3a4754;
+  font-size: 1rem;
+}
+
+#sloganFreedom p span {
+  font-weight: bold;
+}
+
+#sloganSolid {
+  position: absolute;
+  top: 12rem;
+  right: 0rem;
+  width: 17rem;
+}
+
+#sloganSolid p {
+  color: #3a4754;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#sloganSolid p span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 /*CHECKOUT*/

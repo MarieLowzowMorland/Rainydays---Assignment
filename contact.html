@@ -8,43 +8,65 @@
     <header>
       <nav>
         <a href="index.html">
-          <img src="images/logo.png" height="70px" alt="Logo for Rainydays" />
+          <img src="images/logo.png" alt="Logo for Rainydays" class="logo" />
         </a>
         <ul>
+          <!-- use <li class="active"> for the active one on this page -->
           <li><a href="ourJackets.html">Our Jackets</a></li>
           <li><a href="about.html">About</a></li>
           <li class="active"><a href="contact.html">Contact</a></li>
           <li><a href="ourJackets.html">Sale</a></li>
         </ul>
+        <div class="nav-icons">
+          <div class="input-with-label-wrapper shorter">
+            <label for="search">Search</label>
+            <input type="text" name="search" id="search" />
+          </div>
+
+          <img src="images/icons/icon-search.svg" alt="search" />
+          <a href="checkout.html">
+            <img src="images/icons/icon-cart.svg" alt="cart" />
+          </a>
+        </div>
       </nav>
     </header>
 
     <main id="contactPage">
       <h1 class="screen-reader-only">Contact</h1>
-      <h2>How to get in contact with us</h2>
-      <p>
-        Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe liatque
-        porepera dolorporum que del et est et que et anis cum nos volorpor aut a
-        doluptatem dolupta temqui aut demolup tibuscitem. Ita quia cori dolore
-        plicide pore con ni ommolorrum quae optatent quam dolorum facea sequam
-        nam facipsum quo bearchi citiunt esendae vel minus sunt, nit eatqui num
-        estiisi nctios por mi, que volore voluptas eum solo optatquam, aut fuga.
-        Fuga. Hendit maxim hitatibus
-      </p>
-      <a>ranydays@post.com</a>
-      <p>Nicestreet 25 0780 City Norway</p>
-      <p>+47 123 45 566</p>
+      <div class="story-text section-content">
+        <h2>How to get in contact with us</h2>
+        <p>
+          Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
+          liatque porepera dolorporum que del et est et que et anis cum nos
+          volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem. Ita
+          quia cori dolore plicide pore con ni ommolorrum quae optatent quam
+          dolorum facea sequam nam facipsum quo bearchi citiunt esendae vel
+          minus sunt, nit eatqui num estiisi nctios por mi, que volore voluptas
+          eum solo optatquam, aut fuga. Fuga. Hendit maxim hitatibus
+        </p>
+        <a>ranydays@post.com</a>
+        <p>Nicestreet 25 0780 City Norway</p>
+        <p>+47 123 45 566</p>
+      </div>
     </main>
 
     <footer>
-      <h2 class="red-h2">Subscribe to our newsletter</h2>
-      <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
-      <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
-      <h2 class="helvetica-smal-hadding light-h2">Contact:</h2>
-      <p>ranydays@post.com</p>
-      <p>Nicestreet 25 0780 City Norway</p>
-      <p>+47 123 45 566</p>
-      <p>Copyright &copy;</p>
+      <div class="section-content">
+        <div>
+          <h2 class="red-h2">Subscribe to our newsletter</h2>
+          <a>
+            <img src="images/buttons/buttonSignUp.svg" alt="button Sign up" />
+          </a>
+          <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
+        </div>
+        <div>
+          <h2 class="helvetica-smal-headding light-h2">Contact:</h2>
+          <p>ranydays@post.com</p>
+          <p>Nicestreet 25 0780 City Norway</p>
+          <p>+47 123 45 566</p>
+          <p>Copyright &copy;</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
