@@ -7,6 +7,8 @@ html {
 
 body {
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 /* 
  * This class hides the content for human eyes,
@@ -38,7 +40,7 @@ h1 {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.4rem;
-  margin-left: 100px;
+  margin: 0;
 }
 
 a {
@@ -48,37 +50,77 @@ a {
   font-weight: bold;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
 nav {
+  display: flex;
+  align-items: center;
   background-color: #e9edf2;
 }
-
-nav > * {
-  vertical-align: middle;
+nav .filler {
+  flex: 1 1;
 }
 
-nav ul,
+nav ul {
+  flex: 10;
+  padding: 0;
+  max-width: 650px;
+  display: flex;
+  justify-content: space-around;
+}
+
 nav li {
   display: inline-block;
 }
+
+nav li a:hover {
+  color: #ca5c43;
+  border-bottom: 2px solid #ca5c43;
+}
+
+nav li.active a {
+  border-bottom: 2px solid #ca5c43;
+}
+
 nav a {
   text-decoration: none;
-  padding: 30px;
+}
+
+nav .searchbar {
+  margin-bottom: -1rem;
+}
+
+nav svg {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+nav .svg-button {
+  box-sizing: border-box;
+  height: 2.5rem;
+  width: 2rem;
+  padding: 3px;
+  margin: 0 5px;
+  margin-bottom: -1rem;
+}
+nav .svg-button:hover {
+  border-bottom: 2px solid #ca5c43;
+}
+
+nav svg:hover path {
+  fill: #ca5c43;
+}
+
+nav a.logo-link {
+  margin: 5px;
 }
 
 nav div {
   display: inline-block;
-}
-
-.nav-icons {
-  display: inline-block;
-  vertical-align: middle;
-  float: right;
-  padding: 10px;
-}
-
-.nav-icons img {
-  height: 1.5rem;
-  padding-left: 10px;
 }
 
 h2,
@@ -107,6 +149,27 @@ h3 {
   font-weight: normal;
 }
 
+.split-wrapper {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.split-60 {
+  position: relative;
+  width: 60%;
+}
+
+.split-50 {
+  position: relative;
+  width: 50%;
+}
+
+.split-40 {
+  position: relative;
+  width: 40%;
+}
+
 .helvetica-smal-headding {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -114,18 +177,46 @@ h3 {
   text-transform: uppercase;
 }
 
+main {
+  flex: 1 1 auto;
+}
+
 .background {
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
-  background-size: 69%;
+  background-size: contain;
   background-position-x: right;
   height: 700px;
   width: 100%;
 }
+.fixed-background-wrapper {
+  position: relative;
+}
+
+.fixed-background {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+}
+
 .main-contentbox {
-  background-color: #e9edf2;
-  margin: 100px;
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.main-contentbox > h1 {
+  padding-top: 25px;
+}
+
+.grey-card {
+  margin: 50px 0;
   padding: 75px;
+  background-color: #e9edf2;
 }
 
 .story-text {
@@ -167,6 +258,7 @@ input:hover {
   outline: none;
 }
 
+.smal-blue-text,
 label,
 #shipping-address p {
   font-family: Helvetica, Arial, sans-serif;
@@ -187,14 +279,9 @@ aside {
   max-width: 125px;
 }
 
-.jacket-box {
-  height: 400px;
-  width: 300px;
-  padding: 10px;
-}
-
 .jacket-box img {
   display: block;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -312,7 +399,7 @@ footer {
   background-color: #3a4754;
   background-image: url("../images/map.svg");
   background-repeat: no-repeat;
-  background-size: 45%;
+  background-size: contain;
   background-position-x: right;
   z-index: 1000;
   position: relative;
@@ -330,6 +417,16 @@ footer > div > div {
 #filter {
   background-color: #e9edf2;
 }
+
+.jacket-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 400px 400px 400px;
+  gap: 40px 10px;
+  justify-content: center;
+  align-items: start;
+}
+
 /* CONTACT*/
 #contactPage {
   background-image: url("../images/mapBig.svg");
@@ -451,27 +548,6 @@ footer > div > div {
   width: 100%;
 }
 
-.split-wrapper {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.split-60 {
-  position: relative;
-  width: 60%;
-}
-
-.split-50 {
-  position: relative;
-  width: 50%;
-}
-
-.split-40 {
-  position: relative;
-  width: 40%;
-}
-
 .triangle-frame-dark {
   position: absolute;
   bottom: 0px;
@@ -570,17 +646,26 @@ footer > div > div {
 }
 
 /*CHECKOUT*/
-#receipt {
+#cart {
   background-color: white;
-  width: 40%;
+  min-width: 300px;
   padding: 20px;
-}
-
-#receipt h2 {
   text-align: center;
 }
-.checkout > div {
-  display: inline-block;
+
+#cart ul {
+  margin: 0;
+  border: 1px solid #a1b2c3;
+  border-width: 1px 0;
+}
+
+#cart li {
+  display: block;
+  text-align: left;
+}
+
+.checkout-form {
+  width: 50%;
 }
 
 .input-with-label-wrapper {

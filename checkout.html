@@ -15,7 +15,7 @@
   <body>
     <header>
       <nav>
-        <a href="index.html">
+        <a href="index.html" class="logo-link">
           <img src="images/logo.png" alt="Logo for Rainydays" class="logo" />
         </a>
         <ul>
@@ -25,134 +25,205 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="ourJackets.html">Sale</a></li>
         </ul>
-        <div class="nav-icons">
-          <div class="input-with-label-wrapper shorter">
-            <label for="search">Search</label>
-            <input type="text" name="search" id="search" />
-          </div>
+        <div class="filler"></div>
 
-          <img src="images/icons/icon-search.svg" alt="search" />
-          <a href="checkout.html">
-            <img src="images/icons/icon-cart.svg" alt="cart" />
-          </a>
+        <div class="searchbar input-with-label-wrapper shorter">
+          <label for="search">Search</label>
+          <input type="text" name="search" id="search" />
         </div>
+
+        <div class="svg-button">
+          <svg
+            title="search"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28.98"
+            height="28.984"
+            viewBox="0 0 28.98 28.984"
+          >
+            <path
+              d="M28.586,25.058l-5.644-5.643a1.358,1.358,0,0,0-.962-.4h-.923a11.769,11.769,0,1,0-2.038,2.038v.923a1.357,1.357,0,0,0,.4.962l5.644,5.643a1.353,1.353,0,0,0,1.919,0l1.6-1.6A1.365,1.365,0,0,0,28.586,25.058Zm-16.812-6.04a7.245,7.245,0,1,1,7.246-7.245A7.241,7.241,0,0,1,11.774,19.019Z"
+              fill="#3a4754"
+            />
+          </svg>
+        </div>
+        <a href="checkout.html" class="svg-button">
+          <svg
+            title="shopping-cart"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28.602"
+            height="26.184"
+            viewBox="0 0 28.602 26.184"
+          >
+            <path
+              d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+              transform="translate(-3.331 -4.465)"
+              fill="#3a4754"
+            />
+            <path
+              d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+              transform="translate(-2.186 -4.465)"
+              fill="#3a4754"
+            />
+            <path
+              d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+              transform="translate(-3.382 -4.493)"
+              fill="#3a4754"
+            />
+          </svg>
+        </a>
       </nav>
     </header>
 
-    <main class="background">
-      <h1>Checkout</h1>
+    <main>
+      <div class="fixed-background-wrapper">
+        <div class="fixed-background"></div>
+      </div>
+      <div class="main-contentbox">
+        <h1>Checkout</h1>
 
-      <div class="main-contentbox checkout">
-        <div>
-          <section id="shipping-address">
-            <h2>Shipping address</h2>
-            <p>Contry: Norway</p>
-            <form action="shipping-address.php" method="POST">
-              <div class="input-with-label-wrapper">
-                <label for="firstName">First name</label>
-                <input type="text" name="first-name" id="firstName" />
-              </div>
+        <div class="grey-card split-wrapper">
+          <div class="checkout-form split-50">
+            <section id="shipping-address">
+              <h2>Shipping address</h2>
+              <p>Contry: Norway</p>
+              <form action="shipping-address.php" method="POST">
+                <div class="input-with-label-wrapper">
+                  <label for="firstName">First name</label>
+                  <input type="text" name="first-name" id="firstName" />
+                </div>
 
-              <div class="input-with-label-wrapper">
-                <label for="sureName">Surename</label>
-                <input type="text" name="sure-name" id="sureName" />
-              </div>
+                <div class="input-with-label-wrapper">
+                  <label for="sureName">Surename</label>
+                  <input type="text" name="sure-name" id="sureName" />
+                </div>
 
-              <div class="input-with-label-wrapper">
-                <label for="address">Address</label>
-                <input type="text" name="address" id="address" />
-              </div>
+                <div class="input-with-label-wrapper">
+                  <label for="address">Address</label>
+                  <input type="text" name="address" id="address" />
+                </div>
 
-              <div class="input-with-label-wrapper">
-                <label for="zip">Zip code</label>
-                <input type="text" name="zip" id="zip" />
-              </div>
+                <div class="input-with-label-wrapper">
+                  <label for="zip">Zip code</label>
+                  <input type="text" name="zip" id="zip" />
+                </div>
 
-              <div class="input-with-label-wrapper">
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" />
-              </div>
+                <div class="input-with-label-wrapper">
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city" />
+                </div>
 
-              <div class="input-with-label-wrapper">
-                <label for="mail">e-mail</label>
-                <input type="email" name="mail" id="mail" />
-              </div>
-            </form>
-          </section>
+                <div class="input-with-label-wrapper">
+                  <label for="mail">e-mail</label>
+                  <input type="email" name="mail" id="mail" />
+                </div>
+              </form>
+            </section>
 
-          <section id="payment">
-            <h2>Payment</h2>
-            <form action="payment.php" method="POST">
-              <div>
-                <input type="radio" name="paymentType" id="visa" value="visa" />
-                <label for="visa">Visa</label>
-                <input type="radio" name="paymentType" id="vips" value="vips" />
-                <label for="vips">VIPPS</label>
-              </div>
+            <section id="payment">
+              <h2>Payment</h2>
+              <form action="payment.php" method="POST">
+                <div>
+                  <input
+                    type="radio"
+                    name="paymentType"
+                    id="visa"
+                    value="visa"
+                  />
+                  <label for="visa">Visa</label>
+                  <input
+                    type="radio"
+                    name="paymentType"
+                    id="vips"
+                    value="vips"
+                  />
+                  <label for="vips">VIPPS</label>
+                </div>
 
-              <div class="input-with-label-wrapper shorter">
-                <label for="cardNumber">Card number</label>
-                <input type="text" name="card-number" id="cardNumber" />
-              </div>
+                <div class="input-with-label-wrapper shorter">
+                  <label for="cardNumber">Card number</label>
+                  <input type="text" name="card-number" id="cardNumber" />
+                </div>
 
-              <div class="input-with-label-wrapper shorter">
-                <label for="mmyy">mm/yy</label>
-                <input type="text" name="mmyy" id="mmyy" />
-                <label for="cvc">cvc</label>
-                <input type="text" name="cvc" id="cvc" />
-              </div>
+                <div class="input-with-label-wrapper shorter">
+                  <label for="mmyy">mm/yy</label>
+                  <input type="text" name="mmyy" id="mmyy" />
+                  <label for="cvc">cvc</label>
+                  <input type="text" name="cvc" id="cvc" />
+                </div>
 
-              <div>
-                <input
-                  type="checkbox"
-                  name="accept"
-                  id="accept"
-                  value="accept"
-                />
-                <label for="accept">
-                  I have read & agree to Rainydays Terms and Conditions and
-                  accept that the purchase involves a payment responsibility
-                </label>
-              </div>
-            </form>
-          </section>
-        </div>
-        <div>
-          <section id="receipt">
-            <h2 class="red-h2">Your cart</h2>
-            <p>Number of items</p>
-            <h3>Jacket name</h3>
-            <p>Gore tex jacket</p>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="accept"
+                    id="accept"
+                    value="accept"
+                  />
+                  <label for="accept">
+                    I have read & agree to Rainydays Terms and Conditions and
+                    accept that the purchase involves a payment responsibility
+                  </label>
+                </div>
+              </form>
+            </section>
+          </div>
 
-            <div class="size">
-              <label for="size">Size</label>
-              <select name="size" id="size">
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
+          <div class="split-50">
+            <div id="cart">
+              <section>
+                <h2 class="red-h2">Your cart</h2>
+                <p class="smal-blue-text">Number of items</p>
+                <ul>
+                  <li>
+                    <div class="split-wrapper">
+                      <img
+                        class="split-50"
+                        src="images/jacket1.png"
+                        alt="Picture of jacket"
+                      />
+
+                      <div class="split-50">
+                        <h3>Jacket name</h3>
+                        <p>Gore tex jacket</p>
+
+                        <div class="size">
+                          <label for="size">Size</label>
+                          <select name="size" id="size">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                          </select>
+                        </div>
+
+                        <div class="color">
+                          <label for="color">Color</label>
+                          <select name="color" id="color">
+                            <option value="purple">Pruple</option>
+                            <option value="green">Green</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="blue">Blue</option>
+                            <option value="black">Black</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>- 1 + nok</div>
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="red-h2">Payment overview</h2>
+                <p>Sum products</p>
+                <p>Shipping</p>
+                <aside>Estimated time for shipping is 3-4 days</aside>
+                <p>Total</p>
+                <button>Complete the purchase</button>
+              </section>
             </div>
-
-            <div class="color">
-              <label for="color">Color</label>
-              <select name="color" id="color">
-                <option value="purple">Pruple</option>
-                <option value="green">Green</option>
-                <option value="yellow">Yellow</option>
-                <option value="blue">Blue</option>
-                <option value="black">Black</option>
-              </select>
-            </div>
-
-            <h2>Payment overview</h2>
-            <p>Sum products</p>
-            <p>Shipping</p>
-            <aside>Estimated time for shipping is 3-4 days</aside>
-            <p>Total</p>
-            <button>Complete the purchase</button>
-          </section>
+          </div>
         </div>
       </div>
     </main>
