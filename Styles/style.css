@@ -420,11 +420,51 @@ footer > div > div {
 
 .jacket-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 400px 400px 400px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 400px;
   gap: 40px 10px;
   justify-content: center;
   align-items: start;
+}
+
+.jacket-container > a,
+.jacket-container > a > .jacket-box {
+  height: 100%;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.jacket-container .jacket-box {
+  background-color: #e9edf2;
+}
+
+.jacket-box img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.jacket-box div {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.jacket-box p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.jacket-box .price {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #3a4754;
+  font-size: 1.3rem;
 }
 
 /* CONTACT*/
