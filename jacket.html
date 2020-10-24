@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Rainydays|Jacket</title>
     <link href="./Styles/style.css" rel="stylesheet" type="text/CSS" />
@@ -26,43 +26,58 @@
 
         <div class="svg-button">
           <svg
-            title="search"
             xmlns="http://www.w3.org/2000/svg"
             width="28.98"
             height="28.984"
             viewBox="0 0 28.98 28.984"
           >
+            <title>search</title>
             <path
               d="M28.586,25.058l-5.644-5.643a1.358,1.358,0,0,0-.962-.4h-.923a11.769,11.769,0,1,0-2.038,2.038v.923a1.357,1.357,0,0,0,.4.962l5.644,5.643a1.353,1.353,0,0,0,1.919,0l1.6-1.6A1.365,1.365,0,0,0,28.586,25.058Zm-16.812-6.04a7.245,7.245,0,1,1,7.246-7.245A7.241,7.241,0,0,1,11.774,19.019Z"
               fill="#3a4754"
             />
           </svg>
         </div>
-        <a href="checkout.html" class="svg-button">
-          <svg
-            title="shopping-cart"
-            xmlns="http://www.w3.org/2000/svg"
-            width="28.602"
-            height="26.184"
-            viewBox="0 0 28.602 26.184"
-          >
-            <path
-              d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
-              transform="translate(-3.331 -4.465)"
-              fill="#3a4754"
-            />
-            <path
-              d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
-              transform="translate(-2.186 -4.465)"
-              fill="#3a4754"
-            />
-            <path
-              d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
-              transform="translate(-3.382 -4.493)"
-              fill="#3a4754"
-            />
-          </svg>
-        </a>
+        <div id="nav-shopping-cart">
+          <input
+            type="checkbox"
+            id="shopping-cart-visible"
+            class="screen-reader-only"
+          />
+          <label for="shopping-cart-visible" class="svg-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28.602"
+              height="26.184"
+              viewBox="0 0 28.602 26.184"
+            >
+              <title>shopping-cart</title>
+              <path
+                d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                transform="translate(-3.331 -4.465)"
+                fill="#3a4754"
+              />
+              <path
+                d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                transform="translate(-2.186 -4.465)"
+                fill="#3a4754"
+              />
+              <path
+                d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                transform="translate(-3.382 -4.493)"
+                fill="#3a4754"
+              />
+            </svg>
+          </label>
+          <div id="cart-circle">
+            <p>1</p>
+          </div>
+          <label for="shopping-cart-visible" id="overlay"></label>
+          <section id="cart-overlay">
+            <h2 class="red-h2">Your cart</h2>
+            <a href="checkout.html">lenke videre</a>
+          </section>
+        </div>
       </nav>
     </header>
 
@@ -78,8 +93,27 @@
               <img src="images/jacket1.png" alt="Picture of jacket" />
             </div>
             <div class="split-50">
-              <h2>Jacket name</h2>
-              <img src="images/icons/icon-hiking.svg" alt="icon hiking" />
+              <h2>
+                Jacket name
+                <svg
+                  id="Icon_awesome-hiking"
+                  data-name="Icon awesome-hiking"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="27"
+                  height="25.001"
+                  viewBox="0 0 27 36.001"
+                >
+                  <title>Hiking</title>
+                  <path
+                    id="Icon_awesome-hiking-2"
+                    data-name="Icon awesome-hiking"
+                    d="M5.692,33.2A2.25,2.25,0,0,0,10.058,34.3l1.775-7.1L8.122,23.485,5.692,33.2Zm1.047-13.79L9.633,8.227a1.1,1.1,0,0,0-.838-1.34,5.78,5.78,0,0,0-6.983,4.02l-1.777,6.9a1.1,1.1,0,0,0,.838,1.34l4.469,1.072a1.156,1.156,0,0,0,1.4-.8ZM25.875,11.25H24.75a1.125,1.125,0,0,0-1.125,1.125V13.5H21.182l-3.289-3.289a4.133,4.133,0,0,0-6.932,1.92L9.067,19.7a2.251,2.251,0,0,0,.592,2.137l6.09,6.09V33.75a2.25,2.25,0,0,0,4.5,0V27.932a4.47,4.47,0,0,0-1.318-3.182L15.64,21.458c.011-.035.034-.063.044-.1l1.4-5.595,1.577,1.577a2.25,2.25,0,0,0,1.59.66h3.375V34.876A1.125,1.125,0,0,0,24.749,36h1.125A1.125,1.125,0,0,0,27,34.876v-22.5a1.124,1.124,0,0,0-1.124-1.125Zm-9-4.5A3.375,3.375,0,1,0,13.5,3.375,3.375,3.375,0,0,0,16.875,6.75Z"
+                    transform="translate(0)"
+                    fill="#a1b2c3"
+                  />
+                </svg>
+              </h2>
+
               <p>Product information</p>
               <p>
                 Lorem ipsumNequi omnit quasit eost aut fugit ut estium susam
@@ -88,27 +122,191 @@
                 demolup tibuscitem.
               </p>
               <a>Read more >></a>
-              <p>Color</p>
-              <ul>
-                <li>Blue</li>
-                <li>Red</li>
-                <li>Green</li>
-                <li>Black</li>
-              </ul>
-              <p>Size</p>
-              <ul>
-                <li>XS</li>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-              </ul>
+
+              <form>
+                <fieldset class="only-content">
+                  <p>Color:</p>
+                  <div class="jacket-colors">
+                    <input
+                      class="screen-reader-only"
+                      id="color-blue"
+                      type="radio"
+                      name="color"
+                      value="blue"
+                    />
+                    <label for="color-blue">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.117"
+                        height="14.826"
+                        viewBox="0 0 17.117 14.826"
+                      >
+                        <path
+                          d="M8.558,0l8.558,14.826H0Z"
+                          transform="translate(17.117 14.826) rotate(180)"
+                          fill="#609dd9"
+                        />
+                      </svg>
+                      <span>Blue</span>
+                    </label>
+                    <input
+                      class="screen-reader-only"
+                      id="color-red"
+                      type="radio"
+                      name="color"
+                      value="red"
+                      checked="true"
+                    />
+                    <label for="color-red">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.117"
+                        height="14.826"
+                        viewBox="0 0 17.117 14.826"
+                      >
+                        <path
+                          d="M8.558,0l8.558,14.826H0Z"
+                          transform="translate(17.117 14.826) rotate(180)"
+                          fill="#CA5C43"
+                        />
+                      </svg>
+                      <span>Red</span>
+                    </label>
+                    <input
+                      class="screen-reader-only"
+                      id="color-black"
+                      type="radio"
+                      name="color"
+                      value="black"
+                    />
+                    <label for="color-black">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.117"
+                        height="14.826"
+                        viewBox="0 0 17.117 14.826"
+                      >
+                        <path
+                          d="M8.558,0l8.558,14.826H0Z"
+                          transform="translate(17.117 14.826) rotate(180)"
+                          fill="#black"
+                        />
+                      </svg>
+                      <span>Black</span>
+                    </label>
+
+                    <input
+                      class="screen-reader-only"
+                      id="color-green"
+                      type="radio"
+                      name="color"
+                      value="green"
+                    />
+                    <label for="color-green">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.117"
+                        height="14.826"
+                        viewBox="0 0 17.117 14.826"
+                      >
+                        <path
+                          d="M8.558,0l8.558,14.826H0Z"
+                          transform="translate(17.117 14.826) rotate(180)"
+                          fill="#7FB173"
+                        />
+                      </svg>
+                      <span>Green</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="only-content">
+                  <p>Size:</p>
+                  <div class="jacket-sizes">
+                    <input
+                      class="screen-reader-only"
+                      id="size-xs"
+                      type="radio"
+                      name="size"
+                      value="XS"
+                    />
+                    <label for="size-xs">XS</label>
+                    <input
+                      class="screen-reader-only"
+                      id="size-s"
+                      type="radio"
+                      name="size"
+                      value="S"
+                      checked="true"
+                    />
+                    <label for="size-s">S</label>
+                    <input
+                      class="screen-reader-only"
+                      id="size-m"
+                      type="radio"
+                      name="size"
+                      value="M"
+                    />
+                    <label for="size-m">M</label>
+                    <input
+                      class="screen-reader-only"
+                      id="size-l"
+                      type="radio"
+                      name="size"
+                      value="L"
+                    />
+                    <label for="size-l">L</label>
+                    <input
+                      class="screen-reader-only"
+                      id="size-xl"
+                      type="radio"
+                      name="size"
+                      value="XL"
+                    />
+                    <label for="size-xl">XL</label>
+                  </div>
+
+                  <label for="shopping-cart-visible" class="add-to-cart-button">
+                    <span>Add to cart</span>
+                    <span class="cart-wrapper">
+                      <span class="cart-background-color point-down"></span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28.602"
+                        height="26.184"
+                        viewBox="0 0 28.602 26.184"
+                      >
+                        <title>shopping-cart</title>
+                        <path
+                          d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                          transform="translate(-3.331 -4.465)"
+                          fill="#3a4754"
+                        />
+                        <path
+                          d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                          transform="translate(-2.186 -4.465)"
+                          fill="#3a4754"
+                        />
+                        <path
+                          d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                          transform="translate(-3.382 -4.493)"
+                          fill="#3a4754"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+                </fieldset>
+              </form>
             </div>
           </section>
 
-          <section class="split-wrapper">
-            <a class="split-50">Product information</a>
-            <a class="split-50">Reviews</a>
+          <section class="split-wrapper underline">
+            <div class="split-50 center-text">
+              <a class="info-headders active"> Product information </a>
+            </div>
+
+            <div class="split-50 center-text">
+              <a class="info-headders"> Reviews </a>
+            </div>
           </section>
 
           <section>
