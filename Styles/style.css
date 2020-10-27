@@ -44,6 +44,10 @@ body {
   text-align: right;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 h1 {
   color: #ca5c43;
   font-family: Helvetica, Arial, sans-serif;
@@ -711,6 +715,23 @@ footer > div > div {
   right: 0;
 }
 
+.jacket-chekout-info {
+  color: #3a4754;
+}
+
+.jacket-options-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.jacket-options-grid label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: normal;
+  color: #3a4754;
+}
+
 /* JACKET */
 .underline {
   border-bottom: 1px solid #a1b2c3;
@@ -794,7 +815,7 @@ footer > div > div {
   outline: none;
 }
 
-.add-to-cart-button span:first-child {
+.add-to-cart-button > span:first-child {
   flex: 1;
   color: white;
   text-align: center;
@@ -805,8 +826,8 @@ footer > div > div {
   padding: 0.9rem;
 }
 
-.add-to-cart-button:hover span:first-child,
-.add-to-cart-button:focus span:first-child {
+.add-to-cart-button:hover > span:first-child,
+.add-to-cart-button:focus > span:first-child {
   color: #3a4754;
 }
 
@@ -835,6 +856,51 @@ footer > div > div {
 
 .add-to-cart-button svg > path {
   fill: white;
+}
+
+.add-to-cart-button.big {
+  height: 8rem;
+  background-color: #3a4754;
+}
+
+.add-to-cart-button.big:hover,
+.add-to-cart-button.big:focus {
+  border: 1px solid #3a4754;
+  background-color: #e9edf2;
+  outline: none;
+}
+
+.add-to-cart-button.big > span:first-child {
+  color: #e9edf2;
+  font-size: 2rem;
+  text-align: left;
+  padding: 1.8rem;
+  font-weight: bold;
+}
+
+.add-to-cart-button.big > span:first-child > span {
+  width: 20rem;
+}
+
+.add-to-cart-button.big:hover span:first-child,
+.add-to-cart-button.big:focus span:first-child {
+  color: #3a4754;
+}
+
+.add-to-cart-button.big .cart-wrapper {
+  flex-basis: 10rem;
+}
+
+.add-to-cart-button.big .cart-background-color {
+  background-color: #a1b2c3;
+  width: 11rem;
+  height: 11rem;
+  top: -8rem;
+}
+
+.add-to-cart-button.big svg {
+  height: 4.5rem;
+  margin: 1rem;
 }
 
 /* CONTACT */
@@ -1119,4 +1185,22 @@ footer > div > div {
 .input-with-label-wrapper input {
   padding: 1rem 10px 0;
   width: 100%;
+}
+
+.circle {
+  background-color: #a1b2c3;
+  color: #3a4754;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50%;
+  border: 0px;
+}
+
+.circle:hover,
+.circle:focus {
+  background-color: #3a4754;
+  color: #a1b2c3;
+}
+
+.one-liner > * {
+  display: inline-block;
 }
