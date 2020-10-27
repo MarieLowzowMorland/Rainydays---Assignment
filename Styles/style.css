@@ -27,14 +27,17 @@ body {
   padding: 40px;
 }
 
-.center-text {
-  text-align: center;
-}
-
 .only-content {
   border: 0;
   margin: 0;
   padding: 0;
+}
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
 }
 
 .right-text {
@@ -66,6 +69,7 @@ nav {
   display: flex;
   align-items: center;
   background-color: #e9edf2;
+  box-shadow: -3px 3px 6px #0000004d;
 }
 nav .filler {
   flex: 1 1;
@@ -225,10 +229,28 @@ h3 {
   font-weight: normal;
 }
 
+.paragraph-wrapper {
+  margin: 1rem 0;
+}
+
+.paragraph-wrapper p {
+  margin: 0;
+}
+
 .split-wrapper {
   display: flex;
   width: 100%;
   box-sizing: border-box;
+}
+
+.split-80 {
+  position: relative;
+  width: 80%;
+}
+
+.split-70 {
+  position: relative;
+  width: 70%;
 }
 
 .split-60 {
@@ -244,6 +266,16 @@ h3 {
 .split-40 {
   position: relative;
   width: 40%;
+}
+
+.split-30 {
+  position: relative;
+  width: 30%;
+}
+
+.split-20 {
+  position: relative;
+  width: 20%;
 }
 
 .helvetica-smal-headding {
@@ -365,6 +397,10 @@ aside {
   margin: 0 auto;
 }
 
+.image-wrapper {
+  text-align: center;
+}
+
 #instagram {
   background-color: #3a4754;
   width: 100%;
@@ -452,9 +488,6 @@ aside {
   transform: skew(-30deg, 60deg) rotate(90deg);
 }
 
-.point-up {
-}
-
 .same-height {
   display: flex;
   justify-content: space-between;
@@ -496,20 +529,147 @@ footer > div > div {
 /* OUR JACKETS*/
 #filter {
   background-color: #e9edf2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 5rem;
+  box-sizing: border-box;
+  margin: 30px 0;
+}
+
+#filter h2 {
+  width: fit-content;
+  display: inline-block;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+#filter svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#filter-menu {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  width: 40rem;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #a1b2c3;
+  transform: translateY(-100%);
+}
+
+#filter-menu > div {
+  flex: 1;
+  margin: 5px;
+}
+
+#filter-menu .jacket-sizes > label {
+  background-color: #e9edf2;
+  color: #3a4754;
+}
+
+#filter-menu .jacket-sizes input:checked + label,
+#filter-menu .jacket-sizes > label:hover,
+#filter-menu .jacket-sizes > label:focus {
+  background-color: #3a4754;
+  color: #e9edf2;
+}
+
+#filter-menu > div:nth-child(2) {
+  min-width: 14rem;
+}
+
+#filter-menu h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #3a4754;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#filter-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+#filter-menu li {
+  display: block;
+  height: 3.5rem;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  line-height: 2.5rem;
+}
+
+#filter-menu li svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+#filter-menu .collections li svg {
+  width: 1rem;
+}
+
+#filter-menu label:hover svg,
+#filter-menu label:focus svg,
+#filter-menu input:checked ~ label svg {
+  height: 2.5rem;
+}
+
+#filter-menu li path,
+#filter-menu li circle {
+  fill: #a1b2c3;
+}
+
+#filter-menu label:hover path,
+#filter-menu label:focus path,
+#filter-menu input:checked ~ label path,
+#filter-menu label:hover circle,
+#filter-menu label:focus circle,
+#filter-menu input:checked ~ label circle {
+  fill: #3a4754;
+}
+
+#filter-menu label {
+  font-size: 1rem;
+  color: #3a4754;
+  font-weight: normal;
+  text-transform: none;
+}
+
+#filter-menu label:hover,
+#filter-menu label:focus,
+#filter-menu input:checked ~ label {
+  font-weight: bold;
+}
+
+#filter-menu label > * {
+  vertical-align: middle;
+}
+
+#filter-menu-visible:checked + #filter-menu {
+  display: flex;
+  animation: slide-from-top 0.5s forwards;
+}
+
+@keyframes slide-from-top {
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .jacket-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 400px;
   gap: 40px 10px;
   justify-content: center;
   align-items: start;
+  margin-bottom: 40px;
 }
 
 .jacket-container > a,
 .jacket-container > a > .jacket-box {
-  height: 100%;
   font-style: normal;
   font-weight: normal;
 }
@@ -528,9 +688,7 @@ footer > div > div {
 }
 
 .jacket-box div {
-  width: 100%;
-  padding: 15px;
-  box-sizing: border-box;
+  padding: 10px;
 }
 
 .jacket-box p {
@@ -545,6 +703,12 @@ footer > div > div {
   font-weight: bold;
   color: #3a4754;
   font-size: 1.3rem;
+}
+
+.jacket-box .add-to-cart-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* JACKET */
@@ -682,6 +846,11 @@ footer > div > div {
   height: 500px;
   width: 100%;
 }
+
+.contact-text {
+  max-width: 300px;
+}
+
 /* INDEX STYLE */
 #welcome {
   background-image: url("../images/friendsOnAdventure.jpg");
@@ -897,6 +1066,7 @@ footer > div > div {
   min-width: 300px;
   padding: 20px;
   text-align: center;
+  box-shadow: -3px 3px 6px #0000004d;
 }
 
 #cart ul {
@@ -908,6 +1078,25 @@ footer > div > div {
 #cart li {
   display: block;
   text-align: left;
+}
+
+.payment-overview p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #3a4754;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.payment-overview > div {
+  border: 1px solid #a1b2c3;
+  border-width: 1px 0 0 0;
+}
+
+#dubble-line {
+  border: 1px solid #a1b2c3;
+  border-width: 1px 0;
+  height: 2px;
 }
 
 .checkout-form {

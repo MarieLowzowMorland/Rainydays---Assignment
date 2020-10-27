@@ -1,0 +1,31 @@
+@media screen and (max-width: 992px) {
+  .fixed-background-wrapper {
+    display: none;
+  }
+
+  .main-contentbox {
+    width: 100%;
+  }
+
+  .grey-card {
+    margin: 0;
+  }
+
+  .split-wrapper {
+    display: block;
+  }
+
+  .split-50 {
+    width: 100%;
+  }
+
+  .image-wrapper {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}

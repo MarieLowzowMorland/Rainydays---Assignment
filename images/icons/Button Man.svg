@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162.884" height="60.426" viewBox="0 0 162.884 60.426">
+  <defs>
+    <filter id="Path_5" x="0" y="0" width="162.884" height="60.426" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.29"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button_Man" data-name="Button Man" transform="translate(6 6)">
+    <g id="Button">
+      <g transform="matrix(1, 0, 0, 1, -6, -6)" filter="url(#Path_5)">
+        <path id="Path_5-2" data-name="Path 5" d="M16.05-592.814H160.934V-635.24H16.05Z" transform="translate(-10.05 641.24)" fill="#3a4754"/>
+      </g>
+      <path id="Path_19" data-name="Path 19" d="M68.41-592.814H41.133L16.05-635.24H68.41Z" transform="translate(76.429 635.24)" fill="#ca5c43"/>
+    </g>
+    <text id="Man" transform="translate(52.253 26.931)" fill="#e9edf2" font-size="15" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-17.08" y="0">MAN</tspan></text>
+    <g id="Icon_ionic-ios-man" data-name="Icon ionic-ios-man" transform="translate(121.172 9.723)">
+      <path id="Path_31" data-name="Path 31" d="M17.169,5.89h-.011a2.382,2.382,0,1,1,2.393-2.382A2.388,2.388,0,0,1,17.169,5.89Z" transform="translate(-11.189 -1.125)" fill="#e9edf2"/>
+      <path id="Path_32" data-name="Path 32" d="M14.15,28.123a1.437,1.437,0,0,1-1.42-1.6l.053-14.6h-.526v5.522a1.276,1.276,0,0,1-.337.962,1.118,1.118,0,0,1-1.6,0,1.267,1.267,0,0,1-.337-.962v-6.4a3.038,3.038,0,0,1,.726-2.02,2.686,2.686,0,0,1,2.051-.947h6.432a2.674,2.674,0,0,1,2.051.952,3.024,3.024,0,0,1,.726,2.014v6.4a1.247,1.247,0,0,1-.347.962,1.182,1.182,0,0,1-1.63,0,1.247,1.247,0,0,1-.347-.962V11.925h-.473v14.6a1.457,1.457,0,1,1-2.9.032V19.13h-.631v7.41A1.5,1.5,0,0,1,14.15,28.123Z" transform="translate(-9.984 -2.879)" fill="#e9edf2"/>
+    </g>
+  </g>
+</svg>

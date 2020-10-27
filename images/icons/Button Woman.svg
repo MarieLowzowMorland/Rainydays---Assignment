@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162.884" height="60.426" viewBox="0 0 162.884 60.426">
+  <defs>
+    <filter id="Path_5" x="0" y="0" width="162.884" height="60.426" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.29"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button_Woman" data-name="Button Woman" transform="translate(6 6)">
+    <g id="Button">
+      <g transform="matrix(1, 0, 0, 1, -6, -6)" filter="url(#Path_5)">
+        <path id="Path_5-2" data-name="Path 5" d="M16.05-592.814H160.934V-635.24H16.05Z" transform="translate(-10.05 641.24)" fill="#3a4754"/>
+      </g>
+      <path id="Path_19" data-name="Path 19" d="M68.41-592.814H41.133L16.05-635.24H68.41Z" transform="translate(76.429 635.24)" fill="#ca5c43"/>
+    </g>
+    <text id="woman" transform="translate(16.98 25.967)" fill="#e9edf2" font-size="15" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">WOMAN</tspan></text>
+    <g id="Icon_ionic-ios-woman" data-name="Icon ionic-ios-woman" transform="translate(120.424 8.228)">
+      <path id="Path_29" data-name="Path 29" d="M17.305,28.088a1.164,1.164,0,0,1-.841-.347,1.349,1.349,0,0,1-.373-.978V20.483h-.731v6.279a1.322,1.322,0,0,1-.389.983,1.246,1.246,0,0,1-1.714,0,1.313,1.313,0,0,1-.389-.983V20.483H10.558l2.34-8.972H12.54l-1.283,4.754a1.2,1.2,0,0,1-1.125.936h0a1.119,1.119,0,0,1-.894-.458,1.419,1.419,0,0,1-.189-1.257l1.525-5.475a2.875,2.875,0,0,1,2.561-2.067H18.31A3,3,0,0,1,20.86,9.991l.005.021L22.391,15.5a1.433,1.433,0,0,1-.205,1.262,1.126,1.126,0,0,1-.889.452,1.2,1.2,0,0,1-1.12-.952V16.25L18.9,11.511h-.4l2.393,8.972H18.515v6.279a1.349,1.349,0,0,1-.373.978A1.152,1.152,0,0,1,17.305,28.088Z" transform="translate(-8.983 -2.844)" fill="#e9edf2"/>
+      <path id="Path_30" data-name="Path 30" d="M17.215,5.879A2.347,2.347,0,0,1,14.906,3.5a2.31,2.31,0,1,1,4.618,0A2.347,2.347,0,0,1,17.215,5.879Z" transform="translate(-10.476 -1.125)" fill="#e9edf2"/>
+    </g>
+  </g>
+</svg>

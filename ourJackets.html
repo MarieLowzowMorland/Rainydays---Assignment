@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Rainydays|OurJackets</title>
+    <link rel="stylesheet" href="https://use.typekit.net/cuv4oew.css" />
     <link href="./Styles/style.css" rel="stylesheet" type="text/CSS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header>
@@ -38,31 +40,46 @@
             />
           </svg>
         </div>
-        <a href="checkout.html" class="svg-button">
-          <svg
-            title="shopping-cart"
-            xmlns="http://www.w3.org/2000/svg"
-            width="28.602"
-            height="26.184"
-            viewBox="0 0 28.602 26.184"
-          >
-            <path
-              d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
-              transform="translate(-3.331 -4.465)"
-              fill="#3a4754"
-            />
-            <path
-              d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
-              transform="translate(-2.186 -4.465)"
-              fill="#3a4754"
-            />
-            <path
-              d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
-              transform="translate(-3.382 -4.493)"
-              fill="#3a4754"
-            />
-          </svg>
-        </a>
+        <div id="nav-shopping-cart">
+          <input
+            type="checkbox"
+            id="shopping-cart-visible"
+            class="screen-reader-only"
+          />
+          <label for="shopping-cart-visible" class="svg-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28.602"
+              height="26.184"
+              viewBox="0 0 28.602 26.184"
+            >
+              <title>shopping-cart</title>
+              <path
+                d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                transform="translate(-3.331 -4.465)"
+                fill="#3a4754"
+              />
+              <path
+                d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                transform="translate(-2.186 -4.465)"
+                fill="#3a4754"
+              />
+              <path
+                d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                transform="translate(-3.382 -4.493)"
+                fill="#3a4754"
+              />
+            </svg>
+          </label>
+          <div id="cart-circle">
+            <p>1</p>
+          </div>
+          <label for="shopping-cart-visible" id="overlay"></label>
+          <section id="cart-overlay">
+            <h2 class="red-h2">Your cart</h2>
+            <a href="checkout.html">lenke videre</a>
+          </section>
+        </div>
       </nav>
     </header>
 
@@ -73,153 +90,1197 @@
 
       <div class="main-contentbox">
         <h1 class="screen-reader-only">List of all our Jackets</h1>
+        <input
+          id="filter-menu-visible"
+          type="checkbox"
+          class="screen-reader-only"
+        />
+        <div id="filter-menu">
+          <div>
+            <h3>Gender</h3>
+            <ul>
+              <li>
+                <input id="man" type="checkbox" class="screen-reader-only" />
+                <label tabindex="0" for="man">
+                  <svg
+                    id="Icon_ionic-ios-man"
+                    data-name="Icon ionic-ios-man"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.024"
+                    height="33.75"
+                    viewBox="0 0 16.024 33.75"
+                  >
+                    <path
+                      id="Path_31"
+                      data-name="Path 31"
+                      d="M17.979,7.5h-.014a3.185,3.185,0,1,1,3.2-3.185A3.193,3.193,0,0,1,17.979,7.5Z"
+                      transform="translate(-9.984 -1.125)"
+                      fill="#e9edf2"
+                    />
+                    <path
+                      id="Path_32"
+                      data-name="Path 32"
+                      d="M15.553,34.875a1.921,1.921,0,0,1-1.9-2.138l.07-19.519h-.7V20.6a1.706,1.706,0,0,1-.45,1.287,1.494,1.494,0,0,1-2.138,0,1.694,1.694,0,0,1-.45-1.287v-8.55a4.061,4.061,0,0,1,.97-2.7A3.591,3.591,0,0,1,13.7,8.086h8.6a3.574,3.574,0,0,1,2.742,1.273,4.043,4.043,0,0,1,.97,2.693V20.6a1.667,1.667,0,0,1-.464,1.287,1.58,1.58,0,0,1-2.18,0A1.667,1.667,0,0,1,22.9,20.6V13.219h-.633V32.737a1.948,1.948,0,1,1-3.881.042V22.852h-.844v9.907A2,2,0,0,1,15.553,34.875Z"
+                      transform="translate(-9.984 -1.125)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Man</span>
+                </label>
+              </li>
+              <li>
+                <input id="woman" type="checkbox" class="screen-reader-only" />
+                <label tabindex="0" for="woman">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18.006"
+                    height="33.75"
+                    viewBox="0 0 18.006 33.75"
+                  >
+                    <g
+                      id="Icon_ionic-ios-woman"
+                      data-name="Icon ionic-ios-woman"
+                      transform="translate(0)"
+                    >
+                      <path
+                        id="Path_29"
+                        data-name="Path 29"
+                        d="M20.109,34.875a1.556,1.556,0,0,1-1.125-.464,1.8,1.8,0,0,1-.5-1.308v-8.4h-.977v8.4a1.768,1.768,0,0,1-.52,1.315,1.666,1.666,0,0,1-2.292,0,1.755,1.755,0,0,1-.52-1.315v-8.4H11.088l3.129-12h-.478l-1.716,6.356a1.6,1.6,0,0,1-1.5,1.252h0a1.5,1.5,0,0,1-1.2-.612,1.9,1.9,0,0,1-.253-1.68l2.039-7.32a3.844,3.844,0,0,1,3.424-2.763h6.919a4.011,4.011,0,0,1,3.41,2.735l.007.028,2.039,7.334a1.915,1.915,0,0,1-.274,1.688,1.506,1.506,0,0,1-1.188.6,1.6,1.6,0,0,1-1.5-1.273v-.014L22.24,12.712H21.7l3.2,12H21.727v8.4a1.8,1.8,0,0,1-.5,1.308A1.54,1.54,0,0,1,20.109,34.875Z"
+                        transform="translate(-8.983 -1.125)"
+                        fill="#e9edf2"
+                      />
+                      <path
+                        id="Path_30"
+                        data-name="Path 30"
+                        d="M17.993,7.481A3.138,3.138,0,0,1,14.906,4.3a3.088,3.088,0,1,1,6.173,0A3.138,3.138,0,0,1,17.993,7.481Z"
+                        transform="translate(-8.983 -1.125)"
+                        fill="#e9edf2"
+                      />
+                    </g>
+                  </svg>
+
+                  <span>Woman</span>
+                </label>
+              </li>
+            </ul>
+            <h3>Activity</h3>
+            <ul>
+              <li>
+                <input id="hiking" type="checkbox" class="screen-reader-only" />
+                <label tabindex="0" for="hiking">
+                  <svg
+                    id="Icon_awesome-hiking"
+                    data-name="Icon awesome-hiking"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20.999"
+                    height="28.001"
+                    viewBox="0 0 20.999 28.001"
+                    role="presentation"
+                  >
+                    <path
+                      id="Icon_awesome-hiking-2"
+                      data-name="Icon awesome-hiking"
+                      d="M4.427,25.825a1.75,1.75,0,0,0,3.4.849L9.2,21.153,6.317,18.266ZM5.241,15.1,7.492,6.4A.858.858,0,0,0,6.84,5.356,4.5,4.5,0,0,0,1.409,8.483L.027,13.849a.858.858,0,0,0,.652,1.042l3.476.834A.9.9,0,0,0,5.241,15.1ZM20.125,8.75H19.25a.875.875,0,0,0-.875.875V10.5h-1.9L13.916,7.942A3.214,3.214,0,0,0,8.525,9.435L7.052,15.326a1.751,1.751,0,0,0,.46,1.662l4.737,4.737V26.25a1.75,1.75,0,1,0,3.5,0V21.725a3.477,3.477,0,0,0-1.025-2.475l-2.56-2.56c.008-.027.027-.049.034-.077l1.088-4.352,1.227,1.227A1.75,1.75,0,0,0,15.749,14h2.625V27.126a.875.875,0,0,0,.875.875h.875A.875.875,0,0,0,21,27.126V9.625A.874.874,0,0,0,20.125,8.75Zm-7-3.5A2.625,2.625,0,1,0,10.5,2.625,2.625,2.625,0,0,0,13.125,5.25Z"
+                      transform="translate(0)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Hiking</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="running"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="running">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22.812"
+                    height="28.075"
+                    viewBox="0 0 22.812 28.075"
+                  >
+                    <path
+                      id="Icon_awesome-running"
+                      data-name="Icon awesome-running"
+                      d="M14.916,5.264a2.632,2.632,0,1,0-2.632-2.632A2.632,2.632,0,0,0,14.916,5.264ZM6.234,17.409,5.423,19.3H1.755a1.755,1.755,0,1,0,0,3.51H6a2.627,2.627,0,0,0,2.419-1.6L8.9,20.091l-.585-.345A5.222,5.222,0,0,1,6.234,17.409Zm14.823-5.126H18.643l-1.429-2.92a5.262,5.262,0,0,0-3.388-2.793L9.928,5.41A5.242,5.242,0,0,0,5.5,6.35L3.32,8.018A1.755,1.755,0,0,0,5.455,10.8L7.632,9.135A1.708,1.708,0,0,1,9.017,8.8l.806.24L7.769,13.83a3.519,3.519,0,0,0,1.442,4.4l4.66,2.751L12.365,25.8a1.755,1.755,0,1,0,3.349,1.048L17.449,21.3a2.643,2.643,0,0,0-1.187-2.983L12.9,16.338l1.717-4.293,1.112,2.272A2.648,2.648,0,0,0,18.1,15.792h2.961a1.754,1.754,0,1,0,0-3.509Z"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Running</span>
+                </label>
+              </li>
+              <li>
+                <input id="skiing" type="checkbox" class="screen-reader-only" />
+                <label tabindex="0" for="skiing">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28.822"
+                    height="25.619"
+                    viewBox="0 0 28.822 25.619"
+                  >
+                    <path
+                      id="Icon_awesome-skiing-nordic"
+                      data-name="Icon awesome-skiing-nordic"
+                      d="M16.813,4.8a2.4,2.4,0,1,0-2.4-2.4A2.4,2.4,0,0,0,16.813,4.8ZM27.621,20.816a1.2,1.2,0,0,0-1.2,1.2,1.2,1.2,0,0,1-1.2,1.2H21.741l1.276-8.927a1.6,1.6,0,0,0-.6-3.082h-2.2L18.914,8.546A4.809,4.809,0,0,0,15.822,6L12.259,4.939a4.791,4.791,0,0,0-4.043.856L6.23,7.316a1.6,1.6,0,0,0-.3,2.247c.035.045.085.065.12.105L3.348,23.218H1.2a1.2,1.2,0,0,0,0,2.4H25.219a3.607,3.607,0,0,0,3.6-3.6A1.2,1.2,0,0,0,27.621,20.816Zm-13.035,2.4H9.737l2.157-4.553-1.1-.65a4.8,4.8,0,0,1-1.476-1.391L6.19,23.218H4.979L7.6,10.138a1.62,1.62,0,0,0,.585-.28l1.987-1.521a1.549,1.549,0,0,1,1.266-.305l.736.22-1.876,4.373a3.211,3.211,0,0,0,1.316,4.018l4.253,2.512-1.276,4.063Zm5.534,0H17.939l1.181-3.778a2.414,2.414,0,0,0-1.081-2.722l-3.062-1.806,1.566-3.918,1.016,2.072a2.419,2.419,0,0,0,2.157,1.346h1.666L20.12,23.218Z"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Skiing</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="canoeing"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="canoeing">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28.143"
+                    height="24.625"
+                    viewBox="0 0 28.143 24.625"
+                  >
+                    <path
+                      id="Icon_map-canoe"
+                      data-name="Icon map-canoe"
+                      d="M10.357,8.089a2.6,2.6,0,1,0-2.61-2.607,2.607,2.607,0,0,0,2.61,2.607ZM.72,22.326a4.325,4.325,0,0,0,1.728-.377,4.219,4.219,0,0,1,3.571,0,4.218,4.218,0,0,0,3.47,0,4.219,4.219,0,0,1,3.571,0,4.2,4.2,0,0,0,3.463,0,4.219,4.219,0,0,1,3.571,0,4.219,4.219,0,0,0,3.471,0,4.24,4.24,0,0,1,3.329-.107,4.736,4.736,0,0,0-3.5-7.949l-.533.057A3.278,3.278,0,0,1,19.9,16.417l-10.858,0-.908-.533,2.189-3.664,2.4,1.381a1.451,1.451,0,0,0,2.182-.373l2.4-3.908A1.309,1.309,0,1,0,15.1,7.962L13.416,10.7l-4-2.207A2.633,2.633,0,0,0,5.475,9.506l-3.14,5.366c-.534,1.115-.061,1.594-.061,1.594l-1.554,0ZM28.863,27.5a4.2,4.2,0,0,1-1.728-.373,4.284,4.284,0,0,0-1.789-.4,4.239,4.239,0,0,0-1.781.4,4.225,4.225,0,0,1-3.471,0,4.225,4.225,0,0,0-3.571,0,4.207,4.207,0,0,1-3.463,0,4.223,4.223,0,0,0-3.57,0,4.224,4.224,0,0,1-3.47,0,4.217,4.217,0,0,0-3.567,0A4.234,4.234,0,0,1,.72,27.5v-2.59a4.236,4.236,0,0,0,1.732-.376,4.217,4.217,0,0,1,3.567,0,4.188,4.188,0,0,0,3.47,0,4.223,4.223,0,0,1,3.57,0,4.171,4.171,0,0,0,3.463,0,4.225,4.225,0,0,1,3.571,0,4.189,4.189,0,0,0,3.471,0,4.248,4.248,0,0,1,1.781-.4,4.293,4.293,0,0,1,1.789.4,4.217,4.217,0,0,0,1.728.376Z"
+                      transform="translate(-0.72 -2.88)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Canoeing</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="snowboard"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="snowboard">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25.993"
+                    height="26"
+                    viewBox="0 0 25.993 26"
+                  >
+                    <path
+                      id="Icon_awesome-snowboarding"
+                      data-name="Icon awesome-snowboarding"
+                      d="M21.94,4.875A2.437,2.437,0,1,0,19.5,2.437,2.438,2.438,0,0,0,21.94,4.875Zm1.463,7.8a1.625,1.625,0,1,0,1.95-2.6L19.7,5.835A8.138,8.138,0,0,0,17.39,4.626L14.156,3.55,12.83.9a1.624,1.624,0,1,0-2.9,1.452L11.4,5.307A2.435,2.435,0,0,0,12.81,6.525l.833.279L11.551,7.851a3.231,3.231,0,0,0-1.8,2.9v2.7L5.99,14.706a1.623,1.623,0,0,0-1.026,2.057,1.548,1.548,0,0,0,.442.655L3.441,16.7a1.944,1.944,0,0,1-1.107-1.016A1.219,1.219,0,1,0,.125,16.717a4.36,4.36,0,0,0,2.483,2.275l18.525,6.739A4.437,4.437,0,0,0,22.641,26a4.311,4.311,0,0,0,1.854-.416,1.219,1.219,0,1,0-1.031-2.209,1.941,1.941,0,0,1-1.5.066L17.355,21.76a1.611,1.611,0,0,0,.9-1.112l1.112-5.18a2.444,2.444,0,0,0-.919-2.458l-2.641-1.98,3.352-1.549,4.24,3.194ZM16.07,15.3l-1,4.672a1.578,1.578,0,0,0,.142,1.016L6.61,17.86a1.58,1.58,0,0,0,.406-.066l4.316-1.442A2.431,2.431,0,0,0,13,14.041V13Z"
+                      transform="translate(-0.01)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Snowboard</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="down-hill"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="down-hill">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="29.882"
+                    height="29.878"
+                    viewBox="0 0 29.882 29.878"
+                  >
+                    <path
+                      id="Icon_awesome-skiing"
+                      data-name="Icon awesome-skiing"
+                      d="M25.215,5.6a2.8,2.8,0,1,0-2.8-2.8A2.8,2.8,0,0,0,25.215,5.6Zm4.261,20.784a1.4,1.4,0,0,0-1.979,0,2.375,2.375,0,0,1-2.632.508l-7.926-4.1,2.872-4.307a2.8,2.8,0,0,0-.35-3.537L17.1,12.59l-6.245-3.1a3.724,3.724,0,0,0,1.033,3.175l4.383,4.389L13.594,21.07,2.043,15.1A1.4,1.4,0,1,0,.759,17.586L23.633,29.405a5.14,5.14,0,0,0,2.165.473,5.2,5.2,0,0,0,3.677-1.518,1.4,1.4,0,0,0,0-1.973ZM7,5.346,6.333,6.66a2.285,2.285,0,0,0,2.5-.28l2.755,1.366c-.006.006-.006.012-.012.018l6.683,3.315,1.891-.759.374,1.115a2.778,2.778,0,0,0,1.4,1.617l3.391,1.693A1.866,1.866,0,1,0,26.983,11.4L23.942,9.881l-1-2.988a3.75,3.75,0,0,0-4.932-2.288L13.273,6.5,9.625,4.693A2.263,2.263,0,0,0,8.4,2.615L7.757,3.881H7.745L5.738,3.473a.3.3,0,0,0-.292.1A.305.305,0,0,0,5.475,4L7,5.346Z"
+                      transform="translate(0)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Down hill skiing</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Size</h3>
+            <div class="jacket-sizes">
+              <input
+                class="screen-reader-only"
+                id="size-xs"
+                type="radio"
+                name="size"
+                value="XS"
+              />
+              <label tabindex="0" for="size-xs">XS</label>
+              <input
+                class="screen-reader-only"
+                id="size-s"
+                type="radio"
+                name="size"
+                value="S"
+                checked="true"
+              />
+              <label tabindex="0" for="size-s">S</label>
+              <input
+                class="screen-reader-only"
+                id="size-m"
+                type="radio"
+                name="size"
+                value="M"
+              />
+              <label tabindex="0" for="size-m">M</label>
+              <input
+                class="screen-reader-only"
+                id="size-l"
+                type="radio"
+                name="size"
+                value="L"
+              />
+              <label tabindex="0" for="size-l">L</label>
+              <input
+                class="screen-reader-only"
+                id="size-xl"
+                type="radio"
+                name="size"
+                value="XL"
+              />
+              <label tabindex="0" for="size-xl">XL</label>
+            </div>
+            <h3>Product property</h3>
+            <ul>
+              <li>
+                <input
+                  id="water-proof"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="water-proof">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23.498"
+                    height="24.847"
+                    viewBox="0 0 23.498 24.847"
+                  >
+                    <path
+                      id="Icon_metro-water"
+                      data-name="Icon metro-water"
+                      d="M15.345,12.84c-.65,5.113-3.969,6.022-3.969,9.577a4.121,4.121,0,0,0,8.238,0c0-3.555-3.319-4.464-3.969-9.577a.155.155,0,0,0-.3,0ZM7.715,1.658c-.65,5.113-3.969,6.021-3.969,9.577a4.076,4.076,0,0,0,4.118,3.974,4.076,4.076,0,0,0,4.118-3.974c0-3.555-3.319-4.464-3.969-9.577a.154.154,0,0,0-.3,0Zm15.262,0c-.65,5.113-3.969,6.022-3.969,9.577a4.121,4.121,0,0,0,8.236,0c0-3.555-3.319-4.464-3.969-9.577a.154.154,0,0,0-.3,0Z"
+                      transform="translate(-3.746 -1.544)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Water proof</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="wind-proof"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="wind-proof">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.002"
+                    height="23.496"
+                    viewBox="0 0 26.002 23.496"
+                  >
+                    <path
+                      id="Icon_awesome-wind"
+                      data-name="Icon awesome-wind"
+                      d="M7.958,14H.813A.829.829,0,0,0,0,14.839v1.679a.829.829,0,0,0,.813.839H8.034a1.709,1.709,0,0,1,1.7,1.4,1.664,1.664,0,0,1-1.6,1.962,1.64,1.64,0,0,1-1.544-1.149.8.8,0,0,0-.772-.53H4.144A.826.826,0,0,0,3.336,20a4.93,4.93,0,0,0,4.784,4.07A5.037,5.037,0,0,0,7.958,14ZM.813,12.322H17.875A5,5,0,0,0,22.639,6.2a4.846,4.846,0,0,0-9.547.126.819.819,0,0,0,.8.96H15.56a.8.8,0,0,0,.772-.53,1.64,1.64,0,0,1,1.544-1.149,1.667,1.667,0,0,1,1.6,1.962,1.705,1.705,0,0,1-1.7,1.4H.813A.829.829,0,0,0,0,9.8v1.679A.829.829,0,0,0,.813,12.322ZM20.313,14H12.376A6.665,6.665,0,0,1,14.4,17.357h5.916a2.519,2.519,0,0,1,0,5.036,2.421,2.421,0,0,1-2.113-1.28.833.833,0,0,0-.736-.4H15.748a.836.836,0,0,0-.777,1.107,5.64,5.64,0,0,0,6.571,3.792,5.762,5.762,0,0,0,4.3-4.338A5.843,5.843,0,0,0,20.313,14Z"
+                      transform="translate(0 -2.253)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Wind proof</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="winter-lined"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="winter-lined">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.086"
+                    height="29.81"
+                    viewBox="0 0 26.086 29.81"
+                  >
+                    <path
+                      id="Icon_awesome-snowflake"
+                      data-name="Icon awesome-snowflake"
+                      d="M25.635,20.1l-1.968-1.135,1.514-.408a.9.9,0,0,0,.635-1.1l-.233-.868a.9.9,0,0,0-1.1-.635L20.36,17.059,16.64,14.9l3.715-2.148,4.122,1.106a.9.9,0,0,0,1.1-.635l.233-.868a.9.9,0,0,0-.635-1.1l-1.514-.408,1.968-1.135a.9.9,0,0,0,.332-1.228l-.9-1.56A.9.9,0,0,0,23.83,6.6L21.862,7.732l.408-1.514a.9.9,0,0,0-.635-1.1l-.868-.233a.9.9,0,0,0-1.1.635L18.561,9.642,14.9,11.749V7.237l3.127-3.127a.935.935,0,0,0,0-1.316l-.658-.658a.935.935,0,0,0-1.316,0L14.9,3.284V.932A.934.934,0,0,0,13.973,0H12.11a.934.934,0,0,0-.932.932V3.284L10.031,2.137a.935.935,0,0,0-1.316,0l-.664.658a.924.924,0,0,0,0,1.316l3.127,3.127v4.512L7.522,9.642,6.416,5.519a.9.9,0,0,0-1.1-.635l-.868.233a.9.9,0,0,0-.635,1.1l.408,1.514L2.253,6.6a.9.9,0,0,0-1.228.332l-.9,1.555A.9.9,0,0,0,.454,9.712l1.968,1.135-1.514.408a.9.9,0,0,0-.64,1.106l.233.868a.9.9,0,0,0,1.1.635l4.122-1.106L9.437,14.9,5.723,17.053,1.6,15.947a.9.9,0,0,0-1.1.635l-.233.868A.9.9,0,0,0,.9,18.55l1.514.408L.448,20.1a.9.9,0,0,0-.332,1.228l.9,1.56a.9.9,0,0,0,1.228.332l1.968-1.135L3.807,23.6a.9.9,0,0,0,.635,1.1l.868.233a.9.9,0,0,0,1.1-.635l1.106-4.122,3.656-2.108v4.512L8.046,25.705a.924.924,0,0,0,0,1.316l.658.658a.935.935,0,0,0,1.316,0l1.147-1.147v2.346a.934.934,0,0,0,.932.932h1.863a.934.934,0,0,0,.932-.932V26.526l1.147,1.147a.935.935,0,0,0,1.316,0l.658-.658a.935.935,0,0,0,0-1.316L14.9,22.573V18.061l3.656,2.108,1.106,4.122a.9.9,0,0,0,1.1.635l.868-.233a.9.9,0,0,0,.635-1.1l-.408-1.514,1.968,1.135a.9.9,0,0,0,1.228-.332l.9-1.56a.89.89,0,0,0-.326-1.223Z"
+                      transform="translate(0.002)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Winter lined</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="ventilated"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="ventilated">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22.247"
+                    height="18.292"
+                    viewBox="0 0 22.247 18.292"
+                  >
+                    <path
+                      id="Icon_metro-air"
+                      data-name="Icon metro-air"
+                      d="M6.143,10.2c2.159-1.854,3.865-3.32,8.493-.7a11.29,11.29,0,0,0,5.508,1.728c2.614,0,4.308-1.453,5.773-2.71a1.281,1.281,0,0,0,.151-1.778,1.22,1.22,0,0,0-1.743-.154c-2.158,1.856-3.865,3.322-8.493.7-6.115-3.452-8.98-.992-11.281.985a1.282,1.282,0,0,0-.15,1.778,1.219,1.219,0,0,0,1.741.152Zm18.183,2.692c-2.158,1.854-3.865,3.322-8.493.7-6.115-3.454-8.98-.994-11.281.983a1.281,1.281,0,0,0-.15,1.778,1.218,1.218,0,0,0,1.741.154c2.159-1.855,3.865-3.321,8.493-.707a11.3,11.3,0,0,0,5.508,1.73c2.614,0,4.308-1.453,5.773-2.713a1.28,1.28,0,0,0,.151-1.777,1.218,1.218,0,0,0-1.743-.153Zm0,6.311c-2.158,1.856-3.865,3.322-8.493.707-6.115-3.454-8.98-.995-11.281.983a1.281,1.281,0,0,0-.15,1.778,1.218,1.218,0,0,0,1.741.152c2.159-1.854,3.865-3.318,8.493-.7a11.324,11.324,0,0,0,5.508,1.73c2.614,0,4.308-1.456,5.773-2.713a1.281,1.281,0,0,0,.151-1.778,1.221,1.221,0,0,0-1.743-.154Z"
+                      transform="translate(-4.112 -5.552)"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Ventilated</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Collection</h3>
+            <ul class="collections">
+              <li>
+                <input
+                  id="collection-1"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-2"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-3"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-4"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-5"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-6"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-7"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-7">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-8"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-8">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+              <li>
+                <input
+                  id="collection-9"
+                  type="checkbox"
+                  class="screen-reader-only"
+                />
+                <label tabindex="0" for="collection-9">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      id="Ellipse_24"
+                      data-name="Ellipse 24"
+                      cx="8"
+                      cy="8"
+                      r="8"
+                      fill="#e9edf2"
+                    />
+                  </svg>
+                  <span>Collection name</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
         <section id="filter">
           <h2>Filter</h2>
+          <label for="filter-menu-visible">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="41"
+              height="41"
+              viewBox="0 0 41 41"
+            >
+              <defs>
+                <filter
+                  id="Ellipse_7"
+                  x="0"
+                  y="0"
+                  width="41"
+                  height="41"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feOffset dx="3" dy="3" input="SourceAlpha" />
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feFlood flood-opacity="0.161" />
+                  <feComposite operator="in" in2="blur" />
+                  <feComposite in="SourceGraphic" />
+                </filter>
+              </defs>
+              <g
+                id="Group_268"
+                data-name="Group 268"
+                transform="translate(-231 2)"
+              >
+                <g
+                  transform="matrix(1, 0, 0, 1, 231, -2)"
+                  filter="url(#Ellipse_7)"
+                >
+                  <circle
+                    id="Ellipse_7-2"
+                    data-name="Ellipse 7"
+                    cx="11.5"
+                    cy="11.5"
+                    r="11.5"
+                    transform="translate(6 6)"
+                    fill="#fff"
+                  />
+                </g>
+                <path
+                  id="Path_43"
+                  data-name="Path 43"
+                  d="M1857.5,2619.119l8.829-5.349-8.829-5.173"
+                  transform="translate(2862.619 -1845.756) rotate(90)"
+                  fill="none"
+                  stroke="#3a4754"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </label>
         </section>
         <section class="jacket-container">
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket1.png" alt="image of jacket-name" />
-              <div>
+             <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket7.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket2.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket3.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
-              <img src="images/jacket6.png" alt="image of jacket-name" />
-              <div>
+              <img src="images/jacket2.png" alt="image of jacket-name" />
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket4.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket5.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket1.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket7.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket2.png" alt="image of jacket-name" />
-              <div>
+              <div class=split-wrapper>
+              <div class="split-50">
                 <h2>Jacket name</h2>
                 <p>Gore-Tex jacket</p>
                 <p>Color</p>
                 <p class="price">NOK 2000</p>
               </div>
+              <form class="split-50">
+                <label for="shopping-cart-visible" class="add-to-cart-button">
+                  <span>Buy</span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28.602"
+                      height="26.184"
+                      viewBox="0 0 28.602 26.184"
+                    >
+                      <title>Shopping-cart</title>
+                      <path
+                        d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-3.331 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                        transform="translate(-2.186 -4.465)"
+                        fill="#3a4754"
+                      />
+                      <path
+                        d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                        transform="translate(-3.382 -4.493)"
+                        fill="#3a4754"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
             </div>
           </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket3.png" alt="image of jacket-name" />
-              <div>
-                <h2>Jacket name</h2>
-                <p>Gore-Tex jacket</p>
-                <p>Color</p>
-                <p class="price">NOK 2000</p>
+              <div class=split-wrapper>
+                <div class="split-50">
+                  <h2>Jacket name</h2>
+                  <p>Gore-Tex jacket</p>
+                  <p>Color</p>
+                  <p class="price">NOK 2000</p>
+                </div>
+                <form class="split-50">
+                  <label for="shopping-cart-visible" class="add-to-cart-button">
+                    <span>Buy</span>
+                    <span class="cart-wrapper">
+                      <span class="cart-background-color point-down"></span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28.602"
+                        height="26.184"
+                        viewBox="0 0 28.602 26.184"
+                      >
+                        <title>Shopping-cart</title>
+                        <path
+                          d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                          transform="translate(-3.331 -4.465)"
+                          fill="#3a4754"
+                        />
+                        <path
+                          d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                          transform="translate(-2.186 -4.465)"
+                          fill="#3a4754"
+                        />
+                        <path
+                          d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                          transform="translate(-3.382 -4.493)"
+                          fill="#3a4754"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+                </form>
               </div>
-            </div>
-          </a>
+              </div>
+            </a>
 
           <a href="jacket.html">
             <div class="jacket-box">
               <img src="images/jacket6.png" alt="image of jacket-name" />
-              <div>
-                <h2>Jacket name</h2>
-                <p>Gore-Tex jacket</p>
-                <p>Color</p>
-                <p class="price">NOK 2000</p>
+              <div class=split-wrapper>
+                <div class="split-50">
+                  <h2>Jacket name</h2>
+                  <p>Gore-Tex jacket</p>
+                  <p>Color</p>
+                  <p class="price">NOK 2000</p>
+                </div>
+                <form class="split-50">
+                  <label for="shopping-cart-visible" class="add-to-cart-button">
+                    <span>Buy</span>
+                    <span class="cart-wrapper">
+                      <span class="cart-background-color point-down"></span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28.602"
+                        height="26.184"
+                        viewBox="0 0 28.602 26.184"
+                      >
+                        <title>Shopping-cart</title>
+                        <path
+                          d="M12.087,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                          transform="translate(-3.331 -4.465)"
+                          fill="#3a4754"
+                        />
+                        <path
+                          d="M27.872,29.387a1.262,1.262,0,1,1-1.262-1.262,1.262,1.262,0,0,1,1.262,1.262Z"
+                          transform="translate(-2.186 -4.465)"
+                          fill="#3a4754"
+                        />
+                        <path
+                          d="M31.974,9.362a.408.408,0,0,0-.358-.3L9.215,6.817A.687.687,0,0,1,8.7,6.482,7.291,7.291,0,0,0,7.86,5.156c-.53-.67-1.527-.649-3.356-.663A1.015,1.015,0,0,0,3.382,5.5,1,1,0,0,0,4.455,6.5a8.824,8.824,0,0,1,1.788.135c.323.1.585.649.681,1.126a.027.027,0,0,0,.007.021c.014.086.138.727.138.734L9.82,23.606a5.656,5.656,0,0,0,1,2.545,2.712,2.712,0,0,0,2.263,1.155H29.353a.993.993,0,0,0,.99-.955.978.978,0,0,0-.963-1.041H13.066a.78.78,0,0,1-.571-.2,3.247,3.247,0,0,1-.791-1.854l-.3-1.69a.039.039,0,0,1,.028-.043l19.1-3.351a.411.411,0,0,0,.337-.371l1.1-8.256A.421.421,0,0,0,31.974,9.362Z"
+                          transform="translate(-3.382 -4.493)"
+                          fill="#3a4754"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+                </form>
               </div>
-            </div>
-          </a>
+              </div>
+            </a>
+
         </section>
       </div>
     </main>
