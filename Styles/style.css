@@ -133,6 +133,11 @@ nav a.logo-link {
   margin: 5px;
 }
 
+#Logo {
+  height: 5.5rem;
+  width: auto;
+}
+
 nav div {
   display: inline-block;
 }
@@ -183,6 +188,11 @@ nav a {
   width: 300px;
   background-color: white;
   transform: translateX(100%);
+  padding: 30px;
+}
+
+#cart-overlay h2 {
+  text-align: center;
 }
 
 #cart-circle p {
@@ -961,6 +971,10 @@ footer > div > div {
   box-sizing: border-box;
 }
 
+.jacket-slider {
+  grid-template-columns: auto auto auto auto;
+}
+
 #takeALook {
   background-color: #3a4754;
   width: 100%;
@@ -1017,7 +1031,18 @@ footer > div > div {
 #ourHistory {
   background-color: #3a4754;
   width: 100%;
-  height: 440px;
+  background-image: url("../images/mountains.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: left;
+}
+
+#ourHistory .section-content {
+  float: right;
+}
+
+#ourHistory img {
+  object-fit: cover;
 }
 
 #ourHistory p {
@@ -1135,7 +1160,8 @@ footer > div > div {
   box-shadow: -3px 3px 6px #0000004d;
 }
 
-#cart ul {
+#cart ul,
+#cart-overlay ul {
   margin: 0;
   border: 1px solid #a1b2c3;
   border-width: 1px 0;
@@ -1159,10 +1185,11 @@ footer > div > div {
   border-width: 1px 0 0 0;
 }
 
-#dubble-line {
+#doubble-line {
   border: 1px solid #a1b2c3;
   border-width: 1px 0;
   height: 2px;
+  width: 100%;
 }
 
 .checkout-form {
