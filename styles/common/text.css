@@ -58,6 +58,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.helvetica {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .smal-blue-text,
 label,
 #shipping-address p {
