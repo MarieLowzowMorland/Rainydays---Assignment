@@ -1,12 +1,7 @@
 footer {
   box-sizing: border-box;
   width: 100%;
-  padding: 50px 50px;
   background-color: var(--primary);
-  background-image: url("../../images/map.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: right;
   z-index: 1000;
   position: relative;
 }
@@ -16,7 +11,23 @@ footer p {
 }
 
 footer > div > div {
-  display: inline-block;
-  margin-left: 40px;
+  margin: 0 auto 40px;
   max-width: 200px;
+}
+
+@media screen and (min-width: 600px) {
+  footer > div > div {
+    display: inline-block;
+    margin: 0 0 0 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    background-image: url("../../images/map.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    padding: 50px;
+  }
 }

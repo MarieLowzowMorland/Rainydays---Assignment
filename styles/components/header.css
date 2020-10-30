@@ -10,6 +10,17 @@ nav {
   background-color: var(--bg-primary);
   box-shadow: -3px 3px 6px #0000004d;
 }
+
+nav > div {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+nav > div > div {
+  display: inline-block;
+}
+
 nav .filler {
   flex: 1 1;
 }
@@ -71,10 +82,6 @@ nav a.logo-link {
 #Logo {
   height: 5.5rem;
   width: auto;
-}
-
-nav div {
-  display: inline-block;
 }
 
 h2,
@@ -169,4 +176,41 @@ nav a {
 
 #shopping-cart-visible:checked ~ #overlay {
   display: block;
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    display: block;
+    padding: 0 10px;
+  }
+
+  nav .search {
+    border-top: 1px solid var(--icon-color);
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  nav .search > div {
+    display: inline-block;
+  }
+
+  nav ul {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+  }
+
+  nav li {
+    display: block;
+    padding: 5px 0;
+    border-top: 1px solid var(--icon-color);
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  #menu-visible:checked ~ .menu {
+    display: block;
+  }
 }
