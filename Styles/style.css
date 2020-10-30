@@ -1,3 +1,10 @@
+:root {
+  --primary: #3a4754;
+  --secondary: #ca5c43;
+  --icon-color: #a1b2c3;
+  --p-background: #e9edf2;
+}
+
 /* COMMON STYLE */
 html {
   font-size: 12px;
@@ -49,7 +56,7 @@ body {
 }
 
 h1 {
-  color: #ca5c43;
+  color: var(--secondary);
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -57,7 +64,7 @@ h1 {
 }
 
 a {
-  color: #ca5c43;
+  color: var(--secondary);
   font-family: Helvetica, Arial, sans-serif;
   font-style: oblique;
   font-weight: bold;
@@ -72,7 +79,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  background-color: #e9edf2;
+  background-color: var(--p-background);
   box-shadow: -3px 3px 6px #0000004d;
 }
 nav .filler {
@@ -92,12 +99,12 @@ nav li {
 }
 
 nav li a:hover {
-  color: #ca5c43;
-  border-bottom: 2px solid #ca5c43;
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
 }
 
 nav li.active a {
-  border-bottom: 2px solid #ca5c43;
+  border-bottom: 2px solid var(--secondary);
 }
 
 nav a {
@@ -122,11 +129,11 @@ nav .svg-button {
   margin-bottom: -1rem;
 }
 nav .svg-button:hover {
-  border-bottom: 2px solid #ca5c43;
+  border-bottom: 2px solid var(--secondary);
 }
 
 nav svg:hover path {
-  fill: #ca5c43;
+  fill: var(--secondary);
 }
 
 nav a.logo-link {
@@ -144,7 +151,7 @@ nav div {
 
 h2,
 nav a {
-  color: #3a4754;
+  color: var(--primary);
   font-size: 1.5rem;
   font-family: oswald, sans-serif;
   font-weight: 400;
@@ -162,7 +169,7 @@ nav a {
   position: absolute;
   top: 0.6rem;
   left: 1.4rem;
-  background-color: #ca5c43;
+  background-color: var(--secondary);
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
@@ -172,7 +179,7 @@ nav a {
 }
 
 #shopping-cart-visible:checked + label > svg path {
-  fill: #3a4754;
+  fill: var(--primary);
 }
 
 #shopping-cart-visible:checked ~ #cart-circle {
@@ -197,7 +204,7 @@ nav a {
 
 #cart-circle p {
   margin: 0;
-  color: #e9edf2;
+  color: var(--p-background);
   font-size: 0.9rem;
 }
 
@@ -228,16 +235,16 @@ nav a {
 }
 
 .red-h2 {
-  color: #ca5c43;
+  color: var(--secondary);
 }
 
 .light-h2 {
-  color: #e9edf2;
+  color: var(--p-background);
 }
 
 h3 {
   font-family: oswald, sans-serif;
-  color: #3a4754;
+  color: var(--primary);
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: normal;
@@ -338,7 +345,7 @@ main {
 .grey-card {
   margin: 50px 0;
   padding: 75px;
-  background-color: #e9edf2;
+  background-color: var(--p-background);
 }
 
 .story-text {
@@ -364,7 +371,7 @@ main {
 
 input {
   font-size: 1.5rem;
-  color: #3a4754;
+  color: var(--primary);
   background-color: white;
   border: none;
   height: 3rem;
@@ -376,7 +383,7 @@ input {
 input:focus,
 input:hover {
   border-radius: 0;
-  border: 1px solid #ca5c43;
+  border: 1px solid var(--secondary);
   outline: none;
 }
 
@@ -387,14 +394,14 @@ label,
   font-size: 0.6rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: #a1b2c3;
+  color: var(--icon-color);
 }
 
 aside {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.6rem;
   text-transform: uppercase;
-  color: #a1b2c3;
+  color: var(--icon-color);
 }
 
 .logo {
@@ -416,7 +423,7 @@ aside {
 }
 
 #instagram {
-  background-color: #3a4754;
+  background-color: var(--primary);
   width: 100%;
   height: 465px;
   background-image: url("../images/instagram.png");
@@ -434,14 +441,14 @@ aside {
 }
 
 #instagram p {
-  color: #e9edf2;
+  color: var(--p-background);
   float: left;
   width: 30rem;
   margin-left: 40px;
 }
 
 #magazine {
-  background-color: #a1b2c3;
+  background-color: var(--icon-color);
   width: 100%;
   height: 550px;
 }
@@ -462,13 +469,13 @@ aside {
 #magazine p {
   font-family: oswald, sans-serif;
   text-transform: uppercase;
-  color: #3a4754;
+  color: var(--primary);
 }
 
 #magazine h3 {
   font-family: oswald, sans-serif;
   text-transform: uppercase;
-  color: #e9edf2;
+  color: var(--p-background);
   font-weight: normal;
   margin: 10px;
 }
@@ -495,7 +502,7 @@ aside {
   position: relative;
   top: -31rem;
   left: -6rem;
-  background-color: white;
+  background-color: var(--p-background);
 }
 
 .point-down {
@@ -510,7 +517,7 @@ aside {
 #magazine article {
   display: flex;
   flex-direction: column;
-  background-color: #3a4754;
+  background-color: var(--primary);
   width: 23%;
   min-height: 355px;
 }
@@ -523,7 +530,7 @@ footer {
   box-sizing: border-box;
   width: 100%;
   padding: 50px 50px;
-  background-color: #3a4754;
+  background-color: var(--primary);
   background-image: url("../images/map.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -533,16 +540,18 @@ footer {
 }
 
 footer p {
-  color: #e9edf2;
+  color: var(--p-background);
 }
 
 footer > div > div {
   display: inline-block;
+  margin-left: 40px;
+  max-width: 200px;
 }
 
 /* OUR JACKETS*/
 #filter {
-  background-color: #e9edf2;
+  background-color: var(--p-background);
   position: relative;
   display: flex;
   align-items: center;
@@ -571,7 +580,7 @@ footer > div > div {
   width: 40rem;
   padding: 10px;
   background-color: white;
-  border: 1px solid #a1b2c3;
+  border: 1px solid var(--icon-color);
   transform: translateY(-100%);
 }
 
@@ -581,15 +590,15 @@ footer > div > div {
 }
 
 #filter-menu .jacket-sizes > label {
-  background-color: #e9edf2;
-  color: #3a4754;
+  background-color: var(--p-background);
+  color: var(--primary);
 }
 
 #filter-menu .jacket-sizes input:checked + label,
 #filter-menu .jacket-sizes > label:hover,
 #filter-menu .jacket-sizes > label:focus {
-  background-color: #3a4754;
-  color: #e9edf2;
+  background-color: var(--primary);
+  color: var(--p-background);
 }
 
 #filter-menu > div:nth-child(2) {
@@ -598,7 +607,7 @@ footer > div > div {
 
 #filter-menu h3 {
   font-family: Helvetica, Arial, sans-serif;
-  color: #3a4754;
+  color: var(--primary);
   font-weight: bold;
   font-size: 1rem;
 }
@@ -633,7 +642,7 @@ footer > div > div {
 
 #filter-menu li path,
 #filter-menu li circle {
-  fill: #a1b2c3;
+  fill: var(--icon-color);
 }
 
 #filter-menu label:hover path,
@@ -642,12 +651,12 @@ footer > div > div {
 #filter-menu label:hover circle,
 #filter-menu label:focus circle,
 #filter-menu input:checked ~ label circle {
-  fill: #3a4754;
+  fill: var(--primary);
 }
 
 #filter-menu label {
   font-size: 1rem;
-  color: #3a4754;
+  color: var(--primary);
   font-weight: normal;
   text-transform: none;
 }
@@ -689,7 +698,7 @@ footer > div > div {
 }
 
 .jacket-container .jacket-box {
-  background-color: #e9edf2;
+  background-color: var(--p-background);
 }
 
 .jacket-box img {
@@ -715,7 +724,7 @@ footer > div > div {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: #3a4754;
+  color: var(--primary);
   font-size: 1.3rem;
 }
 
@@ -726,7 +735,7 @@ footer > div > div {
 }
 
 .jacket-chekout-info {
-  color: #3a4754;
+  color: var(--primary);
 }
 
 .jacket-options-grid {
@@ -739,17 +748,17 @@ footer > div > div {
   font-size: 1rem;
   text-transform: none;
   font-weight: normal;
-  color: #3a4754;
+  color: var(--primary);
 }
 
 /* JACKET */
 .underline {
-  border-bottom: 1px solid #a1b2c3;
+  border-bottom: 1px solid var(--icon-color);
   padding-bottom: 10px;
 }
 
 .active {
-  border-bottom: 2px solid #ca5c43;
+  border-bottom: 2px solid var(--secondary);
 }
 
 .info-headders {
@@ -757,7 +766,7 @@ footer > div > div {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: #3a4754;
+  color: var(--primary);
   font-size: 1.3rem;
 }
 
@@ -779,7 +788,7 @@ footer > div > div {
 
 .jacket-colors input:checked + label,
 .jacket-colors > label:hover {
-  color: #3a4754;
+  color: var(--primary);
 }
 
 .jacket-colors input:checked + label > svg,
@@ -797,12 +806,12 @@ footer > div > div {
   text-align: center;
   font-weight: normal;
   font-size: 1rem;
-  color: #3a4754;
+  color: var(--primary);
 }
 
 .jacket-sizes input:checked + label,
 .jacket-sizes > label:hover {
-  background-color: #3a4754;
+  background-color: var(--primary);
   color: white;
 }
 
@@ -814,14 +823,14 @@ footer > div > div {
   padding: 0;
   box-sizing: border-box;
   border: 0;
-  background-color: #a1b2c3;
+  background-color: var(--icon-color);
   box-shadow: 3px 3px 6px #0000004d;
 }
 
 .add-to-cart-button:hover,
 .add-to-cart-button:focus {
-  border: 1px solid #3a4754;
-  background-color: #e9edf2;
+  border: 1px solid var(--primary);
+  background-color: var(--p-background);
   outline: none;
 }
 
@@ -838,7 +847,7 @@ footer > div > div {
 
 .add-to-cart-button:hover > span:first-child,
 .add-to-cart-button:focus > span:first-child {
-  color: #3a4754;
+  color: var(--primary);
 }
 
 .add-to-cart-button .cart-wrapper {
@@ -851,7 +860,7 @@ footer > div > div {
 .add-to-cart-button .cart-background-color {
   position: absolute;
   display: block;
-  background-color: #3a4754;
+  background-color: var(--primary);
   width: 7rem;
   height: 7rem;
   top: -6rem;
@@ -870,18 +879,18 @@ footer > div > div {
 
 .add-to-cart-button.big {
   height: 8rem;
-  background-color: #3a4754;
+  background-color: var(--primary);
 }
 
 .add-to-cart-button.big:hover,
 .add-to-cart-button.big:focus {
-  border: 1px solid #3a4754;
-  background-color: #e9edf2;
+  border: 1px solid var(--primary);
+  background-color: var(--p-background);
   outline: none;
 }
 
 .add-to-cart-button.big > span:first-child {
-  color: #e9edf2;
+  color: var(--p-background);
   font-size: 2rem;
   text-align: left;
   padding: 1.8rem;
@@ -894,7 +903,7 @@ footer > div > div {
 
 .add-to-cart-button.big:hover span:first-child,
 .add-to-cart-button.big:focus span:first-child {
-  color: #3a4754;
+  color: var(--primary);
 }
 
 .add-to-cart-button.big .cart-wrapper {
@@ -902,7 +911,7 @@ footer > div > div {
 }
 
 .add-to-cart-button.big .cart-background-color {
-  background-color: #a1b2c3;
+  background-color: var(--icon-color);
   width: 11rem;
   height: 11rem;
   top: -8rem;
@@ -911,6 +920,46 @@ footer > div > div {
 .add-to-cart-button.big svg {
   height: 4.5rem;
   margin: 1rem;
+}
+
+#magazine .red-button {
+  margin: 10px auto;
+}
+
+.add-to-cart-button.red-button {
+  background-color: var(--secondary);
+  width: 160px;
+}
+
+.add-to-cart-button.red-button:hover,
+.add-to-cart-button.red-button:focus {
+  border: 1px solid var(--primary);
+  background-color: var(--p-background);
+  outline: none;
+}
+
+.add-to-cart-button.red-button > span:first-child {
+  color: var(--p-background);
+  font-size: 1rem;
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.add-to-cart-button.red-button > span:first-child > span {
+  width: 20rem;
+}
+
+.add-to-cart-button.red-button:hover span:first-child,
+.add-to-cart-button.red-button:focus span:first-child {
+  color: var(--primary);
+}
+
+.add-to-cart-button.red-button .cart-background-color {
+  background-color: var(--primary);
+  width: 11rem;
+  height: 11rem;
+  top: -8rem;
 }
 
 /* CONTACT */
@@ -938,23 +987,27 @@ footer > div > div {
 
 #welcome h2 {
   font-family: Helvetica, Arial, sans-serif;
-  color: #ca5c43;
+  color: var(--secondary);
   text-transform: uppercase;
   font-size: 2.75rem;
   font-weight: bold;
-  margin: 100px 50px 0 0;
+  margin: 100px 0 0 0;
 }
 
 #welcome p {
   font-size: 1.6rem;
-  color: #3a4754;
+  color: var(--primary);
   font-family: oswald, sans-serif;
   text-transform: uppercase;
-  margin-right: 50px;
+}
+
+#welcome button {
+  margin: 10px;
+  display: inline-flex;
 }
 
 #bestsellers {
-  background-color: #e9edf2;
+  background-color: var(--p-background);
   width: 100%;
   height: 600px;
 }
@@ -976,7 +1029,7 @@ footer > div > div {
 }
 
 #takeALook {
-  background-color: #3a4754;
+  background-color: var(--primary);
   width: 100%;
   height: 440px;
 }
@@ -988,7 +1041,7 @@ footer > div > div {
 }
 
 #takeALook h2 {
-  color: #ca5c43;
+  color: var(--secondary);
   position: relative;
   float: right;
   font-size: 3rem;
@@ -1021,7 +1074,7 @@ footer > div > div {
 #slogan {
   font-family: oswald, sans-serif;
   font-size: 1.4rem;
-  color: #ca5c43;
+  color: var(--secondary);
   text-transform: uppercase;
   position: absolute;
   top: 270px;
@@ -1029,7 +1082,7 @@ footer > div > div {
 }
 
 #ourHistory {
-  background-color: #3a4754;
+  background-color: var(--primary);
   width: 100%;
   background-image: url("../images/mountains.png");
   background-repeat: no-repeat;
@@ -1046,11 +1099,11 @@ footer > div > div {
 }
 
 #ourHistory p {
-  color: #e9edf2;
+  color: var(--p-background);
 }
 
 #ourValuesAndVision {
-  background-color: #e9edf2;
+  background-color: var(--p-background);
   width: 100%;
 }
 
@@ -1069,7 +1122,7 @@ footer > div > div {
   width: 41rem;
   top: 35rem;
   left: 8rem;
-  background-color: #3a4754;
+  background-color: var(--primary);
 }
 .triangle-frame-blue {
   position: absolute;
@@ -1086,7 +1139,7 @@ footer > div > div {
   width: 25rem;
   top: -30rem;
   left: -8rem;
-  background-color: #a1b2c3;
+  background-color: var(--icon-color);
 }
 
 .slogan p {
@@ -1106,7 +1159,7 @@ footer > div > div {
 }
 
 #sloganMotivate p {
-  color: #ca5c43;
+  color: var(--secondary);
 }
 
 #sloganMotivate p span {
@@ -1124,7 +1177,7 @@ footer > div > div {
 }
 
 #sloganFreedom p {
-  color: #3a4754;
+  color: var(--primary);
   font-size: 1rem;
 }
 
@@ -1140,7 +1193,7 @@ footer > div > div {
 }
 
 #sloganSolid p {
-  color: #3a4754;
+  color: var(--primary);
   text-align: left;
   font-size: 1rem;
 }
@@ -1163,7 +1216,7 @@ footer > div > div {
 #cart ul,
 #cart-overlay ul {
   margin: 0;
-  border: 1px solid #a1b2c3;
+  border: 1px solid var(--icon-color);
   border-width: 1px 0;
 }
 
@@ -1174,19 +1227,19 @@ footer > div > div {
 
 .payment-overview p {
   font-family: Helvetica, Arial, sans-serif;
-  color: #3a4754;
+  color: var(--primary);
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1rem;
 }
 
 .payment-overview > div {
-  border: 1px solid #a1b2c3;
+  border: 1px solid var(--icon-color);
   border-width: 1px 0 0 0;
 }
 
 #doubble-line {
-  border: 1px solid #a1b2c3;
+  border: 1px solid var(--icon-color);
   border-width: 1px 0;
   height: 2px;
   width: 100%;
@@ -1215,8 +1268,8 @@ footer > div > div {
 }
 
 .circle {
-  background-color: #a1b2c3;
-  color: #3a4754;
+  background-color: var(--icon-color);
+  color: var(--primary);
   padding: 0.3rem 0.7rem;
   border-radius: 50%;
   border: 0px;
@@ -1224,8 +1277,8 @@ footer > div > div {
 
 .circle:hover,
 .circle:focus {
-  background-color: #3a4754;
-  color: #a1b2c3;
+  background-color: var(--primary);
+  color: var(--icon-color);
 }
 
 .one-liner > * {
