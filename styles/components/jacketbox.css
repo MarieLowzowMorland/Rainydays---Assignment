@@ -1,0 +1,42 @@
+.jacket-box img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-wrapper {
+  text-align: center;
+}
+
+.jacket-box img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.jacket-box div {
+  padding: 10px;
+}
+
+.jacket-box p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.jacket-box .price {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.jacket-box .add-to-cart-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

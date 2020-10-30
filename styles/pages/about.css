@@ -1,0 +1,152 @@
+#whoWeAre a {
+  text-decoration: none;
+}
+
+#whoWeAre ul {
+  list-style-type: none;
+  position: absolute;
+  right: 445px;
+  top: 360px;
+}
+
+#whoWeAre {
+  background-image: url("../../images/who-we-are.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+  height: 500px;
+  width: 100%;
+}
+
+#slogan {
+  font-family: oswald, sans-serif;
+  font-size: 1.4rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  position: absolute;
+  top: 270px;
+  right: 10px;
+}
+
+#ourHistory {
+  background-color: var(--primary);
+  width: 100%;
+  background-image: url("../../images/mountains.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: left;
+}
+
+#ourHistory .section-content {
+  float: right;
+}
+
+#ourHistory img {
+  object-fit: cover;
+}
+
+#ourHistory p {
+  color: var(--bg-primary);
+}
+
+#ourValuesAndVision {
+  background-color: var(--bg-primary);
+  width: 100%;
+}
+
+.triangle-frame-dark {
+  position: absolute;
+  bottom: 0px;
+  right: 11rem;
+  width: 40rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.triangle-dark {
+  position: absolute;
+  height: 40rem;
+  width: 41rem;
+  top: 35rem;
+  left: 8rem;
+  background-color: var(--primary);
+}
+.triangle-frame-blue {
+  position: absolute;
+  right: 0rem;
+  transform: translate(-50%, 0);
+  width: 20rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.triangle-blue {
+  position: absolute;
+  height: 25rem;
+  width: 25rem;
+  top: -30rem;
+  left: -8rem;
+  background-color: var(--icon-color);
+}
+
+.slogan p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#sloganMotivate {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 15rem;
+}
+
+#sloganMotivate p {
+  color: var(--secondary);
+}
+
+#sloganMotivate p span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#sloganFreedom {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 11rem;
+}
+
+#sloganFreedom p {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+#sloganFreedom p span {
+  font-weight: bold;
+}
+
+#sloganSolid {
+  position: absolute;
+  top: 12rem;
+  right: 0rem;
+  width: 17rem;
+}
+
+#sloganSolid p {
+  color: var(--primary);
+  text-align: left;
+  font-size: 1rem;
+}
+
+#sloganSolid p span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+}

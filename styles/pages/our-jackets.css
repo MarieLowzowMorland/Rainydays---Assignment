@@ -1,0 +1,150 @@
+#filter {
+  background-color: var(--bg-primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 5rem;
+  box-sizing: border-box;
+  margin: 30px 0;
+}
+
+#filter h2 {
+  width: fit-content;
+  display: inline-block;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+#filter svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#filter-menu {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  width: 40rem;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid var(--icon-color);
+  transform: translateY(-100%);
+}
+
+#filter-menu > div {
+  flex: 1;
+  margin: 5px;
+}
+
+#filter-menu .jacket-sizes > label {
+  background-color: var(--bg-primary);
+  color: var(--primary);
+}
+
+#filter-menu .jacket-sizes input:checked + label,
+#filter-menu .jacket-sizes > label:hover,
+#filter-menu .jacket-sizes > label:focus {
+  background-color: var(--primary);
+  color: var(--bg-primary);
+}
+
+#filter-menu > div:nth-child(2) {
+  min-width: 14rem;
+}
+
+#filter-menu h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#filter-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+#filter-menu li {
+  display: block;
+  height: 3.5rem;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  line-height: 2.5rem;
+}
+
+#filter-menu li svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+#filter-menu .collections li svg {
+  width: 1rem;
+}
+
+#filter-menu label:hover svg,
+#filter-menu label:focus svg,
+#filter-menu input:checked ~ label svg {
+  height: 2.5rem;
+}
+
+#filter-menu li path,
+#filter-menu li circle {
+  fill: var(--icon-color);
+}
+
+#filter-menu label:hover path,
+#filter-menu label:focus path,
+#filter-menu input:checked ~ label path,
+#filter-menu label:hover circle,
+#filter-menu label:focus circle,
+#filter-menu input:checked ~ label circle {
+  fill: var(--primary);
+}
+
+#filter-menu label {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: normal;
+  text-transform: none;
+}
+
+#filter-menu label:hover,
+#filter-menu label:focus,
+#filter-menu input:checked ~ label {
+  font-weight: bold;
+}
+
+#filter-menu label > * {
+  vertical-align: middle;
+}
+
+#filter-menu-visible:checked + #filter-menu {
+  display: flex;
+  animation: slide-from-top 0.5s forwards;
+}
+
+@keyframes slide-from-top {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jacket-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px 10px;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.jacket-container > a,
+.jacket-container > a > .jacket-box {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.jacket-container .jacket-box {
+  background-color: var(--bg-primary);
+}

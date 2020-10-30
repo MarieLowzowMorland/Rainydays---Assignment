@@ -1,0 +1,173 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  box-shadow: -3px 3px 6px #0000004d;
+}
+nav .filler {
+  flex: 1 1;
+}
+
+nav ul {
+  flex: 10;
+  padding: 0;
+  max-width: 650px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a:hover {
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+}
+
+nav li.active a {
+  border-bottom: 2px solid var(--secondary);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav .searchbar {
+  margin-bottom: -1rem;
+}
+
+nav svg {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+nav .svg-button {
+  box-sizing: border-box;
+  height: 2.5rem;
+  width: 2rem;
+  padding: 3px;
+  margin: 0 5px;
+  margin-bottom: -1rem;
+}
+nav .svg-button:hover {
+  border-bottom: 2px solid var(--secondary);
+}
+
+nav svg:hover path {
+  fill: var(--secondary);
+}
+
+nav a.logo-link {
+  margin: 5px;
+}
+
+#Logo {
+  height: 5.5rem;
+  width: auto;
+}
+
+nav div {
+  display: inline-block;
+}
+
+h2,
+nav a {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-family: oswald, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#nav-shopping-cart {
+  position: relative;
+  margin-bottom: -1rem;
+}
+
+.logo {
+  max-width: 125px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+/* Cart */
+
+#cart-circle {
+  visibility: hidden;
+  position: absolute;
+  top: 0.6rem;
+  left: 1.4rem;
+  background-color: var(--secondary);
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+#shopping-cart-visible:checked + label > svg path {
+  fill: var(--primary);
+}
+
+#shopping-cart-visible:checked ~ #cart-circle {
+  visibility: visible;
+}
+
+#cart-overlay {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  height: 700px;
+  width: 300px;
+  background-color: white;
+  transform: translateX(100%);
+  padding: 30px;
+}
+
+#cart-overlay h2 {
+  text-align: center;
+}
+
+#cart-circle p {
+  margin: 0;
+  color: var(--bg-primary);
+  font-size: 0.9rem;
+}
+
+#shopping-cart-visible:checked ~ #cart-overlay {
+  display: block;
+  animation: slide-from-right 0.5s forwards;
+}
+
+@keyframes slide-from-right {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: -10vh;
+  left: -100vw;
+  width: 200vw;
+  height: 120vh;
+  background-color: black;
+  opacity: 0.5;
+}
+
+#shopping-cart-visible:checked ~ #overlay {
+  display: block;
+}

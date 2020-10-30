@@ -1,0 +1,146 @@
+.add-to-cart-button {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  margin: 15px 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  background-color: var(--icon-color);
+  box-shadow: 3px 3px 6px #0000004d;
+}
+
+.add-to-cart-button:hover,
+.add-to-cart-button:focus {
+  border: 1px solid var(--primary);
+  background-color: var(--bg-primary);
+  outline: none;
+}
+
+.add-to-cart-button > span:first-child {
+  flex: 1;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.9rem;
+}
+
+.add-to-cart-button:hover > span:first-child,
+.add-to-cart-button:focus > span:first-child {
+  color: var(--primary);
+}
+
+.add-to-cart-button .cart-wrapper {
+  position: relative;
+  flex-basis: 5rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.add-to-cart-button .cart-background-color {
+  position: absolute;
+  display: block;
+  background-color: var(--primary);
+  width: 7rem;
+  height: 7rem;
+  top: -6rem;
+}
+
+.add-to-cart-button svg {
+  position: relative;
+  float: right;
+  height: 1.5rem;
+  margin: 0.7rem;
+}
+
+.add-to-cart-button svg > path {
+  fill: white;
+}
+
+.add-to-cart-button.big {
+  height: 8rem;
+  background-color: var(--primary);
+}
+
+.add-to-cart-button.big:hover,
+.add-to-cart-button.big:focus {
+  border: 1px solid var(--primary);
+  background-color: var(--bg-primary);
+  outline: none;
+}
+
+.add-to-cart-button.big > span:first-child {
+  color: var(--bg-primary);
+  font-size: 2rem;
+  text-align: left;
+  padding: 1.8rem;
+  font-weight: bold;
+}
+
+.add-to-cart-button.big > span:first-child > span {
+  width: 20rem;
+}
+
+.add-to-cart-button.big:hover span:first-child,
+.add-to-cart-button.big:focus span:first-child {
+  color: var(--primary);
+}
+
+.add-to-cart-button.big .cart-wrapper {
+  flex-basis: 10rem;
+}
+
+.add-to-cart-button.big .cart-background-color {
+  background-color: var(--icon-color);
+  width: 11rem;
+  height: 11rem;
+  top: -8rem;
+}
+
+.add-to-cart-button.big svg {
+  height: 4.5rem;
+  margin: 1rem;
+}
+
+#magazine .red-button {
+  margin: 10px auto;
+}
+
+.add-to-cart-button.red-button {
+  background-color: var(--secondary);
+  width: 160px;
+}
+
+.add-to-cart-button.red-button:hover,
+.add-to-cart-button.red-button:focus {
+  border: 1px solid var(--primary);
+  background-color: var(--bg-primary);
+  outline: none;
+}
+
+.add-to-cart-button.red-button > span:first-child {
+  color: var(--bg-primary);
+  font-size: 1rem;
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.add-to-cart-button.red-button > span:first-child > span {
+  width: 20rem;
+}
+
+.add-to-cart-button.red-button:hover span:first-child,
+.add-to-cart-button.red-button:focus span:first-child {
+  color: var(--primary);
+}
+
+.add-to-cart-button.red-button .cart-background-color {
+  background-color: var(--primary);
+  width: 11rem;
+  height: 11rem;
+  top: -8rem;
+}

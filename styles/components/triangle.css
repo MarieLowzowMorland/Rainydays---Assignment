@@ -1,0 +1,3 @@
+.point-down {
+  transform: skew(-30deg, 60deg) rotate(90deg);
+}

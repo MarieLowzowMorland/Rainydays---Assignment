@@ -1,0 +1,35 @@
+input {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background-color: white;
+  border: none;
+  height: 3rem;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+input:focus,
+input:hover {
+  border-radius: 0;
+  border: 1px solid var(--secondary);
+  outline: none;
+}
+
+.input-with-label-wrapper {
+  width: 30rem;
+}
+
+.shorter {
+  width: 20rem;
+}
+
+.input-with-label-wrapper label {
+  position: absolute;
+  margin: 3px 10px;
+}
+
+.input-with-label-wrapper input {
+  padding: 1rem 10px 0;
+  width: 100%;
+}

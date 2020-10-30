@@ -1,0 +1,119 @@
+#cart {
+  background-color: white;
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: -3px 3px 6px #0000004d;
+}
+
+#cart ul,
+#cart-overlay ul {
+  margin: 0;
+  border: 1px solid var(--icon-color);
+  border-width: 1px 0;
+}
+
+#cart li {
+  display: block;
+  text-align: left;
+}
+
+.payment-overview p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.payment-overview > div {
+  border: 1px solid var(--icon-color);
+  border-width: 1px 0 0 0;
+}
+
+#doubble-line {
+  border: 1px solid var(--icon-color);
+  border-width: 1px 0;
+  height: 2px;
+  width: 100%;
+}
+
+.jacket-colors > label {
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 5px 10px;
+}
+
+.jacket-colors > label > svg {
+  vertical-align: middle;
+  height: 0.9rem;
+}
+
+.jacket-colors > label > span {
+  vertical-align: middle;
+}
+
+.jacket-colors input:checked + label,
+.jacket-colors > label:hover {
+  color: var(--primary);
+}
+
+.jacket-colors input:checked + label > svg,
+.jacket-colors > label:hover > svg {
+  height: 1.2rem;
+}
+
+.jacket-sizes > label {
+  display: inline-block;
+  background-color: white;
+  padding-top: 0.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.jacket-sizes input:checked + label,
+.jacket-sizes > label:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.jacket-chekout-info {
+  color: var(--primary);
+}
+
+.jacket-options-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.jacket-options-grid label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: normal;
+  color: var(--primary);
+}
+
+.circle {
+  background-color: var(--icon-color);
+  color: var(--primary);
+  padding: 0.3rem 0.7rem;
+  border-radius: 50%;
+  border: 0px;
+}
+
+.circle:hover,
+.circle:focus {
+  background-color: var(--primary);
+  color: var(--icon-color);
+}
+
+.one-liner > * {
+  display: inline-block;
+}

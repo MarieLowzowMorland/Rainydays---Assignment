@@ -1,0 +1,74 @@
+#magazine {
+  background-color: var(--icon-color);
+  width: 100%;
+  height: 550px;
+}
+
+#magazine img {
+  height: 225px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#magazine h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#magazine p {
+  font-family: oswald, sans-serif;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+#magazine h3 {
+  font-family: oswald, sans-serif;
+  text-transform: uppercase;
+  color: var(--bg-primary);
+  font-weight: normal;
+  margin: 10px;
+}
+
+#magazine a {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+}
+
+.same-height {
+  display: flex;
+  justify-content: space-between;
+}
+
+#magazine article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  width: 23%;
+  min-height: 355px;
+}
+
+#magazine article h3 {
+  flex-grow: 1;
+}
+
+.triangle-frame {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.triangle {
+  height: 30rem;
+  width: 30rem;
+  position: relative;
+  top: -31rem;
+  left: -6rem;
+  background-color: var(--bg-primary);
+}
