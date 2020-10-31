@@ -5,17 +5,16 @@
   <!-- Have a descripte title and meta for the spesific page -->
   <title>Rainydays|Home</title>
   <meta name="description" content="The checkout page for Rainydays´online shop." />
-  <link href="./styles/common/layout.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/common/text.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/common/variables.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/components/buttons.css" rel="stylesheet" type="text/CSS" />
+  <link href="./styles/common/layout.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/components/footer.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/components/form.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/components/header.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/components/jacket-cart.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/components/triangle.css" rel="stylesheet" type="text/CSS" />
   <link href="./styles/pages/checkout.css" rel="stylesheet" type="text/CSS" />
-  <link href="./Styles/style.css" rel="stylesheet" type="text/CSS" />
   <link rel="stylesheet" href="https://use.typekit.net/cuv4oew.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
@@ -201,7 +200,7 @@
     <div class="main-contentbox">
       <h1>Checkout</h1>
 
-      <div class="grey-card split-wrapper">
+      <div class="grey-card split-wrapper tablet-block column-reverse">
         <div class="checkout-form split-50">
           <section id="shipping-address">
             <h2>Shipping address</h2>
@@ -270,6 +269,21 @@
               </div>
             </form>
           </section>
+          <button for="checkout" class="add-to-cart-button big desktop-hidden">
+            <span><span>Complete</span></span>
+            <span class="cart-wrapper">
+              <span class="cart-background-color point-down"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="64.536" height="83.672" viewBox="0 0 64.536 83.672">
+                <g id="Group_278" data-name="Group 278" transform="translate(-453.512 -35.568)">
+                  <circle id="Ellipse_14" data-name="Ellipse 14" cx="23" cy="23" r="23"
+                    transform="translate(459.575 73.24)" fill="#e9edf2" />
+                  <path id="Path_45" data-name="Path 45"
+                    d="M-1485-6558.79c18.12,8.512,26.526,26.526,26.526,26.526s13.82-53.179,35.367-70.735"
+                    transform="translate(1939.575 6640.505)" fill="none" stroke="#3a4754" stroke-width="5" />
+                </g>
+              </svg>
+            </span>
+          </button>
         </div>
 
         <div class="split-50">
@@ -337,7 +351,7 @@
               <div id="dubble-line"></div>
             </section>
           </div>
-          <button for="checkout" class="add-to-cart-button big">
+          <button for="checkout" class="add-to-cart-button big tablet-hidden">
             <span><span>Complete the purchase</span></span>
             <span class="cart-wrapper">
               <span class="cart-background-color point-down"></span>

@@ -169,6 +169,11 @@ body {
     display: block;
   }
 
+  .split-wrapper.column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .split-wrapper.tablet-block > .split-50 {
     width: 100%;
   }

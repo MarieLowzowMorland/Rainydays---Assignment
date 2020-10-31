@@ -1,6 +1,6 @@
 #cart {
   background-color: white;
-  min-width: 300px;
+  min-width: 240px;
   padding: 20px;
   text-align: center;
   box-shadow: -3px 3px 6px #0000004d;
@@ -16,6 +16,11 @@
 #cart li {
   display: block;
   text-align: left;
+}
+
+#cart img {
+  max-height: 300px;
+  object-fit: contain;
 }
 
 .payment-overview p {

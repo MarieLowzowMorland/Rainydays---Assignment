@@ -18,10 +18,7 @@ input:hover {
 
 .input-with-label-wrapper {
   width: 30rem;
-}
-
-.shorter {
-  width: 20rem;
+  max-width: 100%;
 }
 
 .input-with-label-wrapper label {
@@ -32,4 +29,10 @@ input:hover {
 .input-with-label-wrapper input {
   padding: 1rem 10px 0;
   width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .shorter {
+    width: 20rem;
+  }
 }
