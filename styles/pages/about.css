@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;
-  height: 500px;
+  min-height: 500px;
   width: 100%;
 }
 
@@ -30,15 +30,24 @@
 
 #ourHistory {
   background-color: var(--primary);
-  width: 100%;
-  background-image: url("../../images/mountains.png");
+}
+
+#ourHistory .split-60 {
+  background-image: url("../../images/mountains.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-x: left;
+  background-size: cover;
+  background-position-y: center;
+}
+
+#ourHistory svg {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 #ourHistory .section-content {
-  float: right;
+  background-color: var(--primary);
 }
 
 #ourHistory img {
@@ -57,27 +66,29 @@
 .triangle-frame-dark {
   position: absolute;
   bottom: 0px;
-  right: 11rem;
-  width: 40rem;
+  right: 14rem;
+  height: 100%;
+}
+
+.triangle-frame-dark svg {
+  height: 100%;
+  width: auto;
+}
+
+.triangle-frame-blue {
+  position: absolute;
+  right: 9rem;
   height: 100%;
   overflow: hidden;
 }
 
-.triangle-dark {
-  position: absolute;
-  height: 40rem;
-  width: 41rem;
-  top: 35rem;
-  left: 8rem;
-  background-color: var(--primary);
+.triangle-frame-blue svg {
+  width: auto;
+  height: 60%;
 }
-.triangle-frame-blue {
-  position: absolute;
-  right: 0rem;
-  transform: translate(-50%, 0);
-  width: 20rem;
-  height: 100%;
-  overflow: hidden;
+
+.triangle-frame-blue svg path {
+  fill: var(--icon-color);
 }
 
 .triangle-blue {
@@ -120,7 +131,7 @@
   top: 10px;
   left: 50%;
   transform: translate(-50%, 0px);
-  width: 11rem;
+  width: 60%;
 }
 
 #sloganFreedom p {
@@ -136,7 +147,7 @@
   position: absolute;
   top: 12rem;
   right: 0rem;
-  width: 17rem;
+  width: 16rem;
 }
 
 #sloganSolid p {
@@ -149,4 +160,167 @@
   display: block;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  #ourValuesAndVision h2 {
+    max-width: 500px;
+    margin: 0.8rem auto;
+  }
+
+  #ourValuesAndVision .story-text {
+    margin: 0 auto;
+  }
+
+  #ourHistory .story-text {
+    column-count: 1;
+  }
+
+  .slogans {
+    width: 60rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .triangle-frame-dark {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    width: 30rem;
+    height: 26rem;
+  }
+
+  .triangle-frame-dark svg {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+  }
+
+  #sloganMotivate {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 15rem;
+    z-index: 1;
+  }
+
+  .triangle-frame-blue {
+    position: relative;
+    width: 25rem;
+    height: 24rem;
+    right: 0;
+    overflow: visible;
+    display: inline-block;
+  }
+  .triangle-frame-blue svg {
+    width: 27rem;
+    height: auto;
+    position: absolute;
+    bottom: -3px;
+    left: -5rem;
+  }
+
+  #sloganFreedom {
+    position: absolute;
+    bottom: 20px;
+    top: inherit;
+    left: calc(50% - 4rem);
+    transform: translate(-50%, 0px);
+    width: 60%;
+  }
+
+  #sloganSolid {
+    position: absolute;
+    top: 0rem;
+    left: 20rem;
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #whoWeAre {
+    background: none;
+  }
+
+  #whoWeAre .section-content {
+    margin: 0 auto;
+    max-width: 45rem;
+  }
+
+  #ourHistory {
+    background-image: url("../../images/mountains.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+  }
+
+  #ourHistory .split-wrapper {
+    display: block;
+  }
+
+  #ourHistory .split-wrapper .split-40 {
+    width: 100%;
+  }
+
+  #ourHistory .section-content {
+    margin: 0 auto;
+    background-color: #33333330;
+    max-width: 30rem;
+  }
+
+  #ourHistory .red-h2 {
+    color: var(--primary);
+  }
+
+  #ourHistory svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #whoWeAre .section-content {
+    max-width: 30rem;
+  }
+
+  #whoWeAre .story-text,
+  #ourValuesAndVision .story-text {
+    column-count: 1;
+  }
+
+  .slogans {
+    width: 30rem;
+  }
+
+  .triangle-frame-blue {
+    position: absolute;
+    width: 10rem;
+    top: 0;
+    right: 0;
+  }
+
+  .triangle-frame-blue svg {
+    display: none;
+  }
+
+  #sloganFreedom {
+    position: inherit;
+    transform: inherit;
+  }
+
+  #sloganFreedom p {
+    text-align: right;
+    width: 9rem;
+  }
+
+  #sloganFreedom span {
+    font-size: 1.5rem;
+  }
+
+  #sloganSolid {
+    left: 1rem;
+    width: 9rem;
+  }
 }

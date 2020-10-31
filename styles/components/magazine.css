@@ -1,7 +1,7 @@
 #magazine {
   background-color: var(--icon-color);
   width: 100%;
-  height: 550px;
+  min-height: 550px;
 }
 
 #magazine img {
@@ -40,10 +40,13 @@
 
 .same-height {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 #magazine article {
+  flex: 1 1 15rem;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   background-color: var(--primary);
@@ -59,16 +62,13 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 30rem;
-  height: 30rem;
-  overflow: hidden;
 }
 
-.triangle {
-  height: 30rem;
+.triangle-frame svg {
+  height: auto;
   width: 30rem;
-  position: relative;
-  top: -31rem;
-  left: -6rem;
-  background-color: var(--bg-primary);
+}
+
+.triangle-frame svg path {
+  fill: var(--bg-primary);
 }

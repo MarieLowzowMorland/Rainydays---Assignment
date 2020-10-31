@@ -18,6 +18,7 @@
     <link href="./styles/components/jacketbox.css" rel="stylesheet" type="text/CSS" />
     <link href="./styles/components/magazine.css" rel="stylesheet" type="text/CSS" />
     <link href="./styles/components/triangle.css" rel="stylesheet" type="text/CSS" />
+    <link href="./styles/pages/about.css" rel="stylesheet" type="text/CSS" />
     <link rel="stylesheet" href="https://use.typekit.net/cuv4oew.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -134,13 +135,13 @@
             <input type="text" name="search" id="search" />
           </div>
         </div>
-        <ul>
-          <!-- use <li class="active"> for the active one on this page -->
-          <li><a href="ourJackets.html">Our Jackets</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="ourJackets.html">Sale</a></li>
-        </ul>
+          <ul>
+            <!-- use <li class="active"> for the active one on this page -->
+            <li><a href="ourJackets.html">Our Jackets</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="ourJackets.html">Sale</a></li>
+          </ul>
         <div class="filler"></div>
 
         <div class="searchbar input-with-label-wrapper shorter tablet-hidden">
@@ -340,34 +341,39 @@
               <a href="#magazine">Magazine >></a>
             </div>
           </div>
-          <p id="slogan">Pushing the comfort zone</p>
+          <p id="slogan" class="tablet-hidden">Pushing the comfort zone</p>
         </div>
       </section>
 
       <section id="ourHistory">
         <div class="split-wrapper">
           <div class="split-60"></div>
-          <div class="section-content split-40">
-          <h2 class="red-h2">Our history</h2>
-          <p class="story-text">
-            Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
-            liatque porepera dolorporum que del et est et que et anis cum nos
-            volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem. Ita
-            quia cori dolore plicide pore con ni ommolorrum quae optatent quam
-            dolorum facea sequam nam facipsum quo bearchi citiunt esendae vel
-            minus sunt, nit eatqui num estiisi nctios por mi, que volore
-            voluptas eum solo optatquam, aut fuga. Fuga. Hendit maxim hitatibus
-            Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
-            liatque porepera dolorporum que del et est et que et anis cum nos
-            volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem. Ita
-            quia cori dolore plicide pore con ni ommolorrum quae optatent quam
-            dolorum facea sequam.
-          </p>
-        </div>
+          <div class="split-40">
+            <svg xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
+              <path id="Polygon_10" data-name="Polygon 10" d="M358.5,0,717,621H0Z" fill="#3a4754"/>
+            </svg>
+            <div class="section-content">
+              <h2 class="red-h2">Our history</h2>
+              <p class="story-text">
+                Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
+                liatque porepera dolorporum que del et est et que et anis cum nos
+                volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem. Ita
+                quia cori dolore plicide pore con ni ommolorrum quae optatent quam
+                dolorum facea sequam nam facipsum quo bearchi citiunt esendae vel
+                minus sunt, nit eatqui num estiisi nctios por mi, que volore
+                voluptas eum solo optatquam, aut fuga. Fuga. Hendit maxim hitatibus
+                Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
+                liatque porepera dolorporum que del et est et que et anis cum nos
+                volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem. Ita
+                quia cori dolore plicide pore con ni ommolorrum quae optatent quam
+                dolorum facea sequam.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="ourValuesAndVision" class="split-wrapper">
+      <section id="ourValuesAndVision" class="split-wrapper small-desktop-block">
         <div class="section-content split-50">
           <h2 class="red-h2">Our values and Vision</h2>
           <p class="story-text">
@@ -390,8 +396,11 @@
         </div>
 
         <div class="split-50">
+        <div class="slogans">
           <div class="triangle-frame-dark">
-            <div class="triangle-dark point-down"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
+              <path id="Polygon_10" data-name="Polygon 10" d="M358.5,0,717,621H0Z" fill="#3a4754"/>
+            </svg>
             <div id="sloganMotivate" class="slogan">
               <p>
                 <span>Motivate</span> our customers to explore nature and
@@ -400,7 +409,12 @@
             </div>
           </div>
           <div class="triangle-frame-blue">
-            <div class="triangle-blue point-down"></div>
+            <svg class="small-desktop-hidden" xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
+              <path id="Polygon_11" data-name="Polygon 11" d="M358.5,0,717,621H0Z" transform="translate(717 621) rotate(180)" fill="#3a4754"/>
+            </svg>
+            <svg class="big-desktop-hidden" xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
+              <path id="Polygon_10" data-name="Polygon 10" d="M358.5,0,717,621H0Z" fill="#3a4754"/>
+            </svg>
             <div id="sloganFreedom" class="slogan">
               <p>
                 <span>Freedom</span> to go on adventure no matter what the
@@ -411,16 +425,18 @@
 
           <div id="sloganSolid" class="slogan">
             <p>
-              <span>Solid</span> - because your limits shouldn’t be set by a
+              <span>Solid</span> - because your limits shouldn't be set by a
               jacket
             </p>
           </div>
+        </div>
         </div>
       </section>
 
       <section id="instagram">
         <div class="section-content">
-          <h2 class="light-h2">
+          <div>
+            <h2 class="light-h2">
             Share your fairytale with us on Instagram
             <span class="red-h2">#Rainydays</span>
           </h2>
@@ -430,13 +446,16 @@
           </p>
           <p class="screen-reader-only">Inspiering photos of hikes</p>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section id="magazine">
         <!--- triangle-->
 
         <div class="triangle-frame">
-          <div class="triangle point-down"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
+            <path id="Polygon_11" data-name="Polygon 11" d="M358.5,0,717,621H0Z" transform="translate(717 621) rotate(180)" fill="#3a4754"/>
+          </svg>
         </div>
 
         <!-- triangle end-->
@@ -444,6 +463,16 @@
           <div class="center-text">
             <h2>Magazine</h2>
             <p>Read our newsletters</p>
+            <button class="add-to-cart-button red-button">
+              <span>Subscribe</span>
+              <span class="cart-wrapper">
+                <span class="cart-background-color point-down"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.2" viewBox="0 0 24 19.2">
+                  <title>Newsletter</title>
+                  <path id="Icon_material-mail" data-name="Icon material-mail" d="M24.6,6H5.4A2.4,2.4,0,0,0,3.012,8.4L3,22.8a2.407,2.407,0,0,0,2.4,2.4H24.6A2.407,2.407,0,0,0,27,22.8V8.4A2.407,2.407,0,0,0,24.6,6Zm0,4.8-9.6,6-9.6-6V8.4l9.6,6,9.6-6Z" transform="translate(-3 -6)" fill="#a1b2c3"/>
+                </svg>
+              </span>
+            </button>
           </div>
 
           <div class="same-height">
