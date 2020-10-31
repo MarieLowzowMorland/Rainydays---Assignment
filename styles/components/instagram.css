@@ -42,7 +42,7 @@
     text-align: left;
     background-image: url("../../images/instagram.png");
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: contain;
     background-position-x: right;
   }
 
