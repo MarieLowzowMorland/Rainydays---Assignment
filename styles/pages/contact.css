@@ -1,12 +1,29 @@
 #contactPage {
-  background-image: url("../../images/mapBig.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-x: 150px;
-  height: 500px;
   width: 100%;
 }
 
 .contact-text {
   max-width: 300px;
+  margin: 0 auto;
+}
+
+.map {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+@media screen and (min-width: 992px) {
+  #contactPage {
+    background-image: url("../../images/mapBig.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 150px;
+    min-height: 500px;
+    width: 100%;
+  }
+
+  .contact-text {
+    max-width: 300px;
+    margin: 0;
+  }
 }
