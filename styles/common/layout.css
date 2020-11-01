@@ -102,21 +102,12 @@ body {
   width: 20%;
 }
 
-.background {
-  background-image: url("../../images/background.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: right;
-  height: 700px;
-  width: 100%;
-}
-
 .fixed-background-wrapper {
   position: relative;
 }
 
 .fixed-background {
-  background-image: url("../../images/background.png");
+  background-image: url("../../images/background.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;

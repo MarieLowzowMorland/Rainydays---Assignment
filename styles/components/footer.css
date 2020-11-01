@@ -24,7 +24,7 @@ footer > div > div {
 
 @media screen and (min-width: 992px) {
   footer {
-    background-image: url("../../images/map.svg");
+    background-image: url("../../images/map.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: right;
