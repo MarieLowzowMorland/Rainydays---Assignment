@@ -50,23 +50,102 @@
 #bestsellers {
   background-color: var(--bg-primary);
   width: 100%;
-  min-height: 600px;
+  position: relative;
+}
+
+#bestsellers > svg {
+  display: none;
+}
+
+#bestsellers h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  padding-top: 15px;
+}
+
+#bestsellers .space {
+  min-width: 1px;
+  min-height: 20px;
+}
+
+#bestsellers .jacket-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+#bestsellers .jacket-slider-wrapper .jacket-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slide-left 0.5s forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#bestsellers #slide-right:checked ~ .jacket-slider-wrapper .jacket-slider {
+  animation: slide-right 0.5s forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
 }
 
 #bestsellers .jacket-box {
   background-color: white;
+  font-weight: normal;
+  font-style: normal;
+  flex: 0 0 200px;
+  margin: 0 10px;
+}
+
+#bestsellers .controls {
+  margin: 0 auto;
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+}
+
+#bestsellers .controls > * {
+  vertical-align: middle;
+}
+
+#bestsellers .controls > label {
   display: inline-block;
-  margin: 5px;
+  height: 4rem;
 }
 
-#bestsellers .jacket-box > div {
-  padding: 0 20px;
-  width: 100%;
-  box-sizing: border-box;
+#bestsellers .controls svg {
+  height: 100%;
+  width: auto;
 }
 
-.jacket-slider {
-  grid-template-columns: auto auto auto auto;
+#bestsellers .controls > label:hover ellipse,
+#bestsellers .controls > label:focus ellipse {
+  fill: var(--secondary);
+}
+
+#bestsellers .controls > p {
+  display: inline-block;
+  width: 30rem;
+  max-width: 60vw;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary);
 }
 
 #takeALook {
@@ -135,5 +214,33 @@
     margin: 10px;
     width: 14rem;
     display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #bestsellers h2 {
+    text-align: left;
+    font-size: 3rem;
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 1rem;
+    color: var(--bg-primary);
+  }
+
+  #bestsellers .jacket-box {
+    flex: 0 0 300px;
+  }
+
+  #bestsellers > svg {
+    display: block;
+    position: absolute;
+    height: 80%;
+    width: auto;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 }
