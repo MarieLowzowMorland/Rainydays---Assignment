@@ -1,3 +1,10 @@
+.anchor {
+  position: relative;
+  display: block;
+  top: -80px;
+  visibility: hidden;
+}
+
 #whoWeAre a {
   text-decoration: none;
 }
@@ -24,7 +31,7 @@
   color: var(--secondary);
   text-transform: uppercase;
   position: absolute;
-  top: 270px;
+  bottom: 36%;
   right: 10px;
 }
 
@@ -110,7 +117,7 @@
 
 #sloganMotivate {
   position: absolute;
-  bottom: 30px;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, 0px);
   width: 15rem;
@@ -199,11 +206,6 @@
   }
 
   #sloganMotivate {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    width: 15rem;
     z-index: 1;
   }
 
@@ -215,6 +217,7 @@
     overflow: visible;
     display: inline-block;
   }
+
   .triangle-frame-blue svg {
     width: 27rem;
     height: auto;
@@ -224,12 +227,9 @@
   }
 
   #sloganFreedom {
-    position: absolute;
     bottom: 20px;
     top: inherit;
     left: calc(50% - 4rem);
-    transform: translate(-50%, 0px);
-    width: 60%;
   }
 
   #sloganSolid {
