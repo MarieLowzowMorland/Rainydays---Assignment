@@ -1,5 +1,5 @@
 #magazine {
-  background-color: var(--icon-color);
+  background-color: var(--bg-3);
   width: 100%;
   min-height: 550px;
 }
@@ -14,13 +14,15 @@
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 0;
+  color: var(--secondary);
 }
 
 #magazine p {
   font-family: oswald, sans-serif;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 #magazine h3 {
@@ -49,7 +51,7 @@
   margin: 15px;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary);
+  background-color: var(--bg-2);
   width: 23%;
   min-height: 355px;
 }
@@ -70,5 +72,5 @@
 }
 
 .triangle-frame svg path {
-  fill: var(--bg-primary);
+  fill: var(--bg-2);
 }

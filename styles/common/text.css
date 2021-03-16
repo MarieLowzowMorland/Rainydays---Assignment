@@ -27,6 +27,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
 a {
   color: var(--secondary);
   font-family: Helvetica, Arial, sans-serif;

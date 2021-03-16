@@ -71,10 +71,12 @@ nav .svg-button:hover {
   border-bottom: 2px solid var(--secondary);
 }
 
+nav svg rect,
 nav svg path {
   fill: var(--text-white);
 }
 
+nav svg:hover rect,
 nav svg:hover path {
   fill: var(--secondary);
 }
@@ -96,7 +98,7 @@ nav a.logo-link svg:hover path{
   width: auto;
 }
 
-h2,
+header h2,
 nav a {
   color: var(--text-white);
   font-size: 1.5rem;

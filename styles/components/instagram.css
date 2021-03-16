@@ -12,23 +12,21 @@
 #instagram .section-content > div {
   width: fit-content;
   margin: 0 auto;
-  background-color: #55555531;
-  padding: 5px;
-  padding-top: 0px;
+  background-color: #00000099;
+  padding: 20px;
 }
 
 #instagram h2 {
   font-size: 3rem;
   max-width: 30rem;
-}
-
-#instagram .red-h2 {
-  color: var(--primary);
+  font-family: oswald, sans-serif;
+  font-weight: normal;
 }
 
 #instagram p {
   color: var(--bg-primary);
-  max-width: 30rem;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 #instagram img {
@@ -38,36 +36,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #instagram {
-    text-align: left;
-    background-image: url("../../images/instagram-triangle.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: right;
-  }
-
-  #instagram img {
-    display: none;
-  }
-
   #instagram .section-content > div {
-    margin: 0;
-    padding: 0;
-    background-color: inherit;
-  }
-
-  #instagram .red-h2 {
-    color: var(--secondary);
-  }
-
-  #instagram h2 {
-    font-size: 3rem;
-    width: 30rem;
-    margin-top: 100px;
-    margin-left: 40px;
-  }
-
-  #instagram p {
-    margin-left: 40px;
+    float: right;
   }
 }
