@@ -9,7 +9,7 @@ export const pageNames = {
   CHECKOUT: "checkout"
 }
 
-export const addHeaderForPage = (pageName) => document
+const addHeaderForPage = (pageName) => document
   .querySelector("main")
   .insertAdjacentHTML("beforebegin", headerTemplate(pageName));
 
@@ -151,3 +151,5 @@ const headerTemplate = (pageName) => `
     </div>
   </nav>
 </header>`;
+
+export default addHeaderForPage;

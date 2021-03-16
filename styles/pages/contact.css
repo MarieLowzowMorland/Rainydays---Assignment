@@ -38,8 +38,7 @@
   margin: 0 auto;
 }
 
-#contactPage .section-content section,
-#contactPage .section-content form{
+#contactPage .section-content section{
   width: 100%;
   max-width: 450px;
   margin: 40px 0;
@@ -48,20 +47,6 @@
 #contactPage .section-content h2,
 #contactPage .section-content p{
   max-width: 300px;
-}
-
-#success-message {
-  display: none;
-}
-
-#contactPage .section-content .form-error p {
-  padding-left: 10px;
-  color: var(--warning);
-  font-size: 0.8rem;
-  text-align: left;
-  margin: 0;
-  margin-top: -5px;
-  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 599px) {
@@ -80,11 +65,7 @@
   }
 
   #contactPage .section-content h2{
-    margin: 20px 0;
-  }
-
-  #contactPage .section-content form{
-    margin-top: 60px;
+    margin: 0 0 20px 0;
   }
 
   .tablet-left{

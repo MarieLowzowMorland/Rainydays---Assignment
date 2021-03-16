@@ -1,5 +1,5 @@
 textarea, input {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--text-white);
   background-color: var(--bg-2);
   border: none;
@@ -37,6 +37,20 @@ input:hover {
 .input-with-label-wrapper input {
   padding: 1rem 10px 0;
   width: 100%;
+}
+
+.success-message {
+  display: none;
+}
+
+.form-error p {
+  padding-left: 10px;
+  color: var(--warning) !important;
+  font-size: 0.8rem;
+  text-align: left;
+  margin: 0;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 992px) {

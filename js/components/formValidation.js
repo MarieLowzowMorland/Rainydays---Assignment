@@ -1,29 +1,33 @@
-const validateForm = (event) => {
+const validateForm = (successDivId) => (event) => {
   event.preventDefault();
   const inputs = [
     ...Array.from(event.target.querySelectorAll("input")), 
     ...Array.from(event.target.querySelectorAll("textarea"))
   ];
   const formIsValid = inputs
-      .map(validateInput)
+      .map(validateInput(successDivId))
       .every(valid => valid);  
 
   if(formIsValid){
-      showSuccessMessage();
+      showSuccessMessage(successDivId);
   } else {
-      hideSuccessMessage();
+      hideSuccessMessage(successDivId);
   }
 }
 
-const showSuccessMessage = () => {
-  document.getElementById("success-message").style.display = "block";
+const showSuccessMessage = (successDivId) => {
+  if(successDivId){
+    document.getElementById(successDivId).style.display = "block";
+  }
 }
 
-const hideSuccessMessage = () => {
-  document.getElementById("success-message").style.display = "none";
+const hideSuccessMessage = (successDivId) => {
+  if(successDivId){
+    document.getElementById(successDivId).style.display = "none";
+  }
 }
 
-const validateInput = (inputElement) => {
+const validateInput = (successDivId) => (inputElement) => {
   const {name, value, required, type} = inputElement;
   const minlength = inputElement.getAttribute("data-minlength") || 0;
   
@@ -46,7 +50,7 @@ const validateInput = (inputElement) => {
       return true;
   } else {
       inputElement.classList.add("invalid");
-      hideSuccessMessage();
+      hideSuccessMessage(successDivId);
       return false;
   };
 }
@@ -71,19 +75,19 @@ const validateEmail = (value, name) => {
 
 const upperCaseFirst = (value) => value.charAt(0).toUpperCase() + value.substr(1);
 
-const validateInputEventHandler = (event) => {
-  validateInput(event.target);
+const validateInputEventHandler = (successDivId) => (event) => {
+  validateInput(successDivId)(event.target);
 }
 
-const addValidationToForm = (formId) => {
+const addValidationToForm = (formId, successDivId) => {
   const form = document.getElementById(formId);
   const inputs = [
     ...form.querySelectorAll("input"), 
     ...form.querySelectorAll("textarea")
   ]
 
-  form.addEventListener("submit", validateForm);
-  inputs.forEach(input => input.addEventListener("input", validateInputEventHandler));
+  form.addEventListener("submit", validateForm(successDivId));
+  inputs.forEach(input => input.addEventListener("input", validateInputEventHandler(successDivId)));
 }
 
 export default addValidationToForm;
