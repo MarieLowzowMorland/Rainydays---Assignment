@@ -7,14 +7,14 @@
   padding: 0;
   box-sizing: border-box;
   border: 0;
-  background-color: var(--icon-color);
+  background-color: var(--primary);
   box-shadow: 3px 3px 6px #0000004d;
 }
 
 .add-to-cart-button:hover,
 .add-to-cart-button:focus {
-  border: 1px solid var(--primary);
-  background-color: var(--bg-primary);
+  border: 1px solid var(--secondary);
+  background-color: var(--hover-primary);
   outline: none;
 }
 
@@ -31,7 +31,7 @@
 
 .add-to-cart-button:hover > span:first-child,
 .add-to-cart-button:focus > span:first-child {
-  color: var(--primary);
+  color: white;
 }
 
 .add-to-cart-button .cart-wrapper {
@@ -45,7 +45,7 @@
 .add-to-cart-button .cart-background-color {
   position: absolute;
   display: block;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   width: 7rem;
   height: 7rem;
   top: -6rem;
@@ -64,18 +64,18 @@
 
 .add-to-cart-button.big {
   height: 8rem;
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .add-to-cart-button.big:hover,
 .add-to-cart-button.big:focus {
-  border: 1px solid var(--primary);
-  background-color: var(--bg-primary);
+  border: 1px solid var(--secondary);
+  background-color: var(--hover-primary);
   outline: none;
 }
 
 .add-to-cart-button.big > span:first-child {
-  color: var(--bg-primary);
+  color: var(--hover-primary);
   font-size: 2rem;
   text-align: left;
   padding: 1.8rem;
@@ -88,7 +88,7 @@
 
 .add-to-cart-button.big:hover span:first-child,
 .add-to-cart-button.big:focus span:first-child {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .add-to-cart-button.big .cart-wrapper {
@@ -96,7 +96,7 @@
 }
 
 .add-to-cart-button.big .cart-background-color {
-  background-color: var(--icon-color);
+  background-color: var(--primary);
   width: 11rem;
   height: 11rem;
   top: -8rem;

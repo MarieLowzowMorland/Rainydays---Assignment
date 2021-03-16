@@ -1,6 +1,11 @@
 :root {
   --primary: #3a4754;
-  --secondary: #ca5c43;
+  --hover-primary: #4a5764;
+  --secondary: #00c4ff;
   --icon-color: #a1b2c3;
   --bg-primary: #e9edf2;
+  --bg-2: #000000;
+  --bg-3: #2b2b2b;
+  --warning: #E20000;
+
 }

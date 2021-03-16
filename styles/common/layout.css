@@ -132,6 +132,10 @@ body {
   background-color: var(--bg-primary);
 }
 
+.clear-float{
+  clear: both;
+}
+
 @media screen and (min-width: 1200px) {
   .big-desktop-hidden {
     display: none;

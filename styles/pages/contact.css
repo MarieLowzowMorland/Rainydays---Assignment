@@ -1,29 +1,106 @@
+#contact-us-banner{
+  background-image: url("../../images/mountains.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  min-height: 100px;
+  width: 100%;
+}
+
+#contact-us-banner h1{
+  color: var(--bg-2);
+  font-size: 2rem;
+  padding: 2rem 0 0 4rem;
+}
+
 #contactPage {
   width: 100%;
 }
 
-.contact-text {
-  max-width: 300px;
+#contactPage h2 {
+  color: var(--secondary);
+}
+
+#contactPage p,
+#contactPage a {
+  color: white;
+  font-weight: normal;
+}
+
+#contactPage textarea,
+#contactPage input{
+  background-color: var(--bg-2);
+  color: white;
+}
+
+#contactPage label{
+  color: white;
+}
+#contactPage .section-content{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--bg-3);
+}
+
+#contactPage .section-content > div{
+  max-width: 500px;
   margin: 0 auto;
 }
 
-.map {
+#contactPage .section-content section,
+#contactPage .section-content form{
   width: 100%;
-  margin-bottom: -5px;
+  max-width: 450px;
+  margin: 40px 0;
+}
+
+#contactPage .section-content h2,
+#contactPage .section-content p{
+  max-width: 300px;
+}
+
+#success-message {
+  display: none;
+}
+
+#contactPage .section-content .form-error p {
+  padding-left: 10px;
+  color: var(--warning);
+  font-size: 0.8rem;
+  text-align: left;
+  margin: 0;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 599px) {
+  #contact-us-banner{
+    min-height: 200px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  #contactPage {
-    background-image: url("../../images/mapBig.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-x: 150px;
-    min-height: 500px;
-    width: 100%;
+  #contact-us-banner{
+    min-height: 300px;
   }
 
-  .contact-text {
-    max-width: 300px;
-    margin: 0;
+  #contactPage .section-content > div{
+    max-width: 1000px;
+  }
+
+  #contactPage .section-content h2{
+    margin: 20px 0;
+  }
+
+  #contactPage .section-content form{
+    margin-top: 60px;
+  }
+
+  .tablet-left{
+    float: left;
+  }
+
+  .tablet-right{
+    float: right;
   }
 }

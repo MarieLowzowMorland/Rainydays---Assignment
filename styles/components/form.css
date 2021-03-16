@@ -1,4 +1,4 @@
-input {
+textarea, input {
   font-size: 1.5rem;
   color: var(--primary);
   background-color: white;
@@ -9,6 +9,12 @@ input {
   margin-bottom: 10px;
 }
 
+textarea{
+  height: 10rem;
+}
+
+textarea:focus,
+textarea:hover,
 input:focus,
 input:hover {
   border-radius: 0;
@@ -26,6 +32,7 @@ input:hover {
   margin: 3px 10px;
 }
 
+.input-with-label-wrapper textarea,
 .input-with-label-wrapper input {
   padding: 1rem 10px 0;
   width: 100%;

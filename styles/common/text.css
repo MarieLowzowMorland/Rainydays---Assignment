@@ -1,5 +1,4 @@
 html {
-  font-size: 12px;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--primary);
 }
@@ -78,10 +77,4 @@ aside {
   font-size: 0.6rem;
   text-transform: uppercase;
   color: var(--primary);
-}
-
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 10px;
-  }
 }
