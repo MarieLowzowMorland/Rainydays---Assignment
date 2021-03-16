@@ -23,19 +23,10 @@
 
 #contactPage p,
 #contactPage a {
-  color: white;
+  color: var(--text-white);
   font-weight: normal;
 }
 
-#contactPage textarea,
-#contactPage input{
-  background-color: var(--bg-2);
-  color: white;
-}
-
-#contactPage label{
-  color: white;
-}
 #contactPage .section-content{
   width: 100%;
   box-sizing: border-box;

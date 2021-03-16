@@ -7,7 +7,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-3);
   box-shadow: -3px 3px 6px #0000004d;
 }
 
@@ -42,7 +42,7 @@ nav li a:hover {
   border-bottom: 2px solid var(--secondary);
 }
 
-nav li.active a {
+nav li a.active {
   border-bottom: 2px solid var(--secondary);
 }
 
@@ -71,12 +71,24 @@ nav .svg-button:hover {
   border-bottom: 2px solid var(--secondary);
 }
 
+nav svg path {
+  fill: var(--text-white);
+}
+
 nav svg:hover path {
   fill: var(--secondary);
 }
 
 nav a.logo-link {
   margin: 5px;
+}
+
+nav a.logo-link path{
+  fill: var(--secondary);
+}
+
+nav a.logo-link svg:hover path{
+  fill: var(--text-white);
 }
 
 #Logo {
@@ -86,7 +98,7 @@ nav a.logo-link {
 
 h2,
 nav a {
-  color: var(--primary);
+  color: var(--text-white);
   font-size: 1.5rem;
   font-family: oswald, sans-serif;
   font-weight: 400;
@@ -124,7 +136,7 @@ nav a {
 }
 
 #shopping-cart-visible:checked + label > svg path {
-  fill: var(--primary);
+  fill: var(--text-white);
 }
 
 #shopping-cart-visible:checked ~ #cart-circle {
@@ -185,7 +197,7 @@ nav a {
   }
 
   nav .search {
-    border-top: 1px solid var(--icon-color);
+    border-top: 1px solid var(--secondary);
     width: 100%;
     padding-top: 10px;
   }
@@ -203,7 +215,7 @@ nav a {
   nav li {
     display: block;
     padding: 5px 0;
-    border-top: 1px solid var(--icon-color);
+    border-top: 1px solid var(--secondary);
   }
 
   nav .menu {

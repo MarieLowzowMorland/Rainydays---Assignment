@@ -1,7 +1,7 @@
 textarea, input {
   font-size: 1.5rem;
-  color: var(--primary);
-  background-color: white;
+  color: var(--text-white);
+  background-color: var(--bg-2);
   border: none;
   height: 3rem;
   box-sizing: border-box;
@@ -30,6 +30,7 @@ input:hover {
 .input-with-label-wrapper label {
   position: absolute;
   margin: 3px 10px;
+  color: var(--text-white);
 }
 
 .input-with-label-wrapper textarea,
