@@ -44,6 +44,12 @@ input[type=radio] + label{
   vertical-align: middle;
 }
 
+fieldset{
+  margin: inherit;
+  border: 0;
+  padding: inherit;
+}
+
 .success-message {
   display: none;
 }

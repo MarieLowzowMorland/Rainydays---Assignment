@@ -70,7 +70,7 @@ h3 {
 label,
 #shipping-address p {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bold;
   color: var(--primary);
@@ -78,7 +78,7 @@ label,
 
 aside {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   color: var(--primary);
 }

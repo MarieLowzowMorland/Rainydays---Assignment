@@ -81,12 +81,13 @@
           <section id="payment">
             <h2>Payment</h2>
             <form action="payment.php" method="POST">
-              <div>
+              <fieldset>
+                <legend class="screen-reader-only">Payment method</legend>
                 <input type="radio" name="paymentType" id="visa" value="visa" />
                 <label for="visa">Visa</label>
                 <input type="radio" name="paymentType" id="vips" value="vips" />
                 <label for="vips">VIPPS</label>
-              </div>
+              </fieldset>
 
               <div class="input-with-label-wrapper shorter">
                 <label for="cardNumber">Card number</label>
