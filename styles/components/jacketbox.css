@@ -39,7 +39,7 @@
   left: -1rem;
   width: fit-content;
   height: 3rem;
-  background-color: var(--secondary);
+  background-color: var(--sale);
   box-shadow: 3px 3px 6px #0000004d;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .jacket-box .sale-banner > svg path {
-  fill: var(--secondary);
+  fill: var(--sale);
 }
 
 .jacket-box .sale-banner > div > span {
