@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
+  background-color: white;
   min-height: 100px;
   width: 100%;
 }
