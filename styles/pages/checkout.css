@@ -3,11 +3,14 @@
   padding-right: 10px;
 }
 
+.white-input-wrapper,
+main select,
 main .input-with-label-wrapper input{
   color: var(--primary);
   background-color: var(--text-white)
 }
 
+main .white-input-wrapper label,
 main .input-with-label-wrapper label{
   color: var(--primary);
 }
@@ -17,4 +20,23 @@ main .input-with-label-wrapper label{
   height: inherit;
   display: block;
   float: left;
+}
+
+main button[type=submit]{
+  margin-bottom: 0;
+}
+
+main .add-to-cart-button svg {
+  margin: 7px;
+  margin-right: 0;
+}
+
+main .grey-card > *{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.right-aligned{
+  float: right;
+  margin-right: 20px;
 }

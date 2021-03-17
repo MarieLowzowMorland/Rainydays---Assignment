@@ -1,218 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Have a descripte title and meta for the spesific page -->
+    <title>Rainydays|Home</title>
+    <meta
+      name="description"
+      content="The checkout page for Rainydays´online shop."
+    />
+    <link href="./styles/common/text.css" rel="stylesheet" type="text/CSS" />
+    <link
+      href="./styles/common/variables.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link
+      href="./styles/components/buttons.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link href="./styles/common/layout.css" rel="stylesheet" type="text/CSS" />
+    <link
+      href="./styles/components/footer.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link
+      href="./styles/components/form.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link
+      href="./styles/components/header.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link
+      href="./styles/components/jacket-cart.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link
+      href="./styles/components/triangle.css"
+      rel="stylesheet"
+      type="text/CSS"
+    />
+    <link href="./styles/pages/checkout.css" rel="stylesheet" type="text/CSS" />
+    <link rel="stylesheet" href="https://use.typekit.net/cuv4oew.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <!-- Have a descripte title and meta for the spesific page -->
-  <title>Rainydays|Home</title>
-  <meta name="description" content="The checkout page for Rainydays´online shop." />
-  <link href="./styles/common/text.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/common/variables.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/components/buttons.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/common/layout.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/components/footer.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/components/form.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/components/header.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/components/jacket-cart.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/components/triangle.css" rel="stylesheet" type="text/CSS" />
-  <link href="./styles/pages/checkout.css" rel="stylesheet" type="text/CSS" />
-  <link rel="stylesheet" href="https://use.typekit.net/cuv4oew.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- Hotjar Tracking Code for https://rainydays-mariemorland.netlify.app/?fbclid=IwAR2EeryFvagCnv0fRMy7lGoAgQaPu3KwiIiqJrPVRkvjImnj8DpE0gDQLjY -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2275177,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    <!-- Hotjar Tracking Code for https://rainydays-mariemorland.netlify.app/?fbclid=IwAR2EeryFvagCnv0fRMy7lGoAgQaPu3KwiIiqJrPVRkvjImnj8DpE0gDQLjY -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2275177, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
 
-</head>
+  <body>
+    <main>
+      <div class="fixed-background-wrapper">
+        <div class="fixed-background"></div>
+      </div>
+      <div class="main-contentbox">
+        <h1>Checkout</h1>
 
-<body>
-  <main>
-    <div class="fixed-background-wrapper">
-      <div class="fixed-background"></div>
-    </div>
-    <div class="main-contentbox">
-      <h1>Checkout</h1>
-
-      <div class="grey-card split-wrapper tablet-block column-reverse">
-        <div class="checkout-form split-50">
-          <section id="shipping-address">
-            <h2>Shipping address</h2>
-            <p>Contry: Norway</p>
-            <form action="shipping-address.php" method="POST">
-              <div class="input-with-label-wrapper">
-                <input type="text" name="first-name" id="firstName" required/>
-                <label for="firstName">First name</label>
-              </div>
-
-              <div class="input-with-label-wrapper">
-                <input type="text" name="sure-name" id="sureName" required/>
-                <label for="sureName">Surename</label>
-              </div>
-
-              <div class="input-with-label-wrapper">
-                <input type="text" name="address" id="address" required/>
-                <label for="address">Address</label>
-              </div>
-
-              <div class="input-with-label-wrapper">
-                <input type="text" name="zip" id="zip" required/>
-                <label for="zip">Zip code</label>
-              </div>
-
-              <div class="input-with-label-wrapper">
-                <input type="text" name="city" id="city" required/>
-                <label for="city">City</label>
-              </div>
-
-              <div class="input-with-label-wrapper">
-                <input type="email" name="mail" id="mail" required/>
-                <label for="mail">e-mail</label>
-              </div>
-            </form>
-          </section>
-
-          <section id="payment">
-            <h2>Payment</h2>
-            <form action="payment.php" method="POST">
-              <fieldset>
-                <legend class="screen-reader-only">Payment method</legend>
-                <input type="radio" checked name="paymentType" id="visa" value="visa" />
-                <label for="visa">Visa</label>
-                <input type="radio" name="paymentType" id="vips" value="vips" />
-                <label for="vips">VIPPS</label>
-              </fieldset>
-
-              <div class="input-with-label-wrapper shorter">
-                <input type="text" name="card-number" id="cardNumber" required/>
-                <label for="cardNumber">Card number</label>
-              </div>
-
-              <div class="input-with-label-wrapper shorter">
-                <input type="text" name="mmyy" id="mmyy" required/>
-                <label for="mmyy">mm/yy</label>
-              </div>
-              <div class="input-with-label-wrapper shorter">
-                <input type="text" name="cvc" id="cvc" required/>
-                <label for="cvc">cvc</label>
-              </div>
-
-              <div class="accept-agreement">
-                <input type="checkbox" name="accept" id="accept" value="accept" required/>
-                <label for="accept">
-                  I have read & agree to Rainydays Terms and Conditions and
-                  accept that the purchase involves a payment responsibility
-                </label>
-              </div>
-            </form>
-          </section>
-          <button class="add-to-cart-button big desktop-hidden">
-            <span><span>Complete</span></span>
-            <span class="cart-wrapper">
-              <span class="cart-background-color point-down"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="64.536" height="83.672" viewBox="0 0 64.536 83.672">
-                <g data-name="Group 278" transform="translate(-453.512 -35.568)">
-                  <circle data-name="Ellipse 14" cx="23" cy="23" r="23"
-                    transform="translate(459.575 73.24)" fill="#e9edf2" />
-                  <path data-name="Path 45"
-                    d="M-1485-6558.79c18.12,8.512,26.526,26.526,26.526,26.526s13.82-53.179,35.367-70.735"
-                    transform="translate(1939.575 6640.505)" fill="none" stroke="#3a4754" stroke-width="5" />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </div>
-
-        <div class="split-50">
-          <div id="cart">
+        <div class="grey-card split-wrapper tablet-block column-reverse">
+          <div class="checkout-form split-50">
             <section>
-              <h2>Your cart</h2>
-              <p class="smal-blue-text">Number of items</p>
-              <ul>
-                <li>
-                  <div class="split-wrapper">
-                    <img class="split-50" src="images/jacket1.png" alt="Picture of jacket" />
-
-                    <div class="split-50 jacket-chekout-info">
-                      <h3>Jacket name</h3>
-                      <p>Gore tex jacket</p>
-
-                      <div class="jacket-options-grid">
-                        <label for="size">Size</label>
-                        <select name="size" id="size">
-                          <option value="XS">XS</option>
-                          <option value="S">S</option>
-                          <option value="M">M</option>
-                          <option value="L">L</option>
-                          <option value="XL">XL</option>
-                        </select>
-                        
-                        <label for="color">Color</label>
-                        <select name="color" id="color">
-                          <option value="purple">Purple</option>
-                          <option value="green">Green</option>
-                          <option value="yellow">Yellow</option>
-                          <option value="blue">Blue</option>
-                          <option value="black">Black</option>
-                        </select>
-                      </div>
-                      <div class="one-liner">
-                        <button class="circle">-</button>
-                        <p>1</p>
-                        <button class="circle">+</button>
-                      </div> 
-                      <p class="bold">NOK 2000,-</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </section>
-
-            <section class="payment-overview">
-              <h2>Payment overview</h2>
-              <div class="split-wrapper">
-                <div class="split-60 left-text">
-                  <p>Sum products</p>
-                  <p>Shipping</p>
-                  <aside>Estimated time for shipping is 3-4 days</aside>
+              <h2>Shipping address</h2>
+              <p>Contry: Norway</p>
+              <form id="purchase-form">
+                <div class="input-with-label-wrapper">
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="firstName"
+                    required
+                  />
+                  <label for="firstName">First name</label>
+                  <div class="form-error" id="first-nameError"></div>
                 </div>
-                <div class="split-40 right-text">
-                  <p>NOK 2000,-</p>
-                  <p>Free</p>
+
+                <div class="input-with-label-wrapper">
+                  <input type="text" name="surname" id="surName" required />
+                  <label for="surName">Surname</label>
+                  <div class="form-error" id="surnameError"></div>
                 </div>
-              </div>
-              <div class="split-wrapper">
-                <p class="split-60 left-text">Total</p>
-                <p class="split-40 right-text">NOK 2000,-</p>
-              </div>
-              <div id="dubble-line"></div>
+
+                <div class="input-with-label-wrapper">
+                  <input type="text" name="address" id="address" required />
+                  <label for="address">Address</label>
+                  <div class="form-error" id="addressError"></div>
+                </div>
+
+                <div class="input-with-label-wrapper">
+                  <input
+                    type="text"
+                    name="zip"
+                    id="zip"
+                    data-numberfield="true"
+                    data-length="4"
+                    required
+                  />
+                  <label for="zip">Zip code</label>
+                  <div class="form-error" id="zipError"></div>
+                </div>
+
+                <div class="input-with-label-wrapper">
+                  <input type="text" name="city" id="city" required />
+                  <label for="city">City</label>
+                  <div class="form-error" id="cityError"></div>
+                </div>
+
+                <div class="input-with-label-wrapper">
+                  <input type="email" name="mail" id="mail" required />
+                  <label for="mail">e-mail</label>
+                  <div class="form-error" id="mailError"></div>
+                </div>
+                <h2>Payment</h2>
+                <fieldset>
+                  <legend class="screen-reader-only">Payment method</legend>
+                  <input
+                    type="radio"
+                    checked
+                    name="paymentType"
+                    id="visa"
+                    value="visa"
+                  />
+                  <label for="visa">Visa</label>
+                  <input
+                    type="radio"
+                    name="paymentType"
+                    id="vips"
+                    value="vips"
+                  />
+                  <label for="vips">VIPPS</label>
+                  <div class="form-error" id="paymentTypeError"></div>
+                </fieldset>
+
+                <div class="input-with-label-wrapper shorter">
+                  <input
+                    type="text"
+                    name="card-number"
+                    id="cardNumber"
+                    data-numberfield="true"
+                    dataLength="11"
+                    required
+                  />
+                  <label for="cardNumber">Card number</label>
+                  <div class="form-error" id="card-numberError"></div>
+                </div>
+
+                <div class="white-input-wrapper shorter">
+                  <label for="mm" class="required raised">Expiry date</label>
+                  <span class="right-aligned">
+                    <select type="select" name="mm" id="mm" required>
+                      <option value disabled selected>MM</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                    <label for="yy">/</label>
+                    <select name="yy" id="yy" required>
+                      <option value disabled selected>YY</option>
+                      <option>21</option>
+                      <option>22</option>
+                      <option>23</option>
+                      <option>24</option>
+                      <option>25</option>
+                      <option>26</option>
+                      <option>27</option>
+                      <option>28</option>
+                      <option>29</option>
+                      <option>30</option>
+                      <option>31</option>
+                      <option>32</option>
+                      <option>33</option>
+                      <option>34</option>
+                      <option>35</option>
+                      <option>36</option>
+                      <option>37</option>
+                      <option>38</option>
+                      <option>39</option>
+                      <option>40</option>
+                      <option>41</option>
+                    </select>
+                  </span>
+                </div>
+                <div class="form-error" id="mmError"></div>
+                <div class="form-error" id="yyError"></div>
+
+                <div class="input-with-label-wrapper shorter">
+                  <input
+                    type="text"
+                    name="cvc"
+                    id="cvc"
+                    data-numberfield="true"
+                    length="3"
+                    required
+                  />
+                  <label for="cvc">cvc</label>
+                  <div class="form-error" id="cvcError"></div>
+                </div>
+
+                <div class="accept-agreement">
+                  <input
+                    type="checkbox"
+                    name="accept"
+                    id="accept"
+                    value="accept"
+                    required
+                  />
+                  <label for="accept">
+                    I have read & agree to Rainydays Terms and Conditions and
+                    accept that the purchase involves a payment responsibility
+                  </label>
+                  <div class="form-error" id="acceptError"></div>
+                </div>
+                <button type="submit" class="add-to-cart-button" formnovalidate>
+                  <span><span>Complete</span></span>
+                  <span class="cart-wrapper">
+                    <span class="cart-background-color point-down"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="64.536"
+                      height="83.672"
+                      viewBox="0 0 64.536 83.672"
+                    >
+                      <g
+                        data-name="Group 278"
+                        transform="translate(-453.512 -35.568)"
+                      >
+                        <circle
+                          data-name="Ellipse 14"
+                          cx="23"
+                          cy="23"
+                          r="23"
+                          transform="translate(459.575 73.24)"
+                          fill="#e9edf2"
+                        />
+                        <path
+                          data-name="Path 45"
+                          d="M-1485-6558.79c18.12,8.512,26.526,26.526,26.526,26.526s13.82-53.179,35.367-70.735"
+                          transform="translate(1939.575 6640.505)"
+                          fill="none"
+                          stroke="#3a4754"
+                          stroke-width="5"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                </button>
+              </form>
             </section>
           </div>
-          <button class="add-to-cart-button big tablet-hidden">
-            <span><span>Complete the purchase</span></span>
-            <span class="cart-wrapper">
-              <span class="cart-background-color point-down"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="64.536" height="83.672" viewBox="0 0 64.536 83.672">
-                <g data-name="Group 278" transform="translate(-453.512 -35.568)">
-                  <circle id="Ellipse_14" data-name="Ellipse 14" cx="23" cy="23" r="23"
-                    transform="translate(459.575 73.24)" fill="#e9edf2" />
-                  <path data-name="Path 45"
-                    d="M-1485-6558.79c18.12,8.512,26.526,26.526,26.526,26.526s13.82-53.179,35.367-70.735"
-                    transform="translate(1939.575 6640.505)" fill="none" stroke="#3a4754" stroke-width="5" />
-                </g>
-              </svg>
-            </span>
-          </button>
+
+          <div class="split-50">
+            <div id="cart">
+              <section>
+                <h2>Your cart</h2>
+                <p class="smal-blue-text">Number of items</p>
+                <ul>
+                  <li>
+                    <div class="split-wrapper">
+                      <img
+                        class="split-50"
+                        src="images/jacket1.png"
+                        alt="Picture of jacket"
+                      />
+
+                      <div class="split-50 jacket-chekout-info">
+                        <h3>Jacket name</h3>
+                        <p>Gore tex jacket</p>
+
+                        <div class="jacket-options-grid">
+                          <label for="size">Size</label>
+                          <select name="size" id="size">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                          </select>
+
+                          <label for="color">Color</label>
+                          <select name="color" id="color">
+                            <option value="purple">Purple</option>
+                            <option value="green">Green</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="blue">Blue</option>
+                            <option value="black">Black</option>
+                          </select>
+                        </div>
+                        <div class="one-liner">
+                          <button class="circle">-</button>
+                          <p>1</p>
+                          <button class="circle">+</button>
+                        </div>
+                        <p class="bold">NOK 2000,-</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="payment-overview">
+                <h2>Payment overview</h2>
+                <div class="split-wrapper">
+                  <div class="split-60 left-text">
+                    <p>Sum products</p>
+                    <p>Shipping</p>
+                    <aside>Estimated time for shipping is 3-4 days</aside>
+                  </div>
+                  <div class="split-40 right-text">
+                    <p>NOK 2000,-</p>
+                    <p>Free</p>
+                  </div>
+                </div>
+                <div class="split-wrapper">
+                  <p class="split-60 left-text">Total</p>
+                  <p class="split-40 right-text">NOK 2000,-</p>
+                </div>
+                <div id="dubble-line"></div>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <script src="./js/pages/checkout.js" type="module"></script>
-</body>
+    </main>
+    <script src="./js/pages/checkout.js" type="module"></script>
+  </body>
 </html>

@@ -2,6 +2,7 @@ const validateForm = (successDivId) => (event) => {
   event.preventDefault();
   const inputs = [
     ...Array.from(event.target.querySelectorAll("input")), 
+    ...Array.from(event.target.querySelectorAll("select")), 
     ...Array.from(event.target.querySelectorAll("textarea"))
   ];
   const formIsValid = inputs
@@ -27,23 +28,55 @@ const hideSuccessMessage = (successDivId) => {
   }
 }
 
+const parseNumberOrDefault = (number, fallback) => {
+  if (typeof number === "string") {
+    number = parseFloat(number);
+  }
+
+  if (typeof number === "number" && !Number.isNaN(number)) {
+    return number;
+  }
+
+  return fallback;
+}
+
+const requiredCheckValue = (value, checked, type) => {
+  if(type !== "checkbox"){
+    return value;
+  }
+
+  if(checked){
+    return "checked";
+  } else {
+    return "";
+  }
+}
+
 const validateInput = (successDivId) => (inputElement) => {
-  const {name, value, required, type} = inputElement;
-  const minlength = inputElement.getAttribute("data-minlength") || 0;
+  const {name, value, required, type, checked} = inputElement;
+  const numberField = inputElement.getAttribute("data-numberfield");
+  const minlength = parseNumberOrDefault(inputElement.getAttribute("data-minlength"), 0);
+  const dataLength = parseNumberOrDefault(inputElement.getAttribute("data-length"), 0);
   
   let errorMessages = [];
   if(required){
-      errorMessages.push(validateRequired(value, name));
+    errorMessages.push(validateRequired(requiredCheckValue(value, checked, type), name));
+  }
+  if(numberField){
+    errorMessages.push(validateNumbersOnly(value, name));
   }
   if(type === "email"){
-      errorMessages.push(validateEmail(value, name));
+    errorMessages.push(validateEmail(value, name));
   }
   if(minlength > 0){
-      errorMessages.push(validateMinLength(value, minlength, name));
+    errorMessages.push(validateMinLength(value, minlength, name));
+  }
+  if(dataLength > 0){
+    errorMessages.push(validateDataLength(value, dataLength, name));
   }
 
-  const errorMessage = errorMessages.join("")
 
+  const errorMessage = errorMessages.join("")
   document.getElementById(`${name}Error`).innerHTML = errorMessage;
   if (errorMessage === ""){
       inputElement.classList.remove("invalid");
@@ -72,6 +105,32 @@ const validateEmail = (value, name) => {
   }
 }
 
+const validateNumbersOnly = (value, name) => { 
+  const regEx = /^\d*$/;
+  if (regEx.test(value)){
+      return "";
+  } else {
+      return /*template*/`<p>${upperCaseFirst(name)} may only contain numbers.</p>`;
+  }
+}
+
+const validateDataLength = (value, dataLength, name) => { 
+  if(value.trim().length !== dataLength){
+    return /*template*/`<p>${upperCaseFirst(name)} must have ${dataLength} numbers without leading or trailing spaces. Currently has ${value.trim().length}</p>`
+} else {
+    return "";
+  }
+}
+
+const validateMinLength = (value, minLength, name) => {
+  if(!value || value.trim().length < minLength){
+      return /*template*/`<p>${upperCaseFirst(name)} must be at least ${minLength} without leading or trailing spaces.</p>`
+  } else {
+      return "";
+  }
+}
+
+
 
 const upperCaseFirst = (value) => value.charAt(0).toUpperCase() + value.substr(1);
 
@@ -83,6 +142,7 @@ const addValidationToForm = (formId, successDivId) => {
   const form = document.getElementById(formId);
   const inputs = [
     ...form.querySelectorAll("input"), 
+    ...form.querySelectorAll("select"), 
     ...form.querySelectorAll("textarea")
   ]
 

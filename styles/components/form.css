@@ -1,4 +1,4 @@
-textarea, input {
+textarea, input, select, .white-input-wrapper {
   font-size: 1rem;
   color: var(--text-white);
   background-color: var(--bg-2);
@@ -7,6 +7,10 @@ textarea, input {
   box-sizing: border-box;
   display: inline-block;
   margin-bottom: 10px;
+}
+
+select{
+  min-width: 3rem;
 }
 
 textarea{
@@ -22,12 +26,14 @@ input:hover {
   outline: none;
 }
 
+.white-input-wrapper,
 .input-with-label-wrapper {
   position: relative;
   width: 30rem;
   max-width: 100%;
 }
 
+label.raised,
 .input-with-label-wrapper label {
   position: absolute;
   left: 0;
@@ -35,6 +41,7 @@ input:hover {
   color: var(--text-white);
 }
 
+label.required::after,
 textarea:required + label::after,
 input:required + label::after{
   content: "*";
