@@ -101,7 +101,7 @@ const headerTemplate = (pageName) => /*template*/`
 
                         <label for="color">Color</label>
                         <select name="color" id="color">
-                          <option value="purple">Pruple</option>
+                          <option value="purple">Purple</option>
                           <option value="green">Green</option>
                           <option value="yellow">Yellow</option>
                           <option value="blue">Blue</option>

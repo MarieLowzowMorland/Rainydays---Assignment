@@ -13,6 +13,7 @@
 
 main {
   flex: 1 1 auto;
+  background-color: var(--bg-2);
 }
 
 body {

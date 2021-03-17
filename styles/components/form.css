@@ -39,6 +39,11 @@ input:hover {
   width: 100%;
 }
 
+input[type=radio],
+input[type=radio] + label{
+  vertical-align: middle;
+}
+
 .success-message {
   display: none;
 }

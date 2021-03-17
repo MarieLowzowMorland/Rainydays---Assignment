@@ -2,3 +2,19 @@
   width: 50%;
   padding-right: 10px;
 }
+
+main .input-with-label-wrapper input{
+  color: var(--primary);
+  background-color: var(--text-white)
+}
+
+main .input-with-label-wrapper label{
+  color: var(--primary);
+}
+
+.accept-agreement input{
+  margin: 10px;
+  height: inherit;
+  display: block;
+  float: left;
+}
