@@ -68,9 +68,16 @@
 
 .triangle-frame svg {
   height: auto;
-  width: 30rem;
+  width: 20rem;
 }
 
 .triangle-frame svg path {
   fill: var(--bg-2);
+}
+
+@media screen and (min-width: 800px) {
+  .triangle-frame svg {
+    height: auto;
+    width: 30rem;
+  }
 }

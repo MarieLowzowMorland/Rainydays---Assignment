@@ -1,5 +1,6 @@
 #welcome {
   position: relative;
+  background-color: white;
   background-image: url("../../images/friendsOnAdventure.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +11,7 @@
 
 #welcome h2 {
   font-family: Helvetica, Arial, sans-serif;
-  color: var(--secondary);
+  color: var(--bg-2);
   text-transform: uppercase;
   font-size: 2.75rem;
   font-weight: bold;
@@ -48,25 +49,21 @@
 }
 
 #bestsellers {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-3);
   width: 100%;
   position: relative;
 }
 
-#bestsellers > svg {
-  display: none;
-}
-
 #bestsellers h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   margin: 0;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 #bestsellers .space {
   min-width: 1px;
-  min-height: 20px;
+  min-height: 60px;
 }
 
 #bestsellers .jacket-slider-wrapper {
@@ -145,7 +142,7 @@
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  color: var(--primary);
+  color: var(--text-white);
 }
 
 @media screen and (min-width: 800px) {
@@ -163,32 +160,14 @@
     width: 14rem;
     display: inline-flex;
   }
+
+  #bestsellers h2 {
+    font-size: 4rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  #bestsellers h2 {
-    text-align: left;
-    font-size: 3rem;
-    position: absolute;
-    z-index: 1;
-    left: 1rem;
-    bottom: 1rem;
-    padding: 1rem;
-    color: var(--bg-primary);
-  }
-
   #bestsellers .jacket-box {
     flex: 0 0 300px;
-  }
-
-  #bestsellers > svg {
-    display: block;
-    position: absolute;
-    height: 80%;
-    width: auto;
-    left: 0;
-    bottom: 0;
-    transform: translateX(-50%);
-    z-index: 1;
   }
 }
