@@ -155,6 +155,7 @@
 
 .jacket-container > a,
 .jacket-container > a > .jacket-box {
+  color: var(--primary);
   font-style: normal;
   font-weight: normal;
 }
