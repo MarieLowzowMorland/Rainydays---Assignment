@@ -57,7 +57,7 @@ const validateInput = (successDivId) => (inputElement) => {
 
 const validateRequired = (value, name) => {
   if(!value || value.trim().length === 0){
-      return `<p>${upperCaseFirst(name)} is required.</p>`
+      return /*template*/`<p>${upperCaseFirst(name)} is required.</p>`
   } else {
       return "";
   }
@@ -68,7 +68,7 @@ const validateEmail = (value, name) => {
   if (regEx.test(value)){
       return "";
   } else {
-      return `<p>${upperCaseFirst(name)} must contain at least @ and a domain. I.e "test@example.com".</p>`;
+      return /*template*/`<p>${upperCaseFirst(name)} must contain at least @ and a domain. I.e "test@example.com".</p>`;
   }
 }
 

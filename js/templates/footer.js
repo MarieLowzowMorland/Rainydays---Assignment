@@ -8,7 +8,7 @@ const addFooterForPage = () => {
   addValidationToForm("footer-subscribe");
 }
 
-const footerTemplate = () => `
+const footerTemplate = () => /*template*/`
   <footer>
     <div class="section-content">
       <div>
