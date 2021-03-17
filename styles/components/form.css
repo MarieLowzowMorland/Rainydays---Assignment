@@ -23,14 +23,25 @@ input:hover {
 }
 
 .input-with-label-wrapper {
+  position: relative;
   width: 30rem;
   max-width: 100%;
 }
 
 .input-with-label-wrapper label {
   position: absolute;
+  left: 0;
   margin: 3px 10px;
   color: var(--text-white);
+}
+
+textarea:required + label::after,
+input:required + label::after{
+  content: "*";
+  margin-left: 2px;
+  color: var(--sale);
+  font-size: 1.2rem;
+  vertical-align: middle;
 }
 
 .input-with-label-wrapper textarea,

@@ -47,33 +47,33 @@
             <p>Contry: Norway</p>
             <form action="shipping-address.php" method="POST">
               <div class="input-with-label-wrapper">
+                <input type="text" name="first-name" id="firstName" required/>
                 <label for="firstName">First name</label>
-                <input type="text" name="first-name" id="firstName" />
               </div>
 
               <div class="input-with-label-wrapper">
+                <input type="text" name="sure-name" id="sureName" required/>
                 <label for="sureName">Surename</label>
-                <input type="text" name="sure-name" id="sureName" />
               </div>
 
               <div class="input-with-label-wrapper">
+                <input type="text" name="address" id="address" required/>
                 <label for="address">Address</label>
-                <input type="text" name="address" id="address" />
               </div>
 
               <div class="input-with-label-wrapper">
+                <input type="text" name="zip" id="zip" required/>
                 <label for="zip">Zip code</label>
-                <input type="text" name="zip" id="zip" />
               </div>
 
               <div class="input-with-label-wrapper">
+                <input type="text" name="city" id="city" required/>
                 <label for="city">City</label>
-                <input type="text" name="city" id="city" />
               </div>
 
               <div class="input-with-label-wrapper">
+                <input type="email" name="mail" id="mail" required/>
                 <label for="mail">e-mail</label>
-                <input type="email" name="mail" id="mail" />
               </div>
             </form>
           </section>
@@ -83,28 +83,28 @@
             <form action="payment.php" method="POST">
               <fieldset>
                 <legend class="screen-reader-only">Payment method</legend>
-                <input type="radio" name="paymentType" id="visa" value="visa" />
+                <input type="radio" checked name="paymentType" id="visa" value="visa" />
                 <label for="visa">Visa</label>
                 <input type="radio" name="paymentType" id="vips" value="vips" />
                 <label for="vips">VIPPS</label>
               </fieldset>
 
               <div class="input-with-label-wrapper shorter">
+                <input type="text" name="card-number" id="cardNumber" required/>
                 <label for="cardNumber">Card number</label>
-                <input type="text" name="card-number" id="cardNumber" />
               </div>
 
               <div class="input-with-label-wrapper shorter">
+                <input type="text" name="mmyy" id="mmyy" required/>
                 <label for="mmyy">mm/yy</label>
-                <input type="text" name="mmyy" id="mmyy" />
               </div>
               <div class="input-with-label-wrapper shorter">
+                <input type="text" name="cvc" id="cvc" required/>
                 <label for="cvc">cvc</label>
-                <input type="text" name="cvc" id="cvc" />
               </div>
 
               <div class="accept-agreement">
-                <input type="checkbox" name="accept" id="accept" value="accept" />
+                <input type="checkbox" name="accept" id="accept" value="accept" required/>
                 <label for="accept">
                   I have read & agree to Rainydays Terms and Conditions and
                   accept that the purchase involves a payment responsibility

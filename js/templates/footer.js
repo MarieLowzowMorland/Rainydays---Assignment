@@ -15,8 +15,8 @@ const footerTemplate = () => /*template*/`
         <h2 class="red-h2">Subscribe to our newsletter</h2>
         <form id="footer-subscribe">
           <div class="input-with-label-wrapper">
-            <label for="e-mailSubscribe">E-mail</label>
             <input type="email" name="subscribeE-mail" id="e-mailSubscribe" required/>
+            <label for="e-mailSubscribe">E-mail</label>
             <div class="form-error" id="subscribeE-mailError"></div>
           </div>
           <button type="submit" class="add-to-cart-button" formnovalidate>
