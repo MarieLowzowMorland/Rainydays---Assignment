@@ -121,10 +121,10 @@ const products = [
       size.L,
     ],
     "colors": [
+      color.DUST_BLUE,
       color.PACIFIC_BLUE,
       color.PLUM_PURPLE,
       color.MUSTARD,
-      color.DUST_BLUE,
     ],
     "imageUrl": (color) => `images/hiking_${colorUrl(color)}.png`,
     "imageDescription": "Long sleves and a high neck with a cool zipper in the front"
@@ -181,7 +181,127 @@ const products = [
     ],
     "imageUrl": (color) => `images/everyday_${colorUrl(color)}.png`,
     "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"
-  }
+  },
+  {
+    "id": "J05",
+    "name": "Glomma",
+    "discountPercentage": 70,
+    "price": 5000,
+    "jacketType": jacketType.CANOEING,
+    "propities": [
+      {...property(propertyType.WATERPROOF), rating: "13,000 mm"},
+      {...property(propertyType.WINDPROOF), rating: "4 CFM"},
+      {...property(propertyType.INSULATING), rating: insulationType.REGULAR},
+      {...property(propertyType.BREATHING), rating: "3 RET"}
+    ],
+    "genders": [gender.UNISEX],
+    "sizes": [
+      size.XS,
+      size.S,
+      size.M,
+      size.L,
+      size.XL,
+    ],
+    "colors": [
+      color.BLACK,
+      color.FOREST_GREEN,
+      color.GRAS_GREEN,
+    ],
+    "imageUrl": (color) => `images/everyday_${colorUrl(color)}.png`,
+    "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"
+  },
+  
+  {
+    "id": "J06",
+    "name": "Snota",
+    "discountPercentage": 0,
+    "price": 2000,
+    "jacketType": jacketType.HIKING,
+    "propities": [
+      {...property(propertyType.WATERPROOF), rating: "20,000 mm"},
+      {...property(propertyType.WINDPROOF), rating: "4 CFM"},
+      {...property(propertyType.INSULATING), rating: insulationType.OPTIMUM},
+      {...property(propertyType.BREATHING), rating: "7 RET"}
+    ],
+    "genders": [
+      gender.WOMEN, 
+      gender.MEN
+    ],
+    "sizes": [
+      size.XS,
+      size.S,
+      size.M,
+      size.L,
+      size.XL,
+    ],
+    "colors": [
+      color.MUSTARD,
+      color.DUST_BLUE,
+      color.PACIFIC_BLUE,
+    ],
+    "imageUrl": (color) => `images/hiking_${colorUrl(color)}.png`,
+    "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"
+  },
+  {
+    "id": "J07",
+    "name": "Trollhetta",
+    "discountPercentage": 0,
+    "price": 3000,
+    "jacketType": jacketType.HIKING,
+    "propities": [
+      {...property(propertyType.WATERPROOF), rating: "16,000 mm"},
+      {...property(propertyType.WINDPROOF), rating: "4 CFM"},
+      {...property(propertyType.INSULATING), rating: insulationType.OPTIMUM},
+      {...property(propertyType.BREATHING), rating: "7 RET"}
+    ],
+    "genders": [
+      gender.WOMEN, 
+      gender.MEN
+    ],
+    "sizes": [
+      size.XS,
+      size.S,
+      size.M,
+      size.L,
+      size.XL,
+    ],
+    "colors": [
+      color.DUST_BLUE,
+      color.MUSTARD,
+      color.PACIFIC_BLUE
+    ],
+    "imageUrl": (color) => `images/hiking_${colorUrl(color)}.png`,
+    "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"
+  },
+  {
+    "id": "J08",
+    "name": "Gjende",
+    "discountPercentage": 20,
+    "price": 5000,
+    "jacketType": jacketType.CANOEING,
+    "propities": [
+      {...property(propertyType.WATERPROOF), rating: "13,000 mm"},
+      {...property(propertyType.WINDPROOF), rating: "4 CFM"},
+      {...property(propertyType.INSULATING), rating: insulationType.REGULAR},
+      {...property(propertyType.BREATHING), rating: "3 RET"}
+    ],
+    "genders": [gender.UNISEX],
+    "sizes": [
+      size.XS,
+      size.S,
+      size.M,
+      size.L,
+      size.XL,
+    ],
+    "colors": [
+      color.GRAS_GREEN,
+      color.BLACK,
+      color.FOREST_GREEN,
+    ],
+    "imageUrl": (color) => `images/everyday_${colorUrl(color)}.png`,
+    "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"
+  },
+
 ];
 
 export default products;

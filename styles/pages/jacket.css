@@ -20,6 +20,10 @@ main h2 path{
   fill: var(--primary);
 }
 
+.grey-card a {
+  color: var(--primary)
+}
+
 .color-option label > * {
   vertical-align: middle;
   font-weight: normal;

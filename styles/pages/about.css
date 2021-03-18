@@ -5,8 +5,9 @@
   visibility: hidden;
 }
 
-main {
-  color: var(--icon-color);
+main p{
+  color: var(--text-white);
+  font-weight: lighter;
 }
 
 #whoWeAre a {
@@ -27,6 +28,10 @@ main {
   background-position-x: right;
   min-height: 500px;
   width: 100%;
+}
+
+#WhoWeAre p {
+  color: var(--icon-color);
 }
 
 #slogan {
@@ -59,7 +64,7 @@ main {
 }
 
 #ourValuesAndVision {
-  background-color: var(--bg-2);
+  background-color: var(--bg-3);
   width: 100%;
 }
 
