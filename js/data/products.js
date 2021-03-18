@@ -67,7 +67,7 @@ export const findJacketById = (id) =>
 const products = [
   {
     "id": "J01",
-    "name": "Tonekollen",
+    "name": "Stetind",
     "discountPercentage": 0,
     "price": 2000,
     "jacketType": jacketType.SKIING,
@@ -90,7 +90,7 @@ const products = [
   },
   {
     "id": "J02",
-    "name": "Blåhø",
+    "name": "Tonekollen",
     "discountPercentage": 30,
     "price": 3500,
     "jacketType": jacketType.HIKING,
@@ -108,7 +108,9 @@ const products = [
     ],
     "colors": [
       color.PACIFIC_BLUE,
-      color.PLUM_PURPLE
+      color.PLUM_PURPLE,
+      color.MUSTARD,
+      color.DUST_BLUE,
     ],
     "imageUrl": (color) => `images/hiking_${colorUrl(color)}.png`,
     "imageDescription": "Long sleves and a high neck with a cool zipper in the front"
@@ -140,7 +142,7 @@ const products = [
   },
   {
     "id": "J04",
-    "name": "Stetind",
+    "name": "Blanksjø",
     "discountPercentage": 70,
     "price": 5000,
     "jacketType": jacketType.CANOEING,
@@ -159,7 +161,9 @@ const products = [
       size.XL,
     ],
     "colors": [
-      color.FOREST_GREEN
+      color.FOREST_GREEN,
+      color.GRAS_GREEN,
+      color.BLACK
     ],
     "imageUrl": (color) => `images/everyday_${colorUrl(color)}.png`,
     "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"

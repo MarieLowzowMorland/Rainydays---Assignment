@@ -37,7 +37,7 @@ const jacketBox = (jacket) => {
       <div class="split-wrapper small-desktop-block">
         <div class="split-50">
           <h2>${name}</h2>
-          <p>${jacketType}</p>
+          <p>${jacketType.name}</p>
           <p>${colors[0].name}</p>
           ${salePrice(price, discountPercentage)}
           ${oldPrice(price, discountPercentage)}
