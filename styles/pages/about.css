@@ -5,6 +5,10 @@
   visibility: hidden;
 }
 
+main h2 {
+  font-family: Good Times, Helvetica, Arial, sans-serif;
+}
+
 main p{
   color: var(--text-white);
   font-weight: lighter;

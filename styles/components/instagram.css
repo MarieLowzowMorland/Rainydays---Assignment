@@ -27,6 +27,7 @@
   color: var(--bg-primary);
   max-width: 300px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 #instagram img {

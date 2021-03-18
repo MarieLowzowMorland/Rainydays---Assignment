@@ -10,10 +10,10 @@
 }
 
 #welcome h2 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Good Times, Helvetica, Arial, sans-serif;
   color: var(--bg-2);
   text-transform: uppercase;
-  font-size: 2.75rem;
+  font-size: 2.3rem;
   font-weight: bold;
   margin: 100px 0 0 0;
 }
@@ -55,6 +55,7 @@
 }
 
 #bestsellers h2 {
+  font-family: Good Times, Helvetica, Arial, sans-serif;
   font-size: 2rem;
   text-align: center;
   margin: 0;
@@ -63,7 +64,7 @@
 
 #bestsellers .space {
   min-width: 1px;
-  min-height: 60px;
+  min-height: 20px;
 }
 
 #bestsellers .jacket-slider-wrapper {
@@ -149,6 +150,10 @@
   #welcome .collection-title {
     max-width: inherit;
     float: none;
+  }
+
+  #welcome h2 {
+    font-size: 3rem;
   }
 
   #welcome .collection-button {

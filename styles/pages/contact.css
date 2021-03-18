@@ -1,5 +1,5 @@
 #contact-us-banner{
-  background-image: url("../../images/mountains.jpg");
+  background-image: url("../../images/contact_us.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
@@ -12,6 +12,7 @@
   color: var(--bg-2);
   font-size: 2rem;
   padding: 2rem 0 0 4rem;
+  text-align: center;
 }
 
 #contactPage {
@@ -58,7 +59,7 @@
 
 @media screen and (min-width: 992px) {
   #contact-us-banner{
-    min-height: 300px;
+    min-height: 350px;
   }
 
   #contactPage .section-content > div{
