@@ -82,3 +82,26 @@ aside {
   text-transform: uppercase;
   color: var(--primary);
 }
+
+.price {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.price-filler{
+  min-width: 1px;
+  min-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.price.sale {
+  color: var(--sale);
+}
+
+.price.strike-through {
+  text-decoration: line-through;
+}

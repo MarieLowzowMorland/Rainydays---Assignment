@@ -137,6 +137,10 @@ body {
   clear: both;
 }
 
+.image-wrapper {
+  text-align: center;
+}
+
 @media screen and (min-width: 1200px) {
   .big-desktop-hidden {
     display: none;
@@ -206,10 +210,6 @@ body {
   .split-wrapper.tablet-block > .split-80 {
     width: 100%;
     box-sizing: border-box;
-  }
-
-  .image-wrapper {
-    text-align: center;
   }
 }
 

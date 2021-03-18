@@ -1,4 +1,5 @@
 import { ShoppingCartIcon, TriangleUp } from "./svgIcons.js";
+import {salePrice, oldPrice} from "../data/products.js";
 
 const saleBanner = (discountPercentage) => {
   if(discountPercentage <= 0){
@@ -10,23 +11,7 @@ const saleBanner = (discountPercentage) => {
       <div><span>${discountPercentage}% sale</span></div>
       ${TriangleUp()}
     </div>`;
-};
-
-const salePrice = (price, discountPercentage) => {
-  if(discountPercentage <= 0){
-    return /*template*/`<p class="price">NOK ${price}</p>`;
-  }
-
-  return /*template*/`<p class="price sale">NOK ${price * (100 - discountPercentage)/100}</p>`;
-};
-
-const oldPrice = (price, discountPercentage) => {
-  if(discountPercentage <= 0){
-    return /*template*/`<div class="price-filler"></div>`;
-  }
-
-  return /*template*/`<p class="price strike-through">NOK ${price}</p>`;
-};
+}
 
 const jacketBox = (jacket) => {
   const {id, name, price, discountPercentage, jacketType, colors, imageUrl, imageDescription} = jacket;

@@ -36,3 +36,7 @@ main h2 path{
   height: 1.2rem;
   width: auto;
 } 
+
+.image-wrapper img {
+  height: 100%;
+}

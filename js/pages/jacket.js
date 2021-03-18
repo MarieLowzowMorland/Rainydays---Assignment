@@ -1,6 +1,7 @@
 import addHeaderForPage, { pageNames } from "../templates/header.js";
 import addFooterForPage from "../templates/footer.js";
 import { findJacketById } from "../data/products.js";
+import {salePrice, oldPrice} from "../data/products.js";
 import { addToCart } from "../data/cartStorage.js";
 import { IconColor, ShoppingCartIcon } from "../templates/svgIcons.js";
 
@@ -116,7 +117,10 @@ const jacketDescription = (jacket) => {
               ${sizes.map(sizeOption).join("")}
             </div>
           </fieldset>
-      
+          <p>
+            ${salePrice(price, discountPercentage)}
+            ${oldPrice(price, discountPercentage)} 
+          </p>
           <button for="shopping-cart-visible" class="add-to-cart-button">
             <span>Add to cart</span>
             <span class="cart-wrapper">

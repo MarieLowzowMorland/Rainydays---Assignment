@@ -1,6 +1,20 @@
 import { insulationType, propertyType, jacketType, gender, color, size} from "./categories.js";
 
+export const salePrice = (price, discountPercentage) => {
+  if(discountPercentage <= 0){
+    return /*template*/`<p class="price">NOK ${price}</p>`;
+  }
 
+  return /*template*/`<p class="price sale">NOK ${price * (100 - discountPercentage)/100}</p>`;
+};
+
+export const oldPrice = (price, discountPercentage) => {
+  if(discountPercentage <= 0){
+    return /*template*/`<div class="price-filler"></div>`;
+  }
+
+  return /*template*/`<p class="price strike-through">NOK ${price}</p>`;
+};
 
 const property = (type) => {
   switch(type){
