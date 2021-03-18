@@ -1,4 +1,4 @@
-import { ShoppingCartIcon } from "./svgIcons.js";
+import { ShoppingCartIcon, TriangleUp } from "./svgIcons.js";
 
 const saleBanner = (discountPercentage) => {
   if(discountPercentage <= 0){
@@ -8,9 +8,7 @@ const saleBanner = (discountPercentage) => {
   return /*template*/`
     <div class="sale-banner">
       <div><span>${discountPercentage}% sale</span></div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
-        <path  data-name="Polygon 10" d="M358.5,0,717,621H0Z" fill="#3a4754"/>
-      </svg>
+      ${TriangleUp()}
     </div>`;
 };
 

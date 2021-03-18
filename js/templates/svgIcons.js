@@ -1,3 +1,8 @@
+export const TriangleUp = ()  => /*template*/`
+  <svg xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
+    <path d="M358.5,0,717,621H0Z" fill="#000000"/>
+  </svg>`;
+
 export const LogoIcon = () => /*template*/`
   <svg
     id="Logo"
