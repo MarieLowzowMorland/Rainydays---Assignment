@@ -1,5 +1,11 @@
 .jacket-box {
   position: relative;
+  cursor: pointer;
+}
+
+.jacket-box:focus,
+.jacket-box:hover{
+  border: 2px solid var(--secondary);
 }
 
 .jacket-box .image-wrapper {

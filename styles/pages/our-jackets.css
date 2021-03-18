@@ -153,13 +153,6 @@
   align-items: start;
 }
 
-.jacket-container > a,
-.jacket-container > a > .jacket-box {
-  color: var(--primary);
-  font-style: normal;
-  font-weight: normal;
-}
-
 .jacket-container .jacket-box {
   background-color: var(--bg-primary);
 }

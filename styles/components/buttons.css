@@ -1,4 +1,5 @@
 .add-to-cart-button {
+  cursor: pointer;
   display: flex;
   align-items: center;
   width: 100%;
