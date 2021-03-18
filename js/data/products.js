@@ -1,8 +1,6 @@
-const insulationType = {
-  REGULAR: "Regular (15°C/5°C)",
-  ENHANCED: "Enhanced (10°C/-5°C)",
-  OPTIMUM: "Optimum (0°C/-20°C)"
-}
+import { insulationType, propertyType, jacketType, gender, color, size} from "./categories.js";
+
+
 
 const property = (type) => {
   switch(type){
@@ -61,47 +59,6 @@ const property = (type) => {
   }
 }
 
-export const propertyType = {
-  WINDPROOF: "Windproof",
-  WATERPROOF: "Waterproof",
-  INSULATING: "Insulating",
-  BREATHING: "Breathing"
-}
-
-export const size = {
-  XS: "SX",
-  S: "S",
-  M: "M",
-  L: "L",
-  XL: "XL"
-}
-
-export const gender = {
-  WOMEN: "Women",
-  MEN: "Men",
-  UNISEX: "Unisex"
-}
-
-export const jacketType = {
-  RUNNING: "Running",
-  SKIING: "Skiing",
-  DOWNHILL: "Down hill skiing",
-  HIKING: "Hiking",
-  CANOEING: "Canoeing",
-  SNOWBOARD: "Snowboard"
-}
-
-export const color = {
-  PLUM_PURPLE: { 
-    "name": "Plum Purple",
-    "hex": "#9c51b6"
-  },
-  PACIFIC_BLUE: { 
-    "name": "Pacific Blue",
-    "hex": "#9c51b6"
-  }
-}
-
 const colorUrl = (color) => color.name.replaceAll(/\s/ig, "_");
 
 export const findJacketById = (id) => 
@@ -141,6 +98,7 @@ const products = [
       property(propertyType.WATERPROOF),
       property(propertyType.WINDPROOF),
       property(propertyType.BREATHING),
+      {...property(propertyType.INSULATING), rating: insulationType.REGULAR},
     ],
     "genders": [gender.MEN, gender.WOMEN],
     "sizes": [
@@ -154,6 +112,57 @@ const products = [
     ],
     "imageUrl": (color) => `images/hiking_${colorUrl(color)}.png`,
     "imageDescription": "Long sleves and a high neck with a cool zipper in the front"
+  },
+  {
+    "id": "J03",
+    "name": "Galdhøpiggen",
+    "discountPercentage": 20,
+    "price": 5000,
+    "jacketType": jacketType.SNOWBOARD,
+    "propities": [
+      {...property(propertyType.WATERPROOF), rating: "16,000 mm"},
+      {...property(propertyType.WINDPROOF), rating: "4 CFM"},
+      {...property(propertyType.INSULATING), rating: insulationType.OPTIMUM},
+      {...property(propertyType.BREATHING), rating: "7 RET"}
+    ],
+    "genders": [gender.MEN, gender.WOMEN],
+    "sizes": [
+      size.M,
+      size.L,
+      size.XL,
+    ],
+    "colors": [
+      color.PACIFIC_BLUE,
+      color.PLUM_PURPLE
+    ],
+    "imageUrl": (color) => `images/hiking_${colorUrl(color)}.png`,
+    "imageDescription": "Long sleves and a high neck with a cool zipper in the front"
+  },
+  {
+    "id": "J04",
+    "name": "Stetind",
+    "discountPercentage": 70,
+    "price": 5000,
+    "jacketType": jacketType.CANOEING,
+    "propities": [
+      {...property(propertyType.WATERPROOF), rating: "16,000 mm"},
+      {...property(propertyType.WINDPROOF), rating: "4 CFM"},
+      {...property(propertyType.INSULATING), rating: insulationType.REGULAR},
+      {...property(propertyType.BREATHING), rating: "2 RET"}
+    ],
+    "genders": [gender.UNISEX],
+    "sizes": [
+      size.XS,
+      size.S,
+      size.M,
+      size.L,
+      size.XL,
+    ],
+    "colors": [
+      color.FOREST_GREEN
+    ],
+    "imageUrl": (color) => `images/everyday_${colorUrl(color)}.png`,
+    "imageDescription": "Breathable jacket with multiple zippers, hood and a cool zipper in the front"
   }
 ];
 

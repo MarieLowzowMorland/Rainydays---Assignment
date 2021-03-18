@@ -1,6 +1,10 @@
 .jacket-box {
   position: relative;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jacket-box:focus,
@@ -16,8 +20,9 @@
   display: block;
   margin: 0 auto;
   width: 80%;
-  height: 50%;
+  height: 60%;
   object-fit: contain;
+  flex: 0;
 }
 
 .jacket-box > div {
@@ -36,6 +41,21 @@
   font-weight: bold;
   color: var(--primary);
   font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.price-filler{
+  min-width: 1px;
+  min-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.jacket-box .price.sale {
+  color: var(--sale);
+}
+
+.jacket-box .price.strike-through {
+  text-decoration: line-through;
 }
 
 .jacket-box .sale-banner {
@@ -60,7 +80,8 @@
 .jacket-box .sale-banner > svg {
   height: 100%;
   width: auto;
-  transform: translateX(50%);
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .jacket-box .sale-banner > svg path {
@@ -71,10 +92,13 @@
   color: white;
   text-transform: uppercase;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: normal;
   font-family: oswald, sans-serif;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 1200px) {
