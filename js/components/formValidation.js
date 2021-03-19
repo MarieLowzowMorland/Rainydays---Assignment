@@ -98,7 +98,7 @@ const validateRequired = (value, name) => {
 
 const validateEmail = (value, name) => { 
   const regEx = /\S+@\S+\.\S+/;
-  if (regEx.test(value)){
+  if (!value || regEx.test(value)){
       return "";
   } else {
       return /*template*/`<p>${upperCaseFirst(name)} must contain at least @ and a domain. I.e "test@example.com".</p>`;
