@@ -67,6 +67,7 @@ nav .svg-button {
   margin: 0 5px;
   margin-bottom: -1rem;
 }
+nav .svg-button.active,
 nav .svg-button:hover {
   border-bottom: 2px solid var(--secondary);
 }
@@ -109,6 +110,7 @@ nav a {
 }
 
 #nav-shopping-cart {
+  margin-right: 1rem;
   position: relative;
   margin-bottom: -1rem;
 }
@@ -124,7 +126,6 @@ nav a {
 /* Cart */
 
 #cart-circle {
-  visibility: hidden;
   position: absolute;
   top: 0.6rem;
   left: 1.4rem;
@@ -137,59 +138,10 @@ nav a {
   border-radius: 50%;
 }
 
-#shopping-cart-visible:checked + label > svg path {
-  fill: var(--text-white);
-}
-
-#shopping-cart-visible:checked ~ #cart-circle {
-  visibility: visible;
-}
-
-#cart-overlay {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 3rem;
-  width: 300px;
-  background-color: white;
-  transform: translateX(100%);
-  padding: 30px;
-}
-
-#cart-overlay h2 {
-  text-align: center;
-}
-
 #cart-circle p {
   margin: 0;
   color: var(--bg-primary);
   font-size: 0.9rem;
-}
-
-#shopping-cart-visible:checked ~ #cart-overlay {
-  display: block;
-  animation: slide-from-right 0.5s forwards;
-}
-
-@keyframes slide-from-right {
-  100% {
-    transform: translateX(0);
-  }
-}
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: -10vh;
-  left: -100vw;
-  width: 200vw;
-  height: 120vh;
-  background-color: black;
-  opacity: 0.5;
-}
-
-#shopping-cart-visible:checked ~ #overlay {
-  display: block;
 }
 
 @media screen and (max-width: 992px) {

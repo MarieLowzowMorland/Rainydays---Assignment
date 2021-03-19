@@ -1,3 +1,6 @@
+
+import { getCartContent } from "../data/cartStorage.js"
+
 import {
   LogoIcon,
   MenuIcon,
@@ -17,9 +20,20 @@ export const pageNames = {
 const addHeaderForPage = (pageName) =>
   document
     .querySelector("main")
-    .insertAdjacentHTML("beforebegin", headerTemplate(pageName));
+    .insertAdjacentHTML("beforebegin", headerTemplate(pageName, getCartContent()));
 
-const headerTemplate = (pageName) => /*template*/ `
+const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
+  <div id="nav-shopping-cart" class=${divClass}>
+    <a href="checkout.html" class="svg-button ${
+      pageName === pageNames.CHECKOUT ? "active" : ""
+    }"> ${ShoppingCartIcon()} </a>
+    <div id="cart-circle">
+      <p>${cartContent.length}</p>
+    </div>
+  </div>
+`;
+
+const headerTemplate = (pageName, cartContent) => /*template*/ `
   <header>
     <nav>
       <input
@@ -32,9 +46,7 @@ const headerTemplate = (pageName) => /*template*/ `
           ${LogoIcon()}
         </a>
         <div class="filler desktop-hidden"></div>
-        <a href="checkout.html" class="svg-button desktop-hidden">
-          ${ShoppingCartIcon()}
-        </a>
+        ${cartWithCircle(pageNames, cartContent, "desktop-hidden")}
         <label class="desktop-hidden" for="menu-visible">
           ${MenuIcon()}
         </label>
@@ -68,97 +80,9 @@ const headerTemplate = (pageName) => /*template*/ `
         </div>
 
         <div class="svg-button tablet-hidden">
-          ${SearchIcon()}
+           ${SearchIcon()}
         </div>
-        <div id="nav-shopping-cart" class="tablet-hidden">
-          <input
-            type="checkbox"
-            id="shopping-cart-visible"
-            class="screen-reader-only"
-          />
-          <label for="shopping-cart-visible" class="svg-button">
-            ${ShoppingCartIcon()}
-          </label>
-          <div id="cart-circle">
-            <p>1</p>
-          </div>
-          <label for="shopping-cart-visible" id="overlay"></label>
-          <section id="cart-overlay">
-            <section>
-              <h2 class="red-h2">Your cart</h2>
-              <p class="smal-blue-text center-text">Number of items</p>
-              <ul>
-                <li>
-                  <div class="split-wrapper">
-                    <img
-                      class="split-50"
-                      src="images/hiking_plum_purple.png"
-                      alt="Picture of jacket"
-                    />
-
-                    <div class="split-50 jacket-chekout-info">
-                      <h3>Jacket name</h3>
-                      <p>Gore tex jacket</p>
-
-                      <div class="jacket-options-grid">
-                        <label for="size">Size</label>
-                        <select name="size" id="size">
-                          <option value="XS">XS</option>
-                          <option value="S">S</option>
-                          <option value="M">M</option>
-                          <option value="L">L</option>
-                          <option value="XL">XL</option>
-                        </select>
-
-                        <label for="color">Color</label>
-                        <select name="color" id="color">
-                          <option value="purple">Purple</option>
-                          <option value="green">Green</option>
-                          <option value="yellow">Yellow</option>
-                          <option value="blue">Blue</option>
-                          <option value="black">Black</option>
-                        </select>
-                      </div>
-                      <div class="one-liner">
-                        <button class="circle">-</button>
-                        <p>1</p>
-                        <button class="circle">+</button>
-                      </div>
-                      <p class="bold">NOK 2000,-</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </section>
-
-            <section class="payment-overview">
-              <h2 class="red-h2">Payment overview</h2>
-              <div class="split-wrapper">
-                <div class="split-60 left-text">
-                  <p>Sum products</p>
-                  <p>Shipping</p>
-                  <aside>Estimated time for shipping is 3-4 days</aside>
-                </div>
-                <div class="split-40 right-text">
-                  <p>NOK 2000,-</p>
-                  <p>Free</p>
-                </div>
-              </div>
-              <div class="split-wrapper">
-                <p class="split-60 left-text">Total</p>
-                <p class="split-40 right-text">NOK 2000,-</p>
-              </div>
-              <div id="doubble-line"></div>
-              <a href="checkout.html" class="add-to-cart-button">
-                <span class="helvetica">Go to checkout</span>
-                <span class="cart-wrapper">
-                  <span class="cart-background-color point-down"></span>
-                    ${ShoppingCartIcon()}
-                </span>
-              </a>
-            </section>
-          </section>
-        </div>
+        ${cartWithCircle(pageNames, cartContent, "tablet-hidden")}
       </div>
     </nav>
   </header>`;

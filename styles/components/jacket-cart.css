@@ -11,8 +11,7 @@
   justify-content: space-between;
 }
 
-#cart ul,
-#cart-overlay ul {
+#cart ul{
   margin: 0;
   padding: 0;
   border: 1px solid var(--icon-color);
