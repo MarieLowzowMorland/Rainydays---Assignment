@@ -8,9 +8,9 @@ export const addToCart = (jacketId, color, size, gender) => {
   const { id, colors, genders, sizes } = findJacketById(jacketId);
   const cartItem = {
     id,
-    color: color || colors[0],
-    size: size || sizes[0],
-    gender: gender || genders[0]
+    selectedColor: color || colors[0],
+    selectedSize: size || sizes[0],
+    selectedGender: gender || genders[0]
   };
 
   const currentContent = getCartContent();

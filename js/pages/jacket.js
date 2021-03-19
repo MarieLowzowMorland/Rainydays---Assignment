@@ -3,7 +3,8 @@ import addFooterForPage from "../templates/footer.js";
 import { findJacketById } from "../data/products.js";
 import {salePrice, oldPrice} from "../data/products.js";
 import { addToCart } from "../data/cartStorage.js";
-import { IconColor, ShoppingCartIcon } from "../templates/svgIcons.js";
+import { ShoppingCartIcon } from "../templates/svgIcons.js";
+import { colorOption, sizeOption} from "../templates/jacketBox.js";
 
 addHeaderForPage(pageNames.JACKET);
 addFooterForPage();
@@ -28,29 +29,6 @@ const colorChange = (event) => {
   }
 }
 
-const colorOption = (color) => {
-  const { id, name, hex} = color;
-  let checkedAttribute = "";
-  if(color ===  selectedColor){
-    checkedAttribute = 'checked="checked"'
-  }
-  return /*template*/` 
-    <div class="color-option">
-      <input
-        class="screen-reader-only"
-        id=${id}
-        type="radio"
-        name="color"
-        value=${id}
-        ${checkedAttribute}
-      />
-      <label for="${id}" tabindex="0">
-        ${IconColor(hex)}
-        <span>${name}</span>
-      </label>
-    </div>`;
-}
-
 const newSelectedSize = (sizeId) => {
   const size = jacket.sizes.find(size => size === sizeId);
   selectedSize = size; 
@@ -63,23 +41,6 @@ const sizeChange = (event) => {
   if( checked ) {
     newSelectedSize(value);
   }
-};
-
-const sizeOption = (size) => {
-  let checkedAttribute = "";
-  if(size === selectedSize){
-    checkedAttribute = 'checked="checked"'
-  }
-  return /*template*/` 
-  <input
-  class="screen-reader-only"
-  id= ${size}
-  type="radio"
-  name="size"
-  value=${size}
-  ${checkedAttribute}
-/>
-<label for=${size} tabindex="0">${size}</label>`
 };
 
 const jacketDescription = (jacket) => {
@@ -108,13 +69,13 @@ const jacketDescription = (jacket) => {
           <fieldset class="only-content">
             <p>Color:</p>
             <div class="jacket-colors">
-              ${colors.map(colorOption).join("")}
+              ${colors.map(color => colorOption(id, color, selectedColor)).join("")}
             </div>
           </fieldset>
           <fieldset class="only-content">
             <p>Size:</p>
             <div class="jacket-sizes">
-              ${sizes.map(sizeOption).join("")}
+              ${sizes.map(size => sizeOption(id, size, selectedSize)).join("")}
             </div>
           </fieldset>
           <p>
@@ -142,6 +103,14 @@ document.querySelectorAll("main .jacket-colors input")
 document.querySelectorAll("main .jacket-sizes input")
   .forEach(sizeOption => sizeOption.addEventListener("change", sizeChange));
 
+
+const form = document.getElementById("jacket-form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  addToCart(jacketId, selectedColor, selectedSize);
+});
+
 const keyboardSelectLabel = (event) => {
   event.preventDefault();
   event.stopPropagation();
@@ -152,13 +121,6 @@ const keyboardSelectLabel = (event) => {
     }
   }
 };
-
-const form = document.getElementById("jacket-form");
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  addToCart(jacketId, selectedColor, selectedSize);
-});
 
 document.querySelectorAll("input[type=radio] + label")
   .forEach(label => label.addEventListener("keyup", keyboardSelectLabel));

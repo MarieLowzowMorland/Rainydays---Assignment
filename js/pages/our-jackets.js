@@ -12,7 +12,7 @@ products.forEach(jacket =>
   jacketContainger.insertAdjacentHTML("afterbegin", jacketBox(jacket))
 )
 
-document.querySelectorAll(".add-to-cart-button")
+document.querySelectorAll("main .add-to-cart-button")
   .forEach(button => {
     button.addEventListener("click", (event) => {
       event.preventDefault();

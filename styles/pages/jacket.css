@@ -24,23 +24,6 @@ main h2 path{
   color: var(--primary)
 }
 
-.color-option label > * {
-  vertical-align: middle;
-  font-weight: normal;
-  font-size: 1rem;
-}
-
-.color-option input:checked + label span,
-.color-option:hover label span{
-  font-weight: bold;
-} 
-
-.color-option input:checked + label svg,
-.color-option:hover label svg{
-  height: 1.2rem;
-  width: auto;
-} 
-
 .image-wrapper img {
   height: 100%;
 }
