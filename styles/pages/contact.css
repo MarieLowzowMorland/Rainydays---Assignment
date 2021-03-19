@@ -4,14 +4,14 @@
   background-size: cover;
   background-position-y: center;
   background-color: white;
-  min-height: 100px;
+  min-height: 130px;
   width: 100%;
 }
 
 #contact-us-banner h1{
   color: var(--bg-2);
   font-size: 2rem;
-  padding: 2rem 0 0 4rem;
+  padding-top: 2rem;
   text-align: center;
 }
 

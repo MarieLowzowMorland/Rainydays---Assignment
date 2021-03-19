@@ -1,4 +1,9 @@
-import { LogoIcon, MenuIcon, ShoppingCartIcon, SearchIcon } from "./svgIcons.js";
+import {
+  LogoIcon,
+  MenuIcon,
+  ShoppingCartIcon,
+  SearchIcon,
+} from "./svgIcons.js";
 
 export const pageNames = {
   INDEX: "index",
@@ -6,15 +11,15 @@ export const pageNames = {
   JACKET: "jacket",
   ABOUT: "about",
   CONTACT: "contact",
-  CHECKOUT: "checkout"
-}
+  CHECKOUT: "checkout",
+};
 
-const addHeaderForPage = (pageName) => document
-  .querySelector("main")
-  .insertAdjacentHTML("beforebegin", headerTemplate(pageName));
+const addHeaderForPage = (pageName) =>
+  document
+    .querySelector("main")
+    .insertAdjacentHTML("beforebegin", headerTemplate(pageName));
 
-
-const headerTemplate = (pageName) => /*template*/`
+const headerTemplate = (pageName) => /*template*/ `
   <header>
     <nav>
       <input
@@ -45,9 +50,15 @@ const headerTemplate = (pageName) => /*template*/`
           </div>
         </div>
         <ul>
-          <li><a href="ourJackets.html" class="${pageName === pageNames.OUR_JACKETS ? "active" : ""}">Our Jackets</a></li>
-          <li><a href="about.html" class="${pageName === pageNames.ABOUT ? "active" : ""}">About</a></li>
-          <li><a href="contact.html" class="${pageName === pageNames.CONTACT ? "active" : ""}">Contact</a></li>
+          <li><a href="ourJackets.html" class="${
+            pageName === pageNames.OUR_JACKETS ? "active" : ""
+          }">Our Jackets</a></li>
+          <li><a href="about.html" class="${
+            pageName === pageNames.ABOUT ? "active" : ""
+          }">About</a></li>
+          <li><a href="contact.html" class="${
+            pageName === pageNames.CONTACT ? "active" : ""
+          }">Contact</a></li>
         </ul>
         <div class="filler"></div>
 
@@ -81,7 +92,7 @@ const headerTemplate = (pageName) => /*template*/`
                   <div class="split-wrapper">
                     <img
                       class="split-50"
-                      src="images/jacket1.png"
+                      src="images/hiking_plum_purple.png"
                       alt="Picture of jacket"
                     />
 
