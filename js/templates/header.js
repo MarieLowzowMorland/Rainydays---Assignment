@@ -17,6 +17,23 @@ export const pageNames = {
   CHECKOUT: "checkout",
 };
 
+const cartCircleVisiblityClass = (numberOfItems) => {
+  if(numberOfItems <= 0){
+    return "";
+  }
+  return "visible";
+}
+
+export const updateCartNumber = () => {
+  const numberOfItems = getCartContent().length;
+  document.querySelectorAll(".cart-circle")
+    .forEach(circles => {
+      circles.classList.remove("visible");
+      circles.classList.add(cartCircleVisiblityClass(numberOfItems));
+      circles.innerHTML = `<p>${numberOfItems}</p>`;
+    });
+}
+
 const addHeaderForPage = (pageName) =>
   document
     .querySelector("main")
@@ -27,7 +44,7 @@ const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
     <a href="checkout.html" class="svg-button ${
       pageName === pageNames.CHECKOUT ? "active" : ""
     }"> ${ShoppingCartIcon()} </a>
-    <div id="cart-circle">
+    <div class="cart-circle ${cartCircleVisiblityClass(cartContent.length)}">
       <p>${cartContent.length}</p>
     </div>
   </div>

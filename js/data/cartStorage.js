@@ -1,4 +1,5 @@
 import { findJacketById } from "../data/products.js";
+import { updateCartNumber } from "../templates/header.js";
 
 export const getCartContent = () => JSON.parse(window.localStorage.getItem("cart") || "[]");
 
@@ -15,5 +16,6 @@ export const addToCart = (jacketId, color, size, gender) => {
 
   const currentContent = getCartContent();
   setCartContent([...currentContent, cartItem]);
+  updateCartNumber();
   console.log(getCartContent());
 }

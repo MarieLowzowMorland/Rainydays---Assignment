@@ -125,7 +125,8 @@ nav a {
 
 /* Cart */
 
-#cart-circle {
+.cart-circle {
+  display: none;
   position: absolute;
   top: 0.6rem;
   left: 1.4rem;
@@ -138,7 +139,11 @@ nav a {
   border-radius: 50%;
 }
 
-#cart-circle p {
+.cart-circle.visible{
+  display: block;
+}
+
+.cart-circle p {
   margin: 0;
   color: var(--bg-primary);
   font-size: 0.9rem;
