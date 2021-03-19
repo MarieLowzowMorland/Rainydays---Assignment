@@ -1,7 +1,6 @@
 .jacket-box {
   position: relative;
   cursor: pointer;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,8 +24,12 @@
   flex: 0;
 }
 
-.jacket-box > div {
+.jacket-box {
   padding: 10px;
+}
+
+.jacket-box svg path{
+  fill: var(--primary);
 }
 
 .jacket-box p {

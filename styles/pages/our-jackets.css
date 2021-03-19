@@ -150,7 +150,6 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  align-items: start;
 }
 
 .jacket-container .jacket-box {

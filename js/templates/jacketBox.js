@@ -36,14 +36,14 @@ export const sizeOption = (jacketId, size, selectedSize) => {
   }
   return /*template*/` 
   <input
-  class="screen-reader-only"
-  id= ${sizeInputId}
-  type="radio"
-  name=${sizeInputName}
-  value=${size}
-  ${checkedAttribute}
-/>
-<label for=${sizeInputId} tabindex="0">${size}</label>`
+    class="screen-reader-only"
+    id= ${sizeInputId}
+    type="radio"
+    name=${sizeInputName}
+    value=${size}
+    ${checkedAttribute}
+  />
+  <label for=${sizeInputId} tabindex="0">${size}</label>`
 };
 
 const saleBanner = (discountPercentage) => {
@@ -58,28 +58,27 @@ const saleBanner = (discountPercentage) => {
     </div>`;
 }
 
-const jacketBox = (jacket) => {
+const jacketBox = (jacket, headerLevel) => {
   const {id, name, price, discountPercentage, jacketType, colors, imageUrl, imageDescription} = jacket;
+  let heading = "h2";
+  if(headerLevel){
+    heading = headerLevel;
+  }
   return /*template*/`
     <div class="jacket-box" data-id="${id}" tabindex="0">
       ${saleBanner(discountPercentage)}
       <img src="${imageUrl(colors[0])}" alt="${imageDescription}"/>
       <div class="split-wrapper small-desktop-block">
         <div class="split-50">
-          <h2>${name}</h2>
+          <${heading}>${name}${jacketType.icon()}</${heading}>
           <p>${jacketType.name}</p>
           <p>${colors[0].name}</p>
-          ${salePrice(price, discountPercentage)}
-          ${oldPrice(price, discountPercentage)}
+          <div>
+            ${salePrice(price, discountPercentage)}
+            ${oldPrice(price, discountPercentage)}
+          </div>
         </div>
         <div class="split-50">
-          <button class="add-to-cart-button">
-            <span>Buy</span>
-            <span class="cart-wrapper">
-              <span class="cart-background-color point-down"></span>
-              ${ShoppingCartIcon()}
-            </span>
-          </button>
         </div>
       </div>
     </div>`;

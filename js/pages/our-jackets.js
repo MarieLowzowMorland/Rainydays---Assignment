@@ -1,7 +1,6 @@
 import addHeaderForPage, { pageNames } from "../templates/header.js";
 import addFooterForPage from "../templates/footer.js";
 import jacketBox from "../templates/jacketBox.js";
-import { addToCart } from "../data/cartStorage.js";
 import products from "../data/products.js";
 
 addHeaderForPage(pageNames.OUR_JACKETS);
