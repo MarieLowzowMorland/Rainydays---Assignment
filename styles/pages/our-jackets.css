@@ -148,6 +148,8 @@
 
 .jacket-container {
   display: grid;
+  margin: 10px;
+  gap: 10px 10px;
   grid-template-columns: 1fr;
   justify-content: center;
 }
@@ -159,7 +161,6 @@
 @media screen and (min-width: 350px) {
   .jacket-container {
     grid-template-columns: 1fr 1fr;
-    gap: 10px 10px;
     margin-bottom: 10px;
   }
 }
