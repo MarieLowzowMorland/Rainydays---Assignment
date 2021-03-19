@@ -27,10 +27,10 @@ const cartCircleVisiblityClass = (numberOfItems) => {
 export const updateCartNumber = () => {
   const numberOfItems = getCartContent().length;
   document.querySelectorAll(".cart-circle")
-    .forEach(circles => {
-      circles.classList.remove("visible");
-      circles.classList.add(cartCircleVisiblityClass(numberOfItems));
-      circles.innerHTML = `<p>${numberOfItems}</p>`;
+    .forEach(circle => {
+      circle.classList.remove("visible");
+      circle.classList.add(cartCircleVisiblityClass(numberOfItems));
+      circle.innerHTML = `<p>${numberOfItems}</p>`;
     });
 }
 
