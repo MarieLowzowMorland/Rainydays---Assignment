@@ -6,6 +6,7 @@ import {
   getCartContent,
   removeFromCart,
   getSelectionKey,
+  addToCart
 } from "../data/cartStorage.js";
 import { findJacketById } from "../data/products.js";
 
@@ -26,8 +27,6 @@ const cartItem = (selectedJacket) => {
     selectedSize,
     name,
     jacketType,
-    colors,
-    sizes,
     imageUrl,
     imageDescription,
     selectionKey,
@@ -36,7 +35,7 @@ const cartItem = (selectedJacket) => {
 
   return /*template*/ `
   <li>
-    <div id=${selectionKey} class="jacket-chekout-info">
+    <div id="${selectionKey}" class="jacket-chekout-info">
       <button class="remove-jacket" aria-label="remove">${IconRemove()}</button>
       <div class="one-liner">
         <img
@@ -61,11 +60,11 @@ const cartItem = (selectedJacket) => {
       </table>
       <div class="price-line">
         <div class="one-liner">
-          <button class="circle">-</button>
+          <button class="circle remove-items">-</button>
           <p>${numberOfJackets}</p>
-          <button class="circle">+</button>
+          <button class="circle add-item">+</button>
         </div>
-        <p class="bold">NOK ${jacketActualPrice(selectedJacket)},-</p>
+        <p id="${selectionKey}-price"  class="bold">NOK ${numberOfJackets * jacketActualPrice(selectedJacket)},-</p>
       </div>
     </div>
   </li>
@@ -143,3 +142,26 @@ const removeJacket = (event) => {
 document
   .querySelectorAll(".remove-jacket")
   .forEach((remove) => remove.addEventListener("click", removeJacket));
+
+const numberOfIdenticalJackets = (allJackets, selectionKey) => {
+    return allJackets
+      .map(getSelectionKey)
+      .filter(key => key === selectionKey)
+      .length;
+}
+
+const addItem = (event) => {
+  const selectionKey = event.target.closest(".jacket-chekout-info").id;
+  const jacket = cartContents.find(jacket => jacket.selectionKey === selectionKey);
+  const {id, selectedColor, selectedSize, selectedGender} = jacket;
+  addToCart(id, selectedColor, selectedSize, selectedGender);
+  
+  const newContents = updateCartInfo();
+  const numberOfJackets = numberOfIdenticalJackets(newContents, selectionKey);
+  document.getElementById(`${selectionKey}-price`).innerHTML = `NOK ${numberOfJackets * jacketActualPrice(jacket)},-`;
+};
+
+document
+  .querySelectorAll(".add-item")
+  .forEach((remove) => remove.addEventListener("click", addItem));
+  
