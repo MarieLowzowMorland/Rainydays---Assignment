@@ -11,6 +11,7 @@ const validateForm = (successDivId) => (event) => {
 
   if(formIsValid){
       showSuccessMessage(successDivId);
+      event.target.closest("form").reset();
   } else {
       hideSuccessMessage(successDivId);
   }
