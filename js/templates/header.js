@@ -29,7 +29,7 @@ export const updateCartNumber = () => {
   document.querySelectorAll(".cart-circle")
     .forEach(circle => {
       circle.classList.remove("visible");
-      
+
       const newClass = cartCircleVisiblityClass(numberOfItems);
       if(newClass){
         circle.classList.add(newClass);
@@ -39,10 +39,18 @@ export const updateCartNumber = () => {
     });
 }
 
-const addHeaderForPage = (pageName) =>
+const addHeaderForPage = (pageName) => {  
   document
     .querySelector("main")
     .insertAdjacentHTML("beforebegin", headerTemplate(pageName, getCartContent()));
+
+  document  
+    .getElementById("hamburger-menu")
+    .addEventListener("click", () => {
+      const menu = document.querySelector("nav .menu");
+      menu.classList.toggle("visible");
+    });
+}
 
 const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
   <div id="nav-shopping-cart" class=${divClass}>
@@ -58,31 +66,17 @@ const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
 const headerTemplate = (pageName, cartContent) => /*template*/ `
   <header>
     <nav>
-      <input
-        id="menu-visible"
-        type="checkbox"
-        class="screen-reader-only desktop-hidden"
-      />
       <div>
         <a href="index.html" class="logo-link">
           ${LogoIcon()}
         </a>
         <div class="filler desktop-hidden"></div>
         ${cartWithCircle(pageNames, cartContent, "desktop-hidden")}
-        <label class="desktop-hidden" for="menu-visible">
+        <button id="hamburger-menu" class="desktop-hidden svg-button">
           ${MenuIcon()}
-        </label>
+        </button>
       </div>
       <div class="menu">
-        <div class="search desktop-hidden">
-          <div class="svg-button">
-            ${SearchIcon()}
-          </div>
-          <div class="searchbar input-with-label-wrapper shorter">
-            <label for="search-small">Search</label>
-            <input type="text" name="search" id="search-small" />
-          </div>
-        </div>
         <ul>
           <li><a href="ourJackets.html" class="${
             pageName === pageNames.OUR_JACKETS ? "active" : ""
@@ -96,17 +90,10 @@ const headerTemplate = (pageName, cartContent) => /*template*/ `
         </ul>
         <div class="filler"></div>
 
-        <div class="searchbar input-with-label-wrapper shorter tablet-hidden">
-          <label for="search">Search</label>
-          <input type="text" name="search" id="search" />
-        </div>
-
-        <div class="svg-button tablet-hidden">
-           ${SearchIcon()}
-        </div>
         ${cartWithCircle(pageNames, cartContent, "tablet-hidden")}
       </div>
     </nav>
   </header>`;
+      
 
 export default addHeaderForPage;

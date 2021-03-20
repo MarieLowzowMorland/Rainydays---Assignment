@@ -17,6 +17,15 @@ nav > div {
   align-items: center;
 }
 
+nav .menu {
+  flex-grow: 3;
+}
+
+#hamburger-menu{
+  background-color: inherit;
+  border: none;
+}
+
 nav > div > div {
   display: inline-block;
 }
@@ -50,10 +59,6 @@ nav a {
   text-decoration: none;
 }
 
-nav .searchbar {
-  margin-bottom: -1rem;
-}
-
 nav svg {
   height: 1.6rem;
   width: 1.6rem;
@@ -68,6 +73,7 @@ nav .svg-button {
   margin-bottom: -1rem;
 }
 nav .svg-button.active,
+nav .svg-button:focus,
 nav .svg-button:hover {
   border-bottom: 2px solid var(--secondary);
 }
@@ -77,6 +83,8 @@ nav svg path {
   fill: var(--text-white);
 }
 
+nav .svg-button:focus rect,
+nav .svg-button:focus path,
 nav svg:hover rect,
 nav svg:hover path {
   fill: var(--secondary);
@@ -181,7 +189,7 @@ nav a {
     display: none;
   }
 
-  #menu-visible:checked ~ .menu {
+  nav .menu.visible {
     display: block;
   }
 }

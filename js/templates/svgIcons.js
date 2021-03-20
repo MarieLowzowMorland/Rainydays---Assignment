@@ -424,7 +424,6 @@ export const ShoppingCartIcon = () => /*template*/ `
 
 export const MenuIcon = () => /*template*/ `
     <svg
-      class="svg-button"
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="25"

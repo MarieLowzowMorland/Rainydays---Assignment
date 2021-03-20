@@ -38,7 +38,7 @@ const cartItem = (selectedJacket) => {
   return /*template*/ `
   <li>
     <div id=${selectionKey} class="jacket-chekout-info">
-      <button class="remove-jacket">${IconRemove()}</button>
+      <button class="remove-jacket" aria-label="remove">${IconRemove()}</button>
       <div class="one-liner">
         <img
           height="100";
