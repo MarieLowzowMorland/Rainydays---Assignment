@@ -126,17 +126,19 @@
 }
 
 .circle {
-  background-color: var(--icon-color);
+  background-color: var(--text-white);
   color: var(--primary);
-  padding: 0.3rem 0.7rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  border: 0px;
+  cursor: pointer;
+  border: 1px solid var(--primary)
 }
 
 .circle:hover,
 .circle:focus {
   background-color: var(--primary);
-  color: var(--icon-color);
+  color: var(--text-white);
 }
 
 .one-liner > * {
