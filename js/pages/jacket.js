@@ -5,6 +5,7 @@ import {salePrice, oldPrice} from "../data/products.js";
 import { addToCart } from "../data/cartStorage.js";
 import { ShoppingCartIcon } from "../templates/svgIcons.js";
 import { colorOption, sizeOption} from "../templates/jacketBox.js";
+import { addSuccessMessage } from "../components/formValidation.js";
 
 addHeaderForPage(pageNames.JACKET);
 addFooterForPage();
@@ -109,6 +110,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   event.stopPropagation();
   addToCart(jacketId, selectedColor, selectedSize);
+  addSuccessMessage("Jacket added to cart");
 });
 
 const keyboardSelectLabel = (event) => {
