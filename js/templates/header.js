@@ -29,7 +29,12 @@ export const updateCartNumber = () => {
   document.querySelectorAll(".cart-circle")
     .forEach(circle => {
       circle.classList.remove("visible");
-      circle.classList.add(cartCircleVisiblityClass(numberOfItems));
+      
+      const newClass = cartCircleVisiblityClass(numberOfItems);
+      if(newClass){
+        circle.classList.add(newClass);
+      }
+
       circle.innerHTML = `<p>${numberOfItems}</p>`;
     });
 }

@@ -107,7 +107,22 @@
 } 
 
 .jacket-chekout-info {
+  position: relative;
   color: var(--primary);
+}
+
+.remove-jacket{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.remove-jacket:focus svg line,
+.remove-jacket:hover svg line{
+  stroke-width: 3;
 }
 
 .circle {
