@@ -8,7 +8,6 @@ import {
   getSelectionKey,
 } from "../data/cartStorage.js";
 import { findJacketById } from "../data/products.js";
-import { colorOption, sizeOption } from "../templates/jacketBox.js";
 
 addHeaderForPage(pageNames.CHECKOUT);
 addFooterForPage();
@@ -48,16 +47,18 @@ const cartItem = (selectedJacket) => {
         />
         <h3>${name}${jacketType.icon()}</h3>
       </div>
-      <div class="jacket-colors">
-        ${colors
-          .map((color) => colorOption(selectionKey, color, selectedColor))
-          .join("")}
-      </div>
-      <div class="jacket-sizes">
-        ${sizes
-          .map((size) => sizeOption(selectionKey, size, selectedSize))
-          .join("")}
-      </div>
+      <table>
+        <tbody>
+          <tr>
+            <th>Color:</th>
+            <td>${selectedColor.name}</td>
+          </tr>
+          <tr>
+            <th>Size:</th>
+            <td>${selectedSize}</td>
+          </tr>
+        </tbody>
+      </table>
       <div class="price-line">
         <div class="one-liner">
           <button class="circle">-</button>

@@ -34,6 +34,20 @@
   object-fit: contain;
 }
 
+#cart table{
+  width: 12rem;
+  margin: 0 auto;
+}
+
+#cart table th{
+  width: 5rem;
+  text-align: left;
+}
+
+#cart table td{
+  text-align: left;
+}
+
 .payment-overview p {
   font-family: Helvetica, Arial, sans-serif;
   color: var(--primary);
