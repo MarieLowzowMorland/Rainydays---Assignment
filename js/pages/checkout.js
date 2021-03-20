@@ -6,13 +6,21 @@ import {
   getCartContent,
   removeFromCart,
   getSelectionKey,
-  addToCart
+  addToCart,
+  setCartContent,
+  emptyCart
 } from "../data/cartStorage.js";
 import { findJacketById } from "../data/products.js";
 
 addHeaderForPage(pageNames.CHECKOUT);
 addFooterForPage();
-addValidationToForm("purchase-form", () => window.location.href = `${pageNames.ORDER_CONFIRMATION}.html`);
+addValidationToForm(
+  "purchase-form",
+  () => {
+    emptyCart();
+    window.location.href = `${pageNames.ORDER_CONFIRMATION}.html`;
+  }
+);
 
 const jacketActualPrice = (jacket) => {
   if (jacket.discountPercentage > 0) {
@@ -30,13 +38,13 @@ const cartItem = (selectedJacket) => {
     imageUrl,
     imageDescription,
     selectionKey,
-    numberOfJackets
+    numberOfJackets,
   } = selectedJacket;
 
   return /*template*/ `
   <li>
     <div id="${selectionKey}" class="jacket-chekout-info">
-      <button class="remove-jacket" aria-label="remove">${IconRemove()}</button>
+      <button id="${selectionKey}-remove" class="remove-jacket" aria-label="remove">${IconRemove()}</button>
       <div class="one-liner">
         <img
           height="100"
@@ -60,11 +68,13 @@ const cartItem = (selectedJacket) => {
       </table>
       <div class="price-line">
         <div class="one-liner">
-          <button class="circle remove-items">-</button>
-          <p>${numberOfJackets}</p>
+          <button class="circle remove-item">-</button>
+          <p class="item-number" id="${selectionKey}-number">${numberOfJackets}</p>
           <button class="circle add-item">+</button>
         </div>
-        <p id="${selectionKey}-price"  class="bold">NOK ${numberOfJackets * jacketActualPrice(selectedJacket)},-</p>
+        <p id="${selectionKey}-price"  class="bold">NOK ${
+    numberOfJackets * jacketActualPrice(selectedJacket)
+  },-</p>
       </div>
     </div>
   </li>
@@ -99,15 +109,19 @@ const updateCartInfo = () => {
 const cartContents = updateCartInfo();
 
 const groupIdenticalJackets = (jackets) => {
-  const allSelectionKeys = jackets.map(jacket => jacket.selectionKey);
+  const allSelectionKeys = jackets.map((jacket) => jacket.selectionKey);
   const uniqeSelectionKeys = [...new Set(allSelectionKeys)];
-  
-  return uniqeSelectionKeys.map(selectionKey => {
-    const jacketsWithSelectionKey = jackets
-        .filter(jacket => jacket.selectionKey === selectionKey);
 
-    return {...jacketsWithSelectionKey[0], numberOfJackets: jacketsWithSelectionKey.length};
-  })
+  return uniqeSelectionKeys.map((selectionKey) => {
+    const jacketsWithSelectionKey = jackets.filter(
+      (jacket) => jacket.selectionKey === selectionKey
+    );
+
+    return {
+      ...jacketsWithSelectionKey[0],
+      numberOfJackets: jacketsWithSelectionKey.length,
+    };
+  });
 };
 // https://www.freecodecamp.org/news/15-useful-javascript-examples-of-map-reduce-and-filter-74cbbb5e0a1f/
 
@@ -144,24 +158,65 @@ document
   .forEach((remove) => remove.addEventListener("click", removeJacket));
 
 const numberOfIdenticalJackets = (allJackets, selectionKey) => {
-    return allJackets
-      .map(getSelectionKey)
-      .filter(key => key === selectionKey)
-      .length;
-}
+  return allJackets.map(getSelectionKey).filter((key) => key === selectionKey)
+    .length;
+};
+
+const rerenderCart = (selectionKey) => {
+  const newContents = updateCartInfo();
+  const numberOfJackets = numberOfIdenticalJackets(newContents, selectionKey);
+  const jacket = newContents.find(
+    (jacket) => jacket.selectionKey === selectionKey
+  );
+  document.getElementById(`${selectionKey}-price`).innerHTML = `NOK ${
+    numberOfJackets * jacketActualPrice(jacket)
+  },-`;
+  document.getElementById(`${selectionKey}-number`).innerHTML = numberOfJackets;
+};
 
 const addItem = (event) => {
   const selectionKey = event.target.closest(".jacket-chekout-info").id;
-  const jacket = cartContents.find(jacket => jacket.selectionKey === selectionKey);
-  const {id, selectedColor, selectedSize, selectedGender} = jacket;
+  const jacket = cartContents.find(
+    (jacket) => jacket.selectionKey === selectionKey
+  );
+  const { id, selectedColor, selectedSize, selectedGender } = jacket;
   addToCart(id, selectedColor, selectedSize, selectedGender);
-  
-  const newContents = updateCartInfo();
-  const numberOfJackets = numberOfIdenticalJackets(newContents, selectionKey);
-  document.getElementById(`${selectionKey}-price`).innerHTML = `NOK ${numberOfJackets * jacketActualPrice(jacket)},-`;
+  rerenderCart(selectionKey);
 };
 
 document
   .querySelectorAll(".add-item")
   .forEach((remove) => remove.addEventListener("click", addItem));
-  
+
+const cartWithSelectedKey = () =>
+  getCartContent().map((selectedJacket) => {
+    return {
+      ...selectedJacket,
+      selectionKey: getSelectionKey(selectedJacket),
+    };
+  });
+
+const removeItem = (event) => {
+  const currentContents = cartWithSelectedKey();
+  const selectionKey = event.target.closest(".jacket-chekout-info").id;
+  const matchingJackets = currentContents.filter(
+    (jacket) => jacket.selectionKey === selectionKey
+  );
+  const numberOfMatchingJackets = matchingJackets.length;
+  if (numberOfMatchingJackets === 1) {
+    document.getElementById(`${selectionKey}-remove`).click();
+    return;
+  }
+
+  matchingJackets.pop();
+  const otherJackets = currentContents.filter(
+    (jacket) => jacket.selectionKey !== selectionKey
+  );
+  const newCart = [...matchingJackets, ...otherJackets];
+  setCartContent(newCart);
+  rerenderCart(selectionKey);
+};
+
+document
+  .querySelectorAll(".remove-item")
+  .forEach((remove) => remove.addEventListener("click", removeItem));

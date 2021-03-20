@@ -4,7 +4,7 @@ import { updateCartNumber } from "../templates/header.js";
 export const getCartContent = () =>
   JSON.parse(window.localStorage.getItem("cart") || "[]");
 
-const setCartContent = (content) => {
+export const setCartContent = (content) => {
   window.localStorage.setItem("cart", JSON.stringify(content));
   updateCartNumber();
 };
@@ -33,3 +33,6 @@ export const removeFromCart = (selectionKey) => {
   );
   setCartContent(contentWithoutRemovedElements);
 };
+
+export const emptyCart = () => 
+  window.localStorage.removeItem("cart");

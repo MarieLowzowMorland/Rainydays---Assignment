@@ -5,24 +5,24 @@
 
 .white-input-wrapper,
 main select,
-main .input-with-label-wrapper input{
+main .input-with-label-wrapper input {
   color: var(--primary);
   background-color: var(--text-white)
 }
 
 main .white-input-wrapper label,
-main .input-with-label-wrapper label{
+main .input-with-label-wrapper label {
   color: var(--primary);
 }
 
-.accept-agreement input{
+.accept-agreement input {
   margin: 10px;
   height: inherit;
   display: block;
   float: left;
 }
 
-main button[type=submit]{
+main button[type=submit] {
   margin-bottom: 0;
 }
 
@@ -36,7 +36,11 @@ main .grey-card > *{
   margin: 0 auto;
 }
 
-.right-aligned{
+.right-aligned {
   float: right;
   margin-right: 20px;
+}
+
+.item-number {
+  width: 1.5rem;
 }
