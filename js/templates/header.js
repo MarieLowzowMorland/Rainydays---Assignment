@@ -5,16 +5,16 @@ import {
   LogoIcon,
   MenuIcon,
   ShoppingCartIcon,
-  SearchIcon,
 } from "./svgIcons.js";
 
 export const pageNames = {
   INDEX: "index",
-  OUR_JACKETS: "our-jackets",
+  OUR_JACKETS: "ourJackets",
   JACKET: "jacket",
   ABOUT: "about",
   CONTACT: "contact",
   CHECKOUT: "checkout",
+  ORDER_CONFIRMATION: "orderConfirmation",
 };
 
 const cartCircleVisiblityClass = (numberOfItems) => {

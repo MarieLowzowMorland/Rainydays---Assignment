@@ -12,7 +12,7 @@ import { colorOption, sizeOption } from "../templates/jacketBox.js";
 
 addHeaderForPage(pageNames.CHECKOUT);
 addFooterForPage();
-addValidationToForm("purchase-form");
+addValidationToForm("purchase-form", () => window.location.href = `${pageNames.ORDER_CONFIRMATION}.html`);
 
 const jacketActualPrice = (jacket) => {
   if (jacket.discountPercentage > 0) {

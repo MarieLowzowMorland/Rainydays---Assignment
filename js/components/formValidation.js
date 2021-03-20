@@ -1,6 +1,6 @@
 document.querySelector("main").insertAdjacentHTML("beforebegin", '<div id="user-messages"></div>');
 
-const addSuccessMessage = (message) => {
+export const addSuccessMessage = (message) => {
   if(!message){
     return;
   }
@@ -8,11 +8,11 @@ const addSuccessMessage = (message) => {
   const messagesContainer = document.getElementById("user-messages");
   messagesContainer.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
   const newMessageElement = messagesContainer.firstChild;
-  setTimeout(() => newMessageElement.remove(), 5000);
+  setTimeout(() => newMessageElement.remove(), 3000);
 };
 
 
-const validateForm = (successMessage) => (event) => {
+const validateForm = (onSuccess) => (event) => {
   event.preventDefault();
   const inputs = [
     ...Array.from(event.target.querySelectorAll("input")), 
@@ -24,8 +24,8 @@ const validateForm = (successMessage) => (event) => {
       .every(valid => valid);  
 
   if(formIsValid){
-      addSuccessMessage(successMessage)
-      event.target.closest("form").reset();
+    onSuccess();
+    event.target.closest("form").reset();
   }
 }
 
@@ -138,7 +138,7 @@ const validateInputEventHandler = (event) => {
   validateInput(event.target);
 }
 
-const addValidationToForm = (formId, successMessage) => {
+const addValidationToForm = (formId, onSuccess) => {
   const form = document.getElementById(formId);
   const inputs = [
     ...form.querySelectorAll("input"), 
@@ -146,7 +146,7 @@ const addValidationToForm = (formId, successMessage) => {
     ...form.querySelectorAll("textarea")
   ]
 
-  form.addEventListener("submit", validateForm(successMessage));
+  form.addEventListener("submit", validateForm(onSuccess));
   inputs.forEach(input => input.addEventListener("input", validateInputEventHandler));
 }
 

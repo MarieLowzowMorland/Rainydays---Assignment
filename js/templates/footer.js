@@ -1,11 +1,11 @@
 import { MailIcon } from "./svgIcons.js";
-import addValidationToForm from "../components/formValidation.js"
+import addValidationToForm, { addSuccessMessage } from "../components/formValidation.js"
 
 const addFooterForPage = () => {
   document
     .querySelector("main")
     .insertAdjacentHTML("afterend", footerTemplate());
-  addValidationToForm("footer-subscribe", "You've successfully subscribed to our newsletter");
+  addValidationToForm("footer-subscribe", () => addSuccessMessage("You've successfully subscribed to our newsletter"));
 }
 
 const footerTemplate = () => /*template*/`
