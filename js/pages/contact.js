@@ -3,5 +3,5 @@ import addValidationToForm from "../components/formValidation.js";
 import addFooterForPage from "../templates/footer.js";
 
 addHeaderForPage(pageNames.CONTACT);
-addValidationToForm("contact-form", "contact-success");
+addValidationToForm("contact-form", "Thank you for your message. Have a nice day.");
 addFooterForPage();

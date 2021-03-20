@@ -1,3 +1,20 @@
+#user-messages{
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  width: 300px;
+  z-index: 999999;
+  transform: translateX(-50%);
+}
+
+#user-messages p{background-color: var(--text-white);
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px;
+  box-shadow: 3px 3px 6px #0000004d
+}
+
 textarea, input, select, .white-input-wrapper {
   font-size: 1rem;
   color: var(--text-white);
@@ -66,10 +83,6 @@ fieldset{
   margin: inherit;
   border: 0;
   padding: inherit;
-}
-
-.success-message {
-  display: none;
 }
 
 .form-error p {

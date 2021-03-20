@@ -1,4 +1,18 @@
-const validateForm = (successDivId) => (event) => {
+document.querySelector("main").insertAdjacentHTML("beforebegin", '<div id="user-messages"></div>');
+
+const addSuccessMessage = (message) => {
+  if(!message){
+    return;
+  }
+
+  const messagesContainer = document.getElementById("user-messages");
+  messagesContainer.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+  const newMessageElement = messagesContainer.firstChild;
+  setTimeout(() => newMessageElement.remove(), 5000);
+};
+
+
+const validateForm = (successMessage) => (event) => {
   event.preventDefault();
   const inputs = [
     ...Array.from(event.target.querySelectorAll("input")), 
@@ -6,26 +20,12 @@ const validateForm = (successDivId) => (event) => {
     ...Array.from(event.target.querySelectorAll("textarea"))
   ];
   const formIsValid = inputs
-      .map(validateInput(successDivId))
+      .map(validateInput)
       .every(valid => valid);  
 
   if(formIsValid){
-      showSuccessMessage(successDivId);
+      addSuccessMessage(successMessage)
       event.target.closest("form").reset();
-  } else {
-      hideSuccessMessage(successDivId);
-  }
-}
-
-const showSuccessMessage = (successDivId) => {
-  if(successDivId){
-    document.getElementById(successDivId).style.display = "block";
-  }
-}
-
-const hideSuccessMessage = (successDivId) => {
-  if(successDivId){
-    document.getElementById(successDivId).style.display = "none";
   }
 }
 
@@ -53,7 +53,7 @@ const requiredCheckValue = (value, checked, type) => {
   }
 }
 
-const validateInput = (successDivId) => (inputElement) => {
+const validateInput = (inputElement) => {
   const {name, value, required, type, checked} = inputElement;
   const numberField = inputElement.getAttribute("data-numberfield");
   const minlength = parseNumberOrDefault(inputElement.getAttribute("data-minlength"), 0);
@@ -84,7 +84,6 @@ const validateInput = (successDivId) => (inputElement) => {
       return true;
   } else {
       inputElement.classList.add("invalid");
-      hideSuccessMessage(successDivId);
       return false;
   };
 }
@@ -135,11 +134,11 @@ const validateMinLength = (value, minLength, name) => {
 
 const upperCaseFirst = (value) => value.charAt(0).toUpperCase() + value.substr(1);
 
-const validateInputEventHandler = (successDivId) => (event) => {
-  validateInput(successDivId)(event.target);
+const validateInputEventHandler = (event) => {
+  validateInput(event.target);
 }
 
-const addValidationToForm = (formId, successDivId) => {
+const addValidationToForm = (formId, successMessage) => {
   const form = document.getElementById(formId);
   const inputs = [
     ...form.querySelectorAll("input"), 
@@ -147,8 +146,8 @@ const addValidationToForm = (formId, successDivId) => {
     ...form.querySelectorAll("textarea")
   ]
 
-  form.addEventListener("submit", validateForm(successDivId));
-  inputs.forEach(input => input.addEventListener("input", validateInputEventHandler(successDivId)));
+  form.addEventListener("submit", validateForm(successMessage));
+  inputs.forEach(input => input.addEventListener("input", validateInputEventHandler));
 }
 
 export default addValidationToForm;

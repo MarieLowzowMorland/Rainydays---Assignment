@@ -5,7 +5,7 @@ const addFooterForPage = () => {
   document
     .querySelector("main")
     .insertAdjacentHTML("afterend", footerTemplate());
-  addValidationToForm("footer-subscribe");
+  addValidationToForm("footer-subscribe", "You've successfully subscribed to our newsletter");
 }
 
 const footerTemplate = () => /*template*/`
