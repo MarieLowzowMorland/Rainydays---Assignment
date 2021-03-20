@@ -102,7 +102,7 @@ nav a.logo-link svg:hover path{
   fill: var(--text-white);
 }
 
-#Logo {
+.logo-icon {
   height: 5.5rem;
   width: auto;
 }
@@ -117,7 +117,7 @@ nav a {
   text-transform: uppercase;
 }
 
-#nav-shopping-cart {
+.nav-shopping-cart {
   margin-right: 1rem;
   position: relative;
   margin-bottom: -1rem;

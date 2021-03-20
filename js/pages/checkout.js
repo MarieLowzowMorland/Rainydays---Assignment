@@ -41,10 +41,10 @@ const cartItem = (selectedJacket) => {
       <button class="remove-jacket" aria-label="remove">${IconRemove()}</button>
       <div class="one-liner">
         <img
-          height="100";
-          width="100";
-          src=${imageUrl(selectedColor)}
-          alt=${imageDescription}
+          height="100"
+          width="100"
+          src="${imageUrl(selectedColor)}"
+          alt="${imageDescription}"
         />
         <h3>${name}${jacketType.icon()}</h3>
       </div>

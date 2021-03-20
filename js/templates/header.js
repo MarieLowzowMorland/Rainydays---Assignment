@@ -53,7 +53,7 @@ const addHeaderForPage = (pageName) => {
 }
 
 const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
-  <div id="nav-shopping-cart" class=${divClass}>
+  <div class="nav-shopping-cart ${divClass}">
     <a href="checkout.html" class="svg-button ${
       pageName === pageNames.CHECKOUT ? "active" : ""
     }"> ${ShoppingCartIcon()} </a>
