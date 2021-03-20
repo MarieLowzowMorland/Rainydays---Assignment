@@ -68,17 +68,12 @@ const jacketBox = (jacket, headerLevel) => {
     <div class="jacket-box" data-id="${id}" tabindex="0">
       ${saleBanner(discountPercentage)}
       <img src="${imageUrl(colors[0])}" alt="${imageDescription}"/>
-      <div class="split-wrapper small-desktop-block">
-        <div class="split-50">
-          <${heading}>${name}${jacketType.icon()}</${heading}>
-          <p>${jacketType.name}</p>
-          <p>${colors[0].name}</p>
-          <div>
-            ${salePrice(price, discountPercentage)}
-            ${oldPrice(price, discountPercentage)}
-          </div>
-        </div>
-        <div class="split-50">
+      <div>
+        <${heading}>${name}${jacketType.icon()}</${heading}>
+        <p>Color: ${colors[0].name}</p>
+        <div>
+          ${salePrice(price, discountPercentage)}
+          ${oldPrice(price, discountPercentage)}
         </div>
       </div>
     </div>`;
