@@ -1,9 +1,6 @@
 .jacket-box {
   position: relative;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 2px solid var(--bg-primary);
 }
 
@@ -13,24 +10,24 @@
 }
 
 .jacket-box .image-wrapper {
-  text-align: center;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 .jacket-box img {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  height: 60%;
-  min-height: 60%;
+  height: 100%;
   object-fit: contain;
-  flex: 0;
 }
 
 .jacket-box {
   padding: 10px;
+  padding-bottom: 20px;
 }
 
-.jacket-box svg path{
+.jacket-box .heading svg path{
   fill: var(--primary);
 }
 
@@ -83,10 +80,26 @@
   padding-right: 10px;
 }
 
+@media screen and (min-width: 800px) {
+  .jacket-box .image-wrapper {
+    height: 250px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  .jacket-box .image-wrapper {
+    height: 300px;
+  }
+
   .jacket-box .add-to-cart-button {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .jacket-box .image-wrapper {
+    height: 400px;
   }
 }

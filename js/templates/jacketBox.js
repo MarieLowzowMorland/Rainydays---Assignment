@@ -1,5 +1,4 @@
-import { ShoppingCartIcon, TriangleUp } from "./svgIcons.js";
-import { IconColor } from "../templates/svgIcons.js";
+import { TriangleUp, IconColor } from "./svgIcons.js";
 import {salePrice, oldPrice} from "../data/products.js";
 
 export const colorOption = (jacketId, color, selectedColor) => {
@@ -67,10 +66,10 @@ const jacketBox = (jacket, headerLevel) => {
   return /*template*/`
     <div class="jacket-box" data-id="${id}" tabindex="0">
       ${saleBanner(discountPercentage)}
-      <img src="${imageUrl(colors[0])}" alt="${imageDescription}"/>
+      <div class="image-wrapper"><img src="${imageUrl(colors[0])}" alt="${imageDescription}"/></div>
       <div>
-        <${heading}>${name}${jacketType.icon()}</${heading}>
-        <p>Color: ${colors[0].name}</p>
+        <${heading} class="heading">${name}${jacketType.icon()}</${heading}>
+        <p>Colors: <span class="color-alternatives">${colors.map(color => IconColor(color.hex)).join("")}</span></p>
         <div>
           ${salePrice(price, discountPercentage)}
           ${oldPrice(price, discountPercentage)}
