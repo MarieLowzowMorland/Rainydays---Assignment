@@ -74,7 +74,37 @@
       <div class="main-contentbox">
         <h1>Checkout</h1>
 
-        <div class="grey-card split-wrapper tablet-block column-reverse">
+        <div class="grey-card split-wrapper tablet-block">
+          <div class="split-50">
+            <div id="cart">
+              <section>
+                <h2>Your cart</h2>
+                <p id="cart-number-of-items" class="smal-blue-text"></p>
+                <ul id="cart-content"></ul>
+              </section>
+
+              <section class="payment-overview">
+                <h2>Payment overview</h2>
+                <div class="split-wrapper">
+                  <div class="split-60 left-text">
+                    <p>Sum products</p>
+                    <p>Shipping</p>
+                    <aside>Estimated time for shipping is 3-4 days</aside>
+                  </div>
+                  <div class="split-40 right-text">
+                    <p id="sum-products"></p>
+                    <p>Free</p>
+                  </div>
+                </div>
+                <div class="split-wrapper">
+                  <p class="split-60 left-text">Total</p>
+                  <p id="cart-total" class="split-40 right-text"></p>
+                </div>
+                <div id="dubble-line"></div>
+              </section>
+            </div>
+          </div>
+
           <div class="checkout-form split-50">
             <section>
               <h2>Shipping address</h2>
@@ -272,36 +302,6 @@
                 </button>
               </form>
             </section>
-          </div>
-
-          <div class="split-50">
-            <div id="cart">
-              <section>
-                <h2>Your cart</h2>
-                <p id="cart-number-of-items" class="smal-blue-text"></p>
-                <ul id="cart-content"></ul>
-              </section>
-
-              <section class="payment-overview">
-                <h2>Payment overview</h2>
-                <div class="split-wrapper">
-                  <div class="split-60 left-text">
-                    <p>Sum products</p>
-                    <p>Shipping</p>
-                    <aside>Estimated time for shipping is 3-4 days</aside>
-                  </div>
-                  <div class="split-40 right-text">
-                    <p id="sum-products"></p>
-                    <p>Free</p>
-                  </div>
-                </div>
-                <div class="split-wrapper">
-                  <p class="split-60 left-text">Total</p>
-                  <p id="cart-total" class="split-40 right-text"></p>
-                </div>
-                <div id="dubble-line"></div>
-              </section>
-            </div>
           </div>
         </div>
       </div>
