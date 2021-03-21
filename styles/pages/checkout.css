@@ -1,3 +1,13 @@
+@import '../common/variables.css';
+@import '../common/text.css';
+@import '../common/layout.css';
+@import '../components/buttons.css';
+@import '../components/header.css';
+@import '../components/footer.css';
+@import '../components/form.css';
+@import '../components/jacket-cart.css';
+@import '../components/triangle.css';
+
 .checkout-form {
   width: 50%;
   padding-left: 20px;

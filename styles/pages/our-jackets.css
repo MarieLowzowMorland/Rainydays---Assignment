@@ -1,3 +1,13 @@
+@import '../common/variables.css';
+@import '../common/text.css';
+@import '../common/layout.css';
+@import '../components/buttons.css';
+@import '../components/header.css';
+@import '../components/footer.css';
+@import '../components/form.css';
+@import '../components/jacketbox.css';
+@import '../components/triangle.css';
+
 #filter {
   background-color: var(--bg-primary);
   position: relative;

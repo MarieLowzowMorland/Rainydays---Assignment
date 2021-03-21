@@ -1,0 +1,30 @@
+main{
+  text-align: center;
+}
+
+main section p{
+  width: 300px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+main h1{
+  color: var(--bg-2);
+}
+
+.sub-heading{
+  font-family: 'oswald', Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.order-number{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  main h1{
+    font-size: 2.5rem;
+  }
+}
