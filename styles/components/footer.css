@@ -20,6 +20,11 @@ footer a {
   font-weight: normal;
 }
 
+footer a:hover,
+footer a:focus {
+  color: var(--secondary);
+}
+
 footer input {
   background-color: var(--primary);
 }

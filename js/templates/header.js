@@ -15,6 +15,9 @@ export const pageNames = {
   CONTACT: "contact",
   CHECKOUT: "checkout",
   ORDER_CONFIRMATION: "orderConfirmation",
+  PRIVACY: "privacy",
+  TERMS: "terms",
+  MAGAZINE: "magazine",
 };
 
 const cartCircleVisiblityClass = (numberOfItems) => {

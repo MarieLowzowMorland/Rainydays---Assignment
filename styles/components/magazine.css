@@ -33,7 +33,13 @@
   margin: 10px;
 }
 
-#magazine a {
+#magazine a:focus .link,
+#magazine a:hover .link {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+#magazine .link {
   box-sizing: border-box;
   width: 100%;
   text-align: right;
@@ -49,11 +55,15 @@
 #magazine article {
   flex: 1 1 15rem;
   margin: 15px;
-  display: flex;
-  flex-direction: column;
   background-color: var(--bg-2);
   width: 23%;
   min-height: 355px;
+}
+
+#magazine article a{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #magazine article h3 {

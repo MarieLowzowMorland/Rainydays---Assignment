@@ -1,4 +1,5 @@
 import { MailIcon } from "./svgIcons.js";
+import { pageNames } from "./header.js";
 import addValidationToForm, { addSuccessMessage } from "../components/formValidation.js"
 
 const addFooterForPage = () => {
@@ -27,7 +28,7 @@ const footerTemplate = () => /*template*/`
             </span>
           </button>
         </form>
-        <p>By signing up you agree to Rainydays´ <a>Privacy Policy</a></p>
+        <p>By signing up you agree to Rainydays´ <a href="${pageNames.PRIVACY}.html">Privacy Policy</a></p>
       </div>
       <div>
         <h2 class="helvetica-smal-headding light-h2">Contact:</h2>

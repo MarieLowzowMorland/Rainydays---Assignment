@@ -44,3 +44,13 @@ main .grey-card > *{
 .item-number {
   width: 1.5rem;
 }
+
+.terms-link {
+  color: var(--bg-2);
+  font-style: italic;
+}
+
+.terms-link:hover,
+.terms-link:focus {
+  color: var(--secondary);
+}
