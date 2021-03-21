@@ -5,6 +5,7 @@
 @import '../components/header.css';
 @import '../components/footer.css';
 @import '../components/form.css';
+@import '../components/jacket-cart.css';
 @import '../components/jacketbox.css';
 @import '../components/triangle.css';
 
@@ -55,11 +56,11 @@
   transform: translateY(-100%);
 }
 
-#filter-menu-visible:checked ~ #filter-menu-wrapper {
+#filter-menu-wrapper.visible {
   display: block;
 }
 
-#filter-menu-visible:checked ~ #filter-menu-wrapper > #filter-menu {
+#filter-menu-wrapper.visible #filter-menu {
   animation: slide-from-top 0.5s forwards;
 }
 
