@@ -5,7 +5,7 @@
 }
 
 .jacket-box:focus,
-.jacket-box:hover{
+.jacket-box:hover {
   border: 2px solid var(--secondary);
 }
 
@@ -27,11 +27,11 @@
   padding-bottom: 20px;
 }
 
-.jacket-box .heading svg path{
+.jacket-box .heading svg path {
   fill: var(--primary);
 }
 
-.jacket-box .heading{
+.jacket-box .heading {
   color: var(--primary);
 }
 
