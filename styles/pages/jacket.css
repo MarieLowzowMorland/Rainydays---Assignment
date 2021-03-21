@@ -6,6 +6,7 @@
 @import '../components/footer.css';
 @import '../components/form.css';
 @import '../components/triangle.css';
+@import '../components/jacket-cart.css';
 
 .active {
   border-bottom: 2px solid var(--secondary);
