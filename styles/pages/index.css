@@ -67,37 +67,61 @@
   min-height: 20px;
 }
 
-#bestsellers .jacket-slider-wrapper {
+.jacket-slider-wrapper {
   width: 100%;
-  overflow: hidden;
+  padding: 20px 0;
 }
 
-#bestsellers .jacket-slider-wrapper .jacket-slider {
+.jacket-slider-wrapper * {
+  box-sizing: border-box;
+}
+
+.jacket-slider-wrapper .jacket-slider {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
-  animation: slide-left 0.5s forwards;
+  justify-content: center;
 }
 
-@keyframes slide-left {
-  0% {
-    transform: translateX(-400px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.control-previous,
+.control-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:50%;
+  background-color: inherit;
+  border: 0;
+  border-radius: 50%;
 }
 
-#bestsellers #slide-right:checked ~ .jacket-slider-wrapper .jacket-slider {
-  animation: slide-right 0.5s forwards;
+.controls svg {
+  height: 120%;
+  width: auto;
+  transform: translate(-14%, -5%);
 }
 
-@keyframes slide-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-400px);
-  }
+.controls,
+.controls svg ellipse{
+  background-color: var(--primary);
+  fill: var(--primary);;
+}
+
+.controls:hover,
+.controls:focus,
+.controls:hover svg ellipse,
+.controls:focus svg ellipse{
+  background-color: var(--secondary);
+  fill: var(--secondary);;
+}
+
+.control-previous {
+  left:0;
+}
+
+.control-next {
+  right:0;
 }
 
 #bestsellers .jacket-box {
@@ -106,32 +130,6 @@
   font-style: normal;
   flex: 0 0 200px;
   margin: 0 10px;
-}
-
-#bestsellers .controls {
-  margin: 0 auto;
-  width: fit-content;
-  position: relative;
-  z-index: 2;
-}
-
-#bestsellers .controls > * {
-  vertical-align: middle;
-}
-
-#bestsellers .controls > label {
-  display: inline-block;
-  height: 4rem;
-}
-
-#bestsellers .controls svg {
-  height: 100%;
-  width: auto;
-}
-
-#bestsellers .controls > label:hover ellipse,
-#bestsellers .controls > label:focus ellipse {
-  fill: var(--secondary);
 }
 
 #bestsellers .controls > p {

@@ -64,7 +64,7 @@ const jacketBox = (jacket, headerLevel) => {
     heading = headerLevel;
   }
   return /*template*/`
-    <div class="jacket-box" data-id="${id}" tabindex="0">
+    <a class="jacket-box" href="jacket.html?id=${id}">
       ${saleBanner(discountPercentage)}
       <div class="image-wrapper"><img src="${imageUrl(colors[0])}" alt="${imageDescription}"/></div>
       <div>
@@ -75,7 +75,7 @@ const jacketBox = (jacket, headerLevel) => {
           ${oldPrice(price, discountPercentage)}
         </div>
       </div>
-    </div>`;
+    </a>`;
 };
 
 export default jacketBox;

@@ -1,3 +1,23 @@
+export const arrowLeft = () => /*template*/ `
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="93" viewBox="0 0 94 93">
+    <g data-name="Component 5 – 3" transform="translate(82 81) rotate(180)">
+      <g transform="matrix(-1, 0, 0, -1, 82, 81)" >
+        <ellipse  data-name="Ellipse 1" cx="38" cy="37.5" rx="38" ry="37.5" transform="translate(82 81) rotate(180)" fill="#3a4754"/>
+      </g>
+      <path  data-name="Path 37" d="M1857.5,2644.323l29.976-18.162L1857.5,2608.6" transform="translate(-1829.838 -2589.833)" fill="none" stroke="#fff" stroke-width="4"/>
+    </g>
+  </svg>`;
+
+export const arrowRight = () => /*template*/ `
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="93" viewBox="0 0 94 93">
+    <g data-name="Component 5 – 2" transform="translate(6 6)">
+      <g transform="matrix(1, 0, 0, 1, -6, -6)">
+        <ellipse  data-name="Ellipse 1" cx="38" cy="37.5" rx="38" ry="37.5" transform="translate(6 6)" fill="#3a4754"/>
+      </g>
+      <path  data-name="Path 37" d="M1857.5,2644.323l29.976-18.162L1857.5,2608.6" transform="translate(-1829.838 -2589.833)" fill="none" stroke="#fff" stroke-width="4"/>
+    </g>
+  </svg>`;
+
 export const TriangleUp = () => /*template*/ `
   <svg xmlns="http://www.w3.org/2000/svg" width="717" height="621" viewBox="0 0 717 621">
     <path d="M358.5,0,717,621H0Z" fill="#000000"/>
