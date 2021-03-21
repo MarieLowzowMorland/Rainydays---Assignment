@@ -1,7 +1,7 @@
 import addHeaderForPage, { pageNames } from "../templates/header.js";
 import addFooterForPage from "../templates/footer.js";
 import { IconRemove } from "../templates/svgIcons.js";
-import addValidationToForm from "../components/formValidation.js";
+import addValidationToForm, { addSuccessMessage } from "../components/formValidation.js";
 import {
   getCartContent,
   removeFromCart,
@@ -44,7 +44,7 @@ const cartItem = (selectedJacket) => {
   return /*template*/ `
   <li>
     <div id="${selectionKey}" class="jacket-chekout-info">
-      <button id="${selectionKey}-remove" class="remove-jacket" aria-label="remove">${IconRemove()}</button>
+      <button class="remove-jacket" aria-label="remove">${IconRemove()}</button>
       <div class="one-liner">
         <img
           height="100"
@@ -204,7 +204,7 @@ const removeItem = (event) => {
   );
   const numberOfMatchingJackets = matchingJackets.length;
   if (numberOfMatchingJackets === 1) {
-    document.getElementById(`${selectionKey}-remove`).click();
+    addSuccessMessage("Remove row by pressing the cross / remove button")
     return;
   }
 
