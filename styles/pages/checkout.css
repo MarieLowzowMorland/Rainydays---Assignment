@@ -58,9 +58,10 @@ main .grey-card > *{
 .terms-link {
   color: var(--bg-2);
   font-style: italic;
+  text-decoration: underline;
 }
 
 .terms-link:hover,
 .terms-link:focus {
-  color: var(--secondary);
+  color: var(--hover-primary);
 }
