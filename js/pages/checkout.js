@@ -108,8 +108,6 @@ const updateCartInfo = async () => {
   return cartContents;
 };
 
-const cartContents = await updateCartInfo();
-
 const groupIdenticalJackets = (jackets) => {
   const allSelectionKeys = jackets.map((jacket) => jacket.selectionKey);
   const uniqeSelectionKeys = [...new Set(allSelectionKeys)];
@@ -125,100 +123,103 @@ const groupIdenticalJackets = (jackets) => {
     };
   });
 };
-// https://www.freecodecamp.org/news/15-useful-javascript-examples-of-map-reduce-and-filter-74cbbb5e0a1f/
 
-groupIdenticalJackets(cartContents).forEach((selectedJacket) => {
-  document
-    .getElementById("cart-content")
-    .insertAdjacentHTML("afterbegin", cartItem(selectedJacket));
-});
+updateCartInfo().then(cartContents => {
+  // https://www.freecodecamp.org/news/15-useful-javascript-examples-of-map-reduce-and-filter-74cbbb5e0a1f/
 
-const keyboardSelectLabel = (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  if (event.keyCode === 13) {
-    const forId = event.target.getAttribute("for");
-    if (forId) {
-      document.getElementById(forId).click();
-    }
-  }
-};
-
-document
-  .querySelectorAll("input[type=radio] + label")
-  .forEach((label) => label.addEventListener("keyup", keyboardSelectLabel));
-
-const removeJacket = (event) => {
-  const selectionKey = event.target.closest(".jacket-chekout-info").id;
-  removeFromCart(selectionKey);
-  event.target.closest("li").remove();
-  updateCartInfo();
-};
-
-document
-  .querySelectorAll(".remove-jacket")
-  .forEach((remove) => remove.addEventListener("click", removeJacket));
-
-const numberOfIdenticalJackets = (allJackets, selectionKey) => {
-  return allJackets.map(getSelectionKey).filter((key) => key === selectionKey)
-    .length;
-};
-
-const rerenderCart = async (selectionKey) => {
-  const newContents = await updateCartInfo();
-  const numberOfJackets = numberOfIdenticalJackets(newContents, selectionKey);
-  const jacket = newContents.find(
-    (jacket) => jacket.selectionKey === selectionKey
-  );
-  document.getElementById(`${selectionKey}-price`).innerHTML = `NOK ${
-    numberOfJackets * jacketActualPrice(jacket)
-  },-`;
-  document.getElementById(`${selectionKey}-number`).innerHTML = numberOfJackets;
-};
-
-const addItem = async (event) => {
-  const selectionKey = event.target.closest(".jacket-chekout-info").id;
-  const jacket = cartContents.find(
-    (jacket) => jacket.selectionKey === selectionKey
-  );
-  const { id, selectedColor, selectedSize, selectedGender } = jacket;
-  await addToCart(id, selectedColor, selectedSize, selectedGender);
-  await rerenderCart(selectionKey);
-};
-
-document
-  .querySelectorAll(".add-item")
-  .forEach((remove) => remove.addEventListener("click", addItem));
-
-const cartWithSelectedKey = () =>
-  getCartContent().map((selectedJacket) => {
-    return {
-      ...selectedJacket,
-      selectionKey: getSelectionKey(selectedJacket),
-    };
+  groupIdenticalJackets(cartContents).forEach((selectedJacket) => {
+    document
+      .getElementById("cart-content")
+      .insertAdjacentHTML("afterbegin", cartItem(selectedJacket));
   });
 
-const removeItem = async (event) => {
-  const currentContents = cartWithSelectedKey();
-  const selectionKey = event.target.closest(".jacket-chekout-info").id;
-  const matchingJackets = currentContents.filter(
-    (jacket) => jacket.selectionKey === selectionKey
-  );
-  const numberOfMatchingJackets = matchingJackets.length;
-  if (numberOfMatchingJackets === 1) {
-    addSuccessMessage("Remove row by pressing the cross / remove button")
-    return;
-  }
+  const keyboardSelectLabel = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.keyCode === 13) {
+      const forId = event.target.getAttribute("for");
+      if (forId) {
+        document.getElementById(forId).click();
+      }
+    }
+  };
 
-  matchingJackets.pop();
-  const otherJackets = currentContents.filter(
-    (jacket) => jacket.selectionKey !== selectionKey
-  );
-  const newCart = [...matchingJackets, ...otherJackets];
-  setCartContent(newCart);
-  await rerenderCart(selectionKey);
-};
+  document
+    .querySelectorAll("input[type=radio] + label")
+    .forEach((label) => label.addEventListener("keyup", keyboardSelectLabel));
 
-document
-  .querySelectorAll(".remove-item")
-  .forEach((remove) => remove.addEventListener("click", removeItem));
+  const removeJacket = (event) => {
+    const selectionKey = event.target.closest(".jacket-chekout-info").id;
+    removeFromCart(selectionKey);
+    event.target.closest("li").remove();
+    updateCartInfo();
+  };
+
+  document
+    .querySelectorAll(".remove-jacket")
+    .forEach((remove) => remove.addEventListener("click", removeJacket));
+
+  const numberOfIdenticalJackets = (allJackets, selectionKey) => {
+    return allJackets.map(getSelectionKey).filter((key) => key === selectionKey)
+      .length;
+  };
+
+  const rerenderCart = async (selectionKey) => {
+    const newContents = await updateCartInfo();
+    const numberOfJackets = numberOfIdenticalJackets(newContents, selectionKey);
+    const jacket = newContents.find(
+      (jacket) => jacket.selectionKey === selectionKey
+    );
+    document.getElementById(`${selectionKey}-price`).innerHTML = `NOK ${
+      numberOfJackets * jacketActualPrice(jacket)
+    },-`;
+    document.getElementById(`${selectionKey}-number`).innerHTML = numberOfJackets;
+  };
+
+  const addItem = async (event) => {
+    const selectionKey = event.target.closest(".jacket-chekout-info").id;
+    const jacket = cartContents.find(
+      (jacket) => jacket.selectionKey === selectionKey
+    );
+    const { id, selectedColor, selectedSize, selectedGender } = jacket;
+    await addToCart(id, selectedColor, selectedSize, selectedGender);
+    await rerenderCart(selectionKey);
+  };
+
+  document
+    .querySelectorAll(".add-item")
+    .forEach((remove) => remove.addEventListener("click", addItem));
+
+  const cartWithSelectedKey = () =>
+    getCartContent().map((selectedJacket) => {
+      return {
+        ...selectedJacket,
+        selectionKey: getSelectionKey(selectedJacket),
+      };
+    });
+
+  const removeItem = async (event) => {
+    const currentContents = cartWithSelectedKey();
+    const selectionKey = event.target.closest(".jacket-chekout-info").id;
+    const matchingJackets = currentContents.filter(
+      (jacket) => jacket.selectionKey === selectionKey
+    );
+    const numberOfMatchingJackets = matchingJackets.length;
+    if (numberOfMatchingJackets === 1) {
+      addSuccessMessage("Remove row by pressing the cross / remove button")
+      return;
+    }
+
+    matchingJackets.pop();
+    const otherJackets = currentContents.filter(
+      (jacket) => jacket.selectionKey !== selectionKey
+    );
+    const newCart = [...matchingJackets, ...otherJackets];
+    setCartContent(newCart);
+    await rerenderCart(selectionKey);
+  };
+
+  document
+    .querySelectorAll(".remove-item")
+    .forEach((remove) => remove.addEventListener("click", removeItem));
+});
