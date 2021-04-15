@@ -7,9 +7,11 @@ addHeaderForPage(pageNames.OUR_JACKETS);
 addFooterForPage();
 
 const jacketContainger = document.querySelector(".jacket-container");
-products.forEach(jacket =>
-  jacketContainger.insertAdjacentHTML("afterbegin", jacketBox(jacket))
-)
+products().then(jackets => 
+  jackets.forEach(jacket =>
+    jacketContainger.insertAdjacentHTML("afterbegin", jacketBox(jacket))
+  )
+);
 
 const toggleMenu = (event) => {
   document.getElementById("filter-menu-wrapper").classList.toggle("visible");

@@ -14,8 +14,8 @@ export const getSelectionKey = (selectedJacket) => {
   return `${id}-${selectedColor.id}-${selectedSize}-${selectedGender}`;
 };
 
-export const addToCart = (jacketId, color, size, gender) => {
-  const { id, colors, genders, sizes } = findJacketById(jacketId);
+export const addToCart = async (jacketId, color, size, gender) => {
+  const { id, colors, genders, sizes } = await findJacketById(jacketId);
   const cartItem = {
     id,
     selectedColor: color || colors[0],

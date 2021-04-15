@@ -1,5 +1,5 @@
 import { TriangleUp, IconColor } from "./svgIcons.js";
-import {salePrice, oldPrice} from "../data/products.js";
+import { salePrice, oldPrice } from "../data/products.js";
 
 export const colorOption = (jacketId, color, selectedColor) => {
   const { id, name, hex} = color;
@@ -58,7 +58,7 @@ const saleBanner = (discountPercentage) => {
 }
 
 const jacketBox = (jacket, headerLevel) => {
-  const {id, name, price, discountPercentage, jacketType, colors, imageUrl, imageDescription} = jacket;
+  const {id, name, price, discountPercentage, jacketType, colors, featuredImage, imageDescription} = jacket;
   let heading = "h2";
   if(headerLevel){
     heading = headerLevel;
@@ -66,7 +66,7 @@ const jacketBox = (jacket, headerLevel) => {
   return /*template*/`
     <a class="jacket-box" href="jacket.html?id=${id}">
       ${saleBanner(discountPercentage)}
-      <div class="image-wrapper"><img src="${imageUrl(colors[0])}" alt="${imageDescription}"/></div>
+      <div class="image-wrapper"><img src="${featuredImage.src}" alt="${imageDescription}"/></div>
       <div>
         <${heading} class="heading">${name}${jacketType.icon()}</${heading}>
         <p>Colors: <span class="color-alternatives">${colors.map(color => IconColor(color.hex)).join("")}</span></p>

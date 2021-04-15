@@ -18,4 +18,7 @@ document
   .getElementById("man-link")
   .addEventListener("click", () => goToJackets("man"));
 
-createCarousel(products, ".jacket-slider-wrapper");
+products().then(jackets => {
+  const featuredJackets = jackets.filter(jacket => jacket.featured);
+  createCarousel(featuredJackets, ".jacket-slider-wrapper");
+});

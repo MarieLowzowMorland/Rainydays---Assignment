@@ -87,14 +87,16 @@ const cartTotal = (items) => {
   return `NOK ${total}`;
 };
 
-const updateCartInfo = () => {
-  const cartContents = getCartContent().map((selectedJacket) => {
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+const updateCartInfo = async () => {
+  const cartContents = await Promise.all(getCartContent().map(async (selectedJacket) => {
+    const jacket = await findJacketById(selectedJacket.id);
     return {
       ...selectedJacket,
-      ...findJacketById(selectedJacket.id),
+      ...jacket,
       selectionKey: getSelectionKey(selectedJacket),
     };
-  });
+  }));
 
   document.getElementById(
     "cart-number-of-items"
@@ -106,7 +108,7 @@ const updateCartInfo = () => {
   return cartContents;
 };
 
-const cartContents = updateCartInfo();
+const cartContents = await updateCartInfo();
 
 const groupIdenticalJackets = (jackets) => {
   const allSelectionKeys = jackets.map((jacket) => jacket.selectionKey);
@@ -162,8 +164,8 @@ const numberOfIdenticalJackets = (allJackets, selectionKey) => {
     .length;
 };
 
-const rerenderCart = (selectionKey) => {
-  const newContents = updateCartInfo();
+const rerenderCart = async (selectionKey) => {
+  const newContents = await updateCartInfo();
   const numberOfJackets = numberOfIdenticalJackets(newContents, selectionKey);
   const jacket = newContents.find(
     (jacket) => jacket.selectionKey === selectionKey
@@ -174,14 +176,14 @@ const rerenderCart = (selectionKey) => {
   document.getElementById(`${selectionKey}-number`).innerHTML = numberOfJackets;
 };
 
-const addItem = (event) => {
+const addItem = async (event) => {
   const selectionKey = event.target.closest(".jacket-chekout-info").id;
   const jacket = cartContents.find(
     (jacket) => jacket.selectionKey === selectionKey
   );
   const { id, selectedColor, selectedSize, selectedGender } = jacket;
-  addToCart(id, selectedColor, selectedSize, selectedGender);
-  rerenderCart(selectionKey);
+  await addToCart(id, selectedColor, selectedSize, selectedGender);
+  await rerenderCart(selectionKey);
 };
 
 document
@@ -196,7 +198,7 @@ const cartWithSelectedKey = () =>
     };
   });
 
-const removeItem = (event) => {
+const removeItem = async (event) => {
   const currentContents = cartWithSelectedKey();
   const selectionKey = event.target.closest(".jacket-chekout-info").id;
   const matchingJackets = currentContents.filter(
@@ -214,7 +216,7 @@ const removeItem = (event) => {
   );
   const newCart = [...matchingJackets, ...otherJackets];
   setCartContent(newCart);
-  rerenderCart(selectionKey);
+  await rerenderCart(selectionKey);
 };
 
 document

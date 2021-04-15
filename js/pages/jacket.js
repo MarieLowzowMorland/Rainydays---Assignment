@@ -1,7 +1,6 @@
 import addHeaderForPage, { pageNames } from "../templates/header.js";
 import addFooterForPage from "../templates/footer.js";
-import { findJacketById } from "../data/products.js";
-import {salePrice, oldPrice} from "../data/products.js";
+import { salePrice, oldPrice, findJacketById } from "../data/products.js";
 import { addToCart } from "../data/cartStorage.js";
 import { ShoppingCartIcon } from "../templates/svgIcons.js";
 import { colorOption, sizeOption} from "../templates/jacketBox.js";
@@ -11,7 +10,7 @@ addHeaderForPage(pageNames.JACKET);
 addFooterForPage();
 
 const jacketId = new URLSearchParams(location.search).get("id");
-const jacket = findJacketById(jacketId);
+const jacket = await findJacketById(jacketId);
 let selectedColor = jacket.colors[0];
 let selectedSize = jacket.sizes[0];
 
