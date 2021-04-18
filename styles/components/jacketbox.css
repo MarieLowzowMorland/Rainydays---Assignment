@@ -4,6 +4,10 @@
   border: 2px solid var(--bg-primary);
 }
 
+.jacket-box.hidden{
+  display: none;
+}
+
 .jacket-box:focus,
 .jacket-box:hover {
   border: 2px solid var(--secondary);

@@ -64,7 +64,7 @@ const jacketBox = (jacket, headerLevel) => {
     heading = headerLevel;
   }
   return /*template*/`
-    <a class="jacket-box" href="jacket.html?id=${id}">
+    <a class="jacket-box" href="jacket.html?id=${id}" id="jacket-box-${id}">
       ${saleBanner(discountPercentage)}
       <div class="image-wrapper"><img src="${featuredImage.src}" alt="${imageDescription}"/></div>
       <div>

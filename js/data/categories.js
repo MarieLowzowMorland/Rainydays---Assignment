@@ -14,7 +14,7 @@ export const propertyType = {
 }
 
 export const size = {
-  XS: "SX",
+  XS: "XS",
   S: "S",
   M: "M",
   L: "L",
@@ -22,8 +22,8 @@ export const size = {
 }
 
 export const gender = {
-  WOMEN: "Women",
-  MEN: "Men",
+  WOMAN: "Woman",
+  MAN: "Man",
   UNISEX: "Unisex"
 }
 
