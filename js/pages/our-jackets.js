@@ -59,9 +59,7 @@ products().then(jackets => {
     );
   };
 
-  const updateFilterCriteria = (event, criteriaType) => {
-    const filterName = event.target.id;
-    const shouldInclude = event.target.checked;
+  const updateFilterCriteria = (filterName, shouldInclude, criteriaType) => {
     let criteria = filterCriteria[criteriaType];
     const alreadyIncluded = criteria.includes(filterName);
 
@@ -73,9 +71,15 @@ products().then(jackets => {
     filterJackets();
   };
 
-  const changeJacketTypeSelection = (event) => updateFilterCriteria(event, "filterJackettypes");
-  const changeGenderSelection = (event) => updateFilterCriteria(event, "filterGenders");
-  const changeSizeSelection = (event) => updateFilterCriteria(event, "filterSizes");
+  const genderFilter = new URLSearchParams(location.search).get("gender");
+  if(genderFilter){
+    document.querySelector(`#gender-selection #${genderFilter}`).checked = true;
+    updateFilterCriteria(genderFilter, true, "filterGenders");
+  }
+
+  const changeJacketTypeSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterJackettypes");
+  const changeGenderSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterGenders");
+  const changeSizeSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterSizes");
 
   const toggleMenu = (event) => {
     const wrapper = document.getElementById("filter-menu-wrapper");
