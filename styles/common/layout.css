@@ -21,6 +21,10 @@
   visibility: hidden;
 }
 
+.hidden {
+  display: none !important;
+}
+
 main {
   flex: 1 1 auto;
   background-color: var(--bg-2);

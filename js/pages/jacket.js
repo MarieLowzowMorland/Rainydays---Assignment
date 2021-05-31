@@ -12,6 +12,8 @@ addFooterForPage();
 
 const jacketId = new URLSearchParams(location.search).get("id");
 findJacketById(jacketId).then(jacket => {
+  document.getElementById("loader").remove();
+  
   let selectedColor = jacket.colors[0];
   let selectedSize = jacket.sizes[0];
 

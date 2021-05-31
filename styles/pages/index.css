@@ -1,6 +1,7 @@
 @import '../common/variables.css';
 @import '../common/text.css';
 @import '../common/layout.css';
+@import "../common/loader.css";
 @import '../components/buttons.css';
 @import '../components/header.css';
 @import '../components/footer.css';
@@ -64,6 +65,18 @@
   background-color: var(--bg-3);
   width: 100%;
   position: relative;
+}
+
+#loader {
+  background-color: var(--bg-3);
+}
+
+#loader path {
+  fill: white;
+}
+
+#loader span {
+  background-color: white;
 }
 
 #bestsellers h2 {

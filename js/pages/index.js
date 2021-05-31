@@ -20,5 +20,6 @@ document
 
 products().then(jackets => {
   const featuredJackets = jackets.filter(jacket => jacket.featured);
+  document.getElementById("loader").remove();
   createCarousel(featuredJackets, ".jacket-slider-wrapper");
 });

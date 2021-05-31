@@ -1,0 +1,54 @@
+#loader{
+  margin: 30px auto;
+  padding: 50px 0;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loader svg{
+  width: 140px;
+  height: auto;
+}
+
+#loader > div {
+  display: flex;
+  width: 120px;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+#loader > div div{
+  display: inline-block;
+  min-height: 100%;
+  min-width: 40px;
+}
+
+#loader span{
+  display: block;
+  background-color: black;
+  height: 5px;
+  width: 20px;
+  transform: translate(-20px, -20px);
+  animation: rain 1s 0s linear infinite;
+}
+
+#loader #rain-2{
+  animation-delay: 0.5s;
+}
+
+#loader #rain-3{
+  animation-delay: 0.2s;
+}
+
+@keyframes rain {
+  0% { 
+    transform: rotate(110deg) translate(-20px, -20px);
+  }
+  100% { 
+    transform: rotate(110deg) translate(60px, -20px);
+  }
+}

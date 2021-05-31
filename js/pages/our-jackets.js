@@ -9,6 +9,9 @@ addFooterForPage();
 
 const jacketContainger = document.querySelector(".jacket-container");
 products().then(jackets => {
+  document.getElementById("loader").remove();
+  document.getElementById("filter").classList.remove("hidden");
+
   jackets
     .sort((a, b) => a.name.localeCompare(b.name, "nb"))
     .forEach(jacket =>
@@ -44,7 +47,7 @@ products().then(jackets => {
     if(filterProperties.includes("ventilated") && (!breathingProperty || parseInt(breathingProperty.rating) >= 7)){
       return false;
     }
-    
+
     return true;
   }
 
