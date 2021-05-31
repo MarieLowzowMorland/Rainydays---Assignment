@@ -3,6 +3,9 @@
  * but is still readable by screen readers for 
  * accessebility 
  */
+*:focus {
+  outline: solid 3px var(--primary);
+}
 
 .screen-reader-only {
   position: fixed !important;
