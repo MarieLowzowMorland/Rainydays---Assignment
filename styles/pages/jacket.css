@@ -34,6 +34,14 @@ main h2 path{
   color: var(--primary)
 }
 
+.property-description .rating {
+  font-weight: bold;
+}
+
+.property-description path {
+  fill: var(--icon-color)
+}
+
 .image-wrapper img {
   height: 100%;
 }

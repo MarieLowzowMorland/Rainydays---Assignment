@@ -1,8 +1,9 @@
 import addHeaderForPage, { pageNames } from "../templates/header.js";
 import addFooterForPage from "../templates/footer.js";
 import { salePrice, oldPrice, findJacketById } from "../data/products.js";
+import { propertyType } from "../data/categories.js";
 import { addToCart } from "../data/cartStorage.js";
-import { ShoppingCartIcon } from "../templates/svgIcons.js";
+import { ShoppingCartIcon, WaterproofIcon, WindproofIcon, InsulationIcon, BreathingIcon } from "../templates/svgIcons.js";
 import { colorOption, sizeOption} from "../templates/jacketBox.js";
 import { addSuccessMessage } from "../components/formValidation.js";
 
@@ -43,8 +44,36 @@ findJacketById(jacketId).then(jacket => {
     }
   };
 
+  const propertyDescription = (property, iconFunction) => {
+    if( !property ) {
+      return "";
+    }
+
+    const { description, rating} = property;
+    return /*template*/`
+      <div class="split-wrapper paragraph-wrapper  property-description">
+        <div class="split-20 image-wrapper">
+          ${ iconFunction() }
+        </div> 
+        <div class="split-80">
+          <p class="rating">${rating}</p>
+          <p>${description}</p>
+        </div>      
+      </div>`
+  };
+
   const jacketDescription = (jacket) => {
-    const {id, name, price, discountPercentage, jacketType, colors, imageUrl, imageDescription, propities, sizes, genders} = jacket;
+    const {id, name, price, discountPercentage, jacketType, colors, imageUrl, imageDescription, properties, sizes, genders} = jacket;
+    const waterproofProperty = properties.find(property => propertyType.WATERPROOF === property.type);
+    const windproofProperty = properties.find(property => propertyType.WINDPROOF === property.type);
+    const insulatingProperty = properties.find(property => propertyType.INSULATING === property.type);
+    const breathingProperty = properties.find(property => propertyType.BREATHING === property.type);
+
+    const waterproofHtmlDescription = propertyDescription(waterproofProperty, WaterproofIcon);
+    const windproofHtmlDescription = propertyDescription(windproofProperty, WindproofIcon);
+    const insulatingHtmlDescription = propertyDescription(insulatingProperty, InsulationIcon);
+    const breathingHtmlDescription = propertyDescription(breathingProperty, BreathingIcon);
+
     return /*template*/`
       <section class="split-wrapper tablet-block">
         <div class="split-50 image-wrapper">
@@ -63,7 +92,7 @@ findJacketById(jacketId).then(jacket => {
             et anis cum nos volorpor aut a doluptatem dolupta temqui aut
             demolup tibuscitem.
           </p>
-          <a>Read more >></a>
+          <a href="#product-description-anchor" aria-label="Read more about product description">Read more >></a>
         
           <form id="jacket-form">
             <fieldset class="only-content">
@@ -90,6 +119,39 @@ findJacketById(jacketId).then(jacket => {
               </span>
             </button>
           </form>
+        </div>
+      </section>
+      <section>
+        <div id="product-description-anchor" class="anchor"></div>
+        <div>
+          <h3>Product description</h3>
+          <div class="split-wrapper mobile-block">
+            <div class="split-50">
+              <p>
+                Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
+                liatque porepera dolorporum que del et est et que et anis cum nos
+                volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem.
+                Ita quia cori dolore plicide pore con ni ommolorrum quae optatent
+                quam dolorum facea sequam nam facipsum quo bearchi citiunt esendae
+                vel minus sunt, nit eatqui num estiisi nctios por mi, que volore
+                voluptas eum solo optatquam, aut fuga. Fuga. Hendit maxim
+                hitatibus. Nequi omnit quasit eost aut fugit ut estium susam fuga. Ficaepe
+                liatque porepera dolorporum que del et est et que et anis cum nos
+                volorpor aut a doluptatem dolupta temqui aut demolup tibuscitem.
+                Ita quia cori dolore plicide pore con ni ommolorrum quae optatent
+                quam dolorum facea sequam nam facipsum quo bearchi citiunt esendae
+                vel minus sunt, nit eatqui num estiisi nctios por mi, que volore
+                voluptas eum solo optatquam, aut fuga. Fuga. Hendit maxim
+                hitatibus.
+              </p>
+            </div>
+            <div class="split-50">
+              ${ waterproofHtmlDescription }
+              ${ windproofHtmlDescription }
+              ${ insulatingHtmlDescription }
+              ${ breathingHtmlDescription }
+            </div>
+          </div>
         </div>
       </section>`;
   };

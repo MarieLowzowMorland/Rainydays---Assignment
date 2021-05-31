@@ -11,6 +11,13 @@
   clip: rect(0, 0, 1px, 1px) !important;
 }
 
+.anchor {
+  position: relative;
+  display: block;
+  top: -80px;
+  visibility: hidden;
+}
+
 main {
   flex: 1 1 auto;
   background-color: var(--bg-2);

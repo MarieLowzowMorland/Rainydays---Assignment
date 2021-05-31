@@ -2,6 +2,7 @@ import addHeaderForPage, { pageNames } from "../templates/header.js";
 import addFooterForPage from "../templates/footer.js";
 import jacketBox from "../templates/jacketBox.js";
 import products from "../data/products.js";
+import { propertyType } from "../data/categories.js";
 
 addHeaderForPage(pageNames.OUR_JACKETS);
 addFooterForPage();
@@ -17,12 +18,39 @@ products().then(jackets => {
   const filterCriteria = {
     filterJackettypes: [],
     filterGenders: [],
-    filterSizes: []
+    filterSizes: [],
+    filterProperties: []
   };
+
+  const passPropertycheck = (filterProperties, jacket) => {
+    const properties = jacket.properties;
+    const waterproofProperty = properties.find(property => propertyType.WATERPROOF === property.type);
+    const windproofProperty = properties.find(property => propertyType.WINDPROOF === property.type);
+    const insulatingProperty = properties.find(property => propertyType.INSULATING === property.type);
+    const breathingProperty = properties.find(property => propertyType.BREATHING === property.type);
+
+    if(filterProperties.includes("water-proof") && (!waterproofProperty || parseInt(waterproofProperty.rating) < 11)){
+      return false;
+    }
+
+    if(filterProperties.includes("wind-proof") && (!windproofProperty || parseInt(windproofProperty.rating) >= 8)){
+      return false;
+    }
+
+    if(filterProperties.includes("winter-lined") && (!insulatingProperty || !insulatingProperty.rating.includes("Optimum"))){
+      return false;
+    }
+
+    if(filterProperties.includes("ventilated") && (!breathingProperty || parseInt(breathingProperty.rating) >= 7)){
+      return false;
+    }
+    
+    return true;
+  }
 
   const filterJacket = (jacket) => {
     const { jacketType, genders, sizes } = jacket;
-    const { filterJackettypes, filterGenders, filterSizes } = filterCriteria;
+    const { filterJackettypes, filterGenders, filterSizes, filterProperties } = filterCriteria;
 
     if( filterJackettypes.length > 0 && !filterJackettypes.includes(jacketType.name.toLowerCase())){
       return false;
@@ -33,6 +61,10 @@ products().then(jackets => {
     }
 
     if( filterSizes.length > 0 && !sizes.some(size => filterSizes.includes(size.toLowerCase()))){
+      return false;
+    }
+
+    if( filterProperties.length > 0 && !passPropertycheck(filterProperties, jacket)){
       return false;
     }
 
@@ -80,6 +112,7 @@ products().then(jackets => {
   const changeJacketTypeSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterJackettypes");
   const changeGenderSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterGenders");
   const changeSizeSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterSizes");
+  const changePropertiesSelection = (event) => updateFilterCriteria(event.target.id, event.target.checked, "filterProperties");
 
   const toggleMenu = (event) => {
     const wrapper = document.getElementById("filter-menu-wrapper");
@@ -91,6 +124,8 @@ products().then(jackets => {
         .forEach(inputElement => inputElement.addEventListener("change", changeGenderSelection));
       wrapper.querySelectorAll("#size-selection input")
         .forEach(inputElement => inputElement.addEventListener("change", changeSizeSelection));
+      wrapper.querySelectorAll("#properties-selection input")
+        .forEach(inputElement => inputElement.addEventListener("change", changePropertiesSelection));
     }
   };
 

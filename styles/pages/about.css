@@ -7,13 +7,6 @@
 @import '../components/form.css';
 @import '../components/triangle.css';
 
-.anchor {
-  position: relative;
-  display: block;
-  top: -80px;
-  visibility: hidden;
-}
-
 main h2 {
   font-family: Good Times, Helvetica, Arial, sans-serif;
 }

@@ -103,8 +103,9 @@ nav a.logo-link svg:hover path{
 }
 
 .logo-icon {
-  height: 5.5rem;
+  height: 3.5rem;
   width: auto;
+  margin-left: 20px;
 }
 
 header h2,

@@ -144,7 +144,7 @@ const toJacketInfo = (jacketFromApi) => {
     featured,
     sizes,
     genders,
-    propities: getProperties(attributes),
+    properties: getProperties(attributes),
     featuredImage: images[0],
     imageUrl: (color) => getAttributeContaining(images, colorUrl(color).toLowerCase()).src,
     imageDescription: images[0].alt,
