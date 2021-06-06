@@ -1,13 +1,13 @@
-@import '../common/variables.css';
-@import '../common/text.css';
-@import '../common/layout.css';
-@import '../components/buttons.css';
-@import '../components/header.css';
-@import '../components/footer.css';
-@import '../components/form.css';
-@import '../components/triangle.css';
+@import "../common/variables.css";
+@import "../common/text.css";
+@import "../common/layout.css";
+@import "../components/buttons.css";
+@import "../components/header.css";
+@import "../components/footer.css";
+@import "../components/form.css";
+@import "../components/triangle.css";
 
-#contact-us-banner{
+#contact-us-banner {
   background-image: url("../../images/contact_us.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,73 +17,73 @@
   width: 100%;
 }
 
-#contact-us-banner h1{
+#contact-us-banner h1 {
   color: var(--bg-2);
   font-size: 2rem;
   padding-top: 2rem;
   text-align: center;
 }
 
-#contactPage {
+#main {
   width: 100%;
 }
 
-#contactPage h2 {
+#main h2 {
   color: var(--secondary);
 }
 
-#contactPage p,
-#contactPage a {
+#main p,
+#main a {
   color: var(--text-white);
   font-weight: normal;
 }
 
-#contactPage .section-content{
+#main .section-content {
   width: 100%;
   box-sizing: border-box;
   background-color: var(--bg-3);
 }
 
-#contactPage .section-content > div{
+#main .section-content > div {
   max-width: 500px;
   margin: 0 auto;
 }
 
-#contactPage .section-content section{
+#main .section-content section {
   width: 100%;
   max-width: 450px;
   margin: 40px 0;
 }
 
-#contactPage .section-content h2,
-#contactPage .section-content p{
+#main .section-content h2,
+#main .section-content p {
   max-width: 300px;
 }
 
 @media screen and (min-width: 599px) {
-  #contact-us-banner{
+  #contact-us-banner {
     min-height: 200px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  #contact-us-banner{
+  #contact-us-banner {
     min-height: 350px;
   }
 
-  #contactPage .section-content > div{
+  #main .section-content > div {
     max-width: 1000px;
   }
 
-  #contactPage .section-content h2{
+  #main .section-content h2 {
     margin: 0 0 20px 0;
   }
 
-  .tablet-left{
+  .tablet-left {
     float: left;
   }
 
-  .tablet-right{
+  .tablet-right {
     float: right;
   }
 }

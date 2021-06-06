@@ -1,11 +1,6 @@
+import { getCartContent } from "../data/cartStorage.js";
 
-import { getCartContent } from "../data/cartStorage.js"
-
-import {
-  LogoIcon,
-  MenuIcon,
-  ShoppingCartIcon,
-} from "./svgIcons.js";
+import { LogoIcon, MenuIcon, ShoppingCartIcon } from "./svgIcons.js";
 
 export const pageNames = {
   INDEX: "index",
@@ -21,41 +16,53 @@ export const pageNames = {
 };
 
 const cartCircleVisiblityClass = (numberOfItems) => {
-  if(numberOfItems <= 0){
+  if (numberOfItems <= 0) {
     return "";
   }
   return "visible";
-}
+};
 
 export const updateCartNumber = () => {
   const numberOfItems = getCartContent().length;
-  document.querySelectorAll(".cart-circle")
-    .forEach(circle => {
-      circle.classList.remove("visible");
+  document.querySelectorAll(".cart-circle").forEach((circle) => {
+    circle.classList.remove("visible");
 
-      const newClass = cartCircleVisiblityClass(numberOfItems);
-      if(newClass){
-        circle.classList.add(newClass);
-      }
+    const newClass = cartCircleVisiblityClass(numberOfItems);
+    if (newClass) {
+      circle.classList.add(newClass);
+    }
 
-      circle.innerHTML = `<p>${numberOfItems}</p>`;
-    });
-}
+    circle.innerHTML = `<p>${numberOfItems}</p>`;
+  });
+};
 
-const addHeaderForPage = (pageName) => {  
+
+const toggleMenu = (event) => {
+  const menuButton = document.getElementById("hamburger-menu");
+  const menu = document.querySelector(".main-nav .menu")
+  if(menu.classList.contains("visible")){
+    menu.classList.remove("visible");
+    menuButton.setAttribute("aria-label", "Open menu");
+  } else {
+    menu.classList.add("visible");
+    menuButton.setAttribute("aria-label", "Close menu");
+  }
+  menuButton.focus();
+};
+
+const addHeaderForPage = (pageName) => {
   document
     .querySelector("main")
-    .insertAdjacentHTML("beforebegin", headerTemplate(pageName, getCartContent()));
+    .insertAdjacentHTML(
+      "beforebegin",
+      headerTemplate(pageName, getCartContent())
+    );
 
-  document  
-    .getElementById("hamburger-menu")
-    .addEventListener("click", () => {
-      const menu = document.querySelector("nav .menu");
-      menu.classList.toggle("visible");
-    });
-}
+  document.getElementById("hamburger-menu").addEventListener("click", toggleMenu);
+  document.getElementById("close-menu").addEventListener("click", toggleMenu);
+};
 
-const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
+const cartWithCircle = (pageName, cartContent, divClass) => /*template*/ `
   <div class="nav-shopping-cart ${divClass}">
     <a href="checkout.html" class="svg-button ${
       pageName === pageNames.CHECKOUT ? "active" : ""
@@ -68,14 +75,17 @@ const cartWithCircle = (pageName, cartContent, divClass) => /*template*/`
 
 const headerTemplate = (pageName, cartContent) => /*template*/ `
   <header>
-    <nav>
+    <nav id="skiplink" aria-label="Skiplink menu">
+      <a href="#main" class="skiplink" aria-label="Go to main content">Main content</a>
+    </nav>
+    <nav class="main-nav">
       <div>
         <a href="index.html" class="logo-link">
           ${LogoIcon()}
         </a>
         <div class="filler desktop-hidden"></div>
         ${cartWithCircle(pageNames, cartContent, "desktop-hidden")}
-        <button id="hamburger-menu" class="desktop-hidden svg-button">
+        <button id="hamburger-menu" aria-label="Open menu" class="desktop-hidden svg-button">
           ${MenuIcon()}
         </button>
       </div>
@@ -90,6 +100,7 @@ const headerTemplate = (pageName, cartContent) => /*template*/ `
           <li><a href="contact.html" class="${
             pageName === pageNames.CONTACT ? "active" : ""
           }">Contact</a></li>
+          <li><button id="close-menu">Close menu</button></li>
         </ul>
         <div class="filler"></div>
 
@@ -97,6 +108,5 @@ const headerTemplate = (pageName, cartContent) => /*template*/ `
       </div>
     </nav>
   </header>`;
-      
 
 export default addHeaderForPage;

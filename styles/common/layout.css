@@ -163,7 +163,7 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  .desktop-hidden {
+  .desktop-hidden, .main-nav .desktop-hidden {
     display: none;
   }
 }
@@ -190,7 +190,7 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  .tablet-hidden {
+  .tablet-hidden, .main-nav .tablet-hidden{
     display: none;
   }
 
