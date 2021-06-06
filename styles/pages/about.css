@@ -1,17 +1,17 @@
-@import '../common/variables.css';
-@import '../common/text.css';
-@import '../common/layout.css';
-@import '../components/buttons.css';
-@import '../components/header.css';
-@import '../components/footer.css';
-@import '../components/form.css';
-@import '../components/triangle.css';
+@import "../common/variables.css";
+@import "../common/text.css";
+@import "../common/layout.css";
+@import "../components/buttons.css";
+@import "../components/header.css";
+@import "../components/footer.css";
+@import "../components/form.css";
+@import "../components/triangle.css";
 
 main h2 {
-  font-family: Good Times, Helvetica, Arial, sans-serif;
+  font-family: Good-Times, Helvetica, Arial, sans-serif;
 }
 
-main p{
+main p {
   color: var(--text-white);
   font-weight: lighter;
 }

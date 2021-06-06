@@ -1,15 +1,15 @@
-@import '../common/variables.css';
-@import '../common/text.css';
-@import '../common/layout.css';
+@import "../common/variables.css";
+@import "../common/text.css";
+@import "../common/layout.css";
 @import "../common/loader.css";
-@import '../components/buttons.css';
-@import '../components/header.css';
-@import '../components/footer.css';
-@import '../components/form.css';
-@import '../components/jacketbox.css';
-@import '../components/magazine.css';
-@import '../components/instagram.css';
-@import '../components/triangle.css';
+@import "../components/buttons.css";
+@import "../components/header.css";
+@import "../components/footer.css";
+@import "../components/form.css";
+@import "../components/jacketbox.css";
+@import "../components/magazine.css";
+@import "../components/instagram.css";
+@import "../components/triangle.css";
 
 #welcome {
   position: relative;
@@ -23,7 +23,7 @@
 }
 
 #welcome h2 {
-  font-family: Good Times, Helvetica, Arial, sans-serif;
+  font-family: Good-Times, Helvetica, Arial, sans-serif;
   color: var(--bg-2);
   text-transform: uppercase;
   font-size: 2.3rem;
@@ -80,7 +80,7 @@
 }
 
 #bestsellers h2 {
-  font-family: Good Times, Helvetica, Arial, sans-serif;
+  font-family: Good-Times, Helvetica, Arial, sans-serif;
   font-size: 2rem;
   text-align: center;
   margin: 0;
@@ -113,35 +113,33 @@
 .control-previous,
 .control-next {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top:50%;
+  width: 70px;
+  top: 50%;
   background-color: inherit;
   border: 0;
   border-radius: 50%;
 }
 
 .controls svg {
-  height: 120%;
-  width: auto;
-  transform: translate(-14%, -5%);
+  height: auto;
+  width: 100%;
 }
 
-.controls svg ellipse{
-  fill: var(--primary);;
+.controls svg ellipse {
+  fill: var(--primary);
 }
 
 .controls:hover svg ellipse,
-.controls:focus svg ellipse{
-  fill: var(--secondary);;
+.controls:focus svg ellipse {
+  fill: var(--secondary);
 }
 
 .control-previous {
-  left:0;
+  left: 0;
 }
 
 .control-next {
-  right:0;
+  right: 0;
 }
 
 #bestsellers .jacket-box {
@@ -164,7 +162,7 @@
   color: var(--text-white);
 }
 
-#welcome .collection-button{
+#welcome .collection-button {
   position: static;
   margin: 0 auto;
   width: 250px;
@@ -187,16 +185,16 @@
     float: inherit;
   }
 
-  #welcome .collection-title p{
+  #welcome .collection-title p {
     margin: 0;
   }
 
-  #welcome > div{
+  #welcome > div {
     height: 100%;
     padding: 0;
   }
 
-  #welcome > div > div.center-text{
+  #welcome > div > div.center-text {
     margin: 0;
     height: 100%;
     display: flex;
