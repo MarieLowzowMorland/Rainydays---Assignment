@@ -6,6 +6,8 @@ header {
 
 #skiplink a {
   position: fixed;
+  color: var(--secondary);
+  background-color: var(--bg-2);
   left: 0;
   top: 0;
   width: 1px;
@@ -19,8 +21,6 @@ header {
   clip: auto;
   z-index: 9999;
   padding: 10px;
-  color: var(--secondary);
-  background-color: var(--bg-2);
   text-decoration: none;
   box-shadow: var(--thin-shadow);
   height: auto;
@@ -84,6 +84,7 @@ header {
 
 #close-menu {
   position: fixed;
+  background-color: var(--bg-3);
   left: 0;
   top: 0;
   clip: rect(0, 0, 0, 0);
