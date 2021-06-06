@@ -1,5 +1,8 @@
 export const arrowLeft = () => /*template*/ `
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="93" viewBox="0 0 94 93">
+  <svg 
+    role="img"
+    aria-label="Arrow left"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="93" viewBox="0 0 94 93">
     <g data-name="Component 5 – 3" transform="translate(82 81) rotate(180)">
       <g transform="matrix(-1, 0, 0, -1, 82, 81)" >
         <ellipse  data-name="Ellipse 1" cx="38" cy="37.5" rx="38" ry="37.5" transform="translate(82 81) rotate(180)" fill="#3a4754"/>
@@ -9,7 +12,10 @@ export const arrowLeft = () => /*template*/ `
   </svg>`;
 
 export const arrowRight = () => /*template*/ `
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="93" viewBox="0 0 94 93">
+  <svg 
+    role="img"
+    aria-label="Arrow right"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="93" viewBox="0 0 94 93">
     <g data-name="Component 5 – 2" transform="translate(6 6)">
       <g transform="matrix(1, 0, 0, 1, -6, -6)">
         <ellipse  data-name="Ellipse 1" cx="38" cy="37.5" rx="38" ry="37.5" transform="translate(6 6)" fill="#3a4754"/>
@@ -24,7 +30,10 @@ export const TriangleUp = () => /*template*/ `
   </svg>`;
 
 export const IconRemove = () => /*template*/`
-  <svg xmlns="http://www.w3.org/2000/svg" width="21.707" height="21.707" viewBox="0 0 21.707 21.707">
+  <svg 
+    role="img"
+    aria-label="Remove"
+    xmlns="http://www.w3.org/2000/svg" width="21.707" height="21.707" viewBox="0 0 21.707 21.707">
     <line data-name="Line 31" x2="21" y2="21" transform="translate(0.354 0.354)" fill="none" stroke="#707070" stroke-width="1"/>
     <line data-name="Line 32" x1="21" y2="21" transform="translate(0.354 0.354)" fill="none" stroke="#707070" stroke-width="1"/>
   </svg>`;
@@ -45,6 +54,8 @@ export const IconColor = (hex) => /*template*/ `
 
 export const IconHiking = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Hiking icon"
     data-name="Icon awesome-hiking"
     xmlns="http://www.w3.org/2000/svg"
     width="27"
@@ -62,6 +73,8 @@ export const IconHiking = () => /*template*/ `
 
 export const IconRunning = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Running icon"
     xmlns="http://www.w3.org/2000/svg"
     width="22.812"
     height="28.075"
@@ -76,6 +89,8 @@ export const IconRunning = () => /*template*/ `
 
 export const IconSkiing = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Skiing icon"
     xmlns="http://www.w3.org/2000/svg"
     width="28.822"
     height="25.619"
@@ -90,6 +105,8 @@ export const IconSkiing = () => /*template*/ `
 
 export const IconDowhill = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Downhill icon"
     xmlns="http://www.w3.org/2000/svg"
     width="29.882"
     height="29.878"
@@ -105,6 +122,8 @@ export const IconDowhill = () => /*template*/ `
 
 export const IconCanoeing = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Canoeing icon"
     xmlns="http://www.w3.org/2000/svg"
     width="28.143"
     height="24.625"
@@ -120,6 +139,8 @@ export const IconCanoeing = () => /*template*/ `
 
 export const IconSnowboard = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Snowboard icon"
     xmlns="http://www.w3.org/2000/svg"
     width="25.993"
     height="26"
@@ -135,6 +156,8 @@ export const IconSnowboard = () => /*template*/ `
 
 export const LogoIcon = () => /*template*/ `
   <svg
+    role="img"
+    aria-label="Logo with mountains and our name"
     class="logo-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="182.714"
@@ -374,6 +397,8 @@ export const LogoIcon = () => /*template*/ `
 
 export const ShoppingCartIcon = () => /*template*/ `
     <svg
+      role="img"
+      aria-label="Shopping cart"
       xmlns="http://www.w3.org/2000/svg"
       width="28.602"
       height="26.184"
@@ -399,6 +424,8 @@ export const ShoppingCartIcon = () => /*template*/ `
 
 export const MenuIcon = () => /*template*/ `
     <svg
+      role="img"
+      aria-label="Menu"
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="25"
@@ -434,13 +461,18 @@ export const MenuIcon = () => /*template*/ `
     </svg>`;
 
 export const MailIcon = () => /*template*/ `
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.2" viewBox="0 0 24 19.2">
+    <svg 
+    role="img"
+    aria-label="Mail icon"
+    xmlns="http://www.w3.org/2000/svg" width="24" height="19.2" viewBox="0 0 24 19.2">
       <title>Newsletter</title>
       <path data-name="Icon material-mail" d="M24.6,6H5.4A2.4,2.4,0,0,0,3.012,8.4L3,22.8a2.407,2.407,0,0,0,2.4,2.4H24.6A2.407,2.407,0,0,0,27,22.8V8.4A2.407,2.407,0,0,0,24.6,6Zm0,4.8-9.6,6-9.6-6V8.4l9.6,6,9.6-6Z" transform="translate(-3 -6)" fill="#a1b2c3"/>
     </svg>`;
 
 export const WaterproofIcon = () => /*template*/ `
   <svg
+  role="img"
+  aria-label="Waterproof icon"
   xmlns="http://www.w3.org/2000/svg"
   width="23.498"
   height="24.847"
@@ -456,6 +488,8 @@ export const WaterproofIcon = () => /*template*/ `
 
 export const WindproofIcon = () => /*template*/ `
   <svg
+  role="img"
+  aria-label="Windproof icon"
   xmlns="http://www.w3.org/2000/svg"
   width="26.002"
   height="23.496"
@@ -471,6 +505,8 @@ export const WindproofIcon = () => /*template*/ `
 
 export const InsulationIcon = () => /*template*/ `
   <svg
+  role="img"
+  aria-label="Insulation icon"
   xmlns="http://www.w3.org/2000/svg"
   width="26.086"
   height="29.81"
@@ -486,6 +522,8 @@ export const InsulationIcon = () => /*template*/ `
 
 export const BreathingIcon = () => /*template*/ `
   <svg
+  role="img"
+  aria-label="Breathing icon"
   xmlns="http://www.w3.org/2000/svg"
   width="22.247"
   height="18.292"
